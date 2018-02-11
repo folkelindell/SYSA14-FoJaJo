@@ -51,7 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Program.cs" />
+    <Compile Include="Model1.cs" />
+    <Compile Include="Model\GameContext.cs" />
+    <Compile Include="Model\Player.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
