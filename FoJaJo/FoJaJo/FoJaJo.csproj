@@ -49,6 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Game.cs" />
+    <Compile Include="Model\PlayerInGame.cs" />
+    <Compile Include="Model\Result.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -59,7 +62,6 @@
   <ItemGroup>
     <Folder Include="Controller\" />
     <Folder Include="GUI\" />
-    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
