@@ -51,6 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\GameController.cs" />
+    <Compile Include="Controller\PasswordController.cs" />
+    <Compile Include="Controller\PlayerController.cs" />
+    <Compile Include="Controller\GameLogic.cs" />
     <Compile Include="Model\Game.cs" />
     <Compile Include="Model\PlayerInGame.cs" />
     <Compile Include="Model\Result.cs" />
@@ -65,7 +69,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controller\" />
     <Folder Include="GUI\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
