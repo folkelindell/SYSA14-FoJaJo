@@ -16,7 +16,7 @@ namespace FoJaJo.Model
         
         [ForeignKey("Player")]
         [Required]
-        public string StartedPlayerUsername { get; set; }
+        public Player StartedPlayerUsername { get; set; }
 
         [Required]
         public int MaxNumberOfPlayers { get; set; }
@@ -32,6 +32,6 @@ namespace FoJaJo.Model
         public string BoardDimension { get; set; }
 
         [ForeignKey("Result")]
-        public int ResultId { get; set; }
+        public Result ResultId { get; set; }
     }   
 }

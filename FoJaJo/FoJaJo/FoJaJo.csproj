@@ -55,6 +55,11 @@
     <Compile Include="Controller\PasswordController.cs" />
     <Compile Include="Controller\PlayerController.cs" />
     <Compile Include="Controller\GameLogic.cs" />
+    <Compile Include="Migrations\201802111659142_InitialCreate.cs" />
+    <Compile Include="Migrations\201802111659142_InitialCreate.Designer.cs">
+      <DependentUpon>201802111659142_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Game.cs" />
     <Compile Include="Model\PlayerInGame.cs" />
     <Compile Include="Model\Result.cs" />
@@ -70,6 +75,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GUI\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201802111659142_InitialCreate.resx">
+      <DependentUpon>201802111659142_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
