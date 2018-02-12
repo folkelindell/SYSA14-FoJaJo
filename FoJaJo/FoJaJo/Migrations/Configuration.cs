@@ -7,10 +7,10 @@ namespace FoJaJo.Migrations
 
     internal sealed class Configuration : DbMigrationsConfiguration<FoJaJo.Model.GameContext>
     {
+        //Update skiten: Update-Database -Verbose -Force
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            ContextKey = "FoJaJo.Model.GameContext";
         }
 
         protected override void Seed(FoJaJo.Model.GameContext context)
