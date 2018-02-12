@@ -12,11 +12,13 @@ namespace FoJaJo.Model
     {
         [Key]
         [ForeignKey("Player")]
-        public Player PlayerUsername { get; set; }
+        public string PlayerUsername { get; set; }
+        public virtual Player Player { get; set; }
 
         [Key]
         [ForeignKey("Game")]
-        public Game GameId { get; set; }
+        public string GameId { get; set; }
+        public virtual Game Game { get; set; }
         
         public int Score { get; set; }
     }

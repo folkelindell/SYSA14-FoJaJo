@@ -14,25 +14,20 @@ namespace FoJaJo.Model
         [Required]
         public string GameID{get; set;}
         
-        [ForeignKey("username")]
-        [Required]
-        public Player StartedPlayerUsername { get; set; }
+        [ForeignKey("Player")]
+        public string Username { get; set; }
+        public virtual Player Player { get; set; }
 
         [Required]
         public int MaxNumberOfPlayers { get; set; }
 
-        /*
-        [Timestamp]
-        [Required]
-        public DateTime StartTime { get; set; }
-
-        [Timestamp]
-        public DateTime EndTime { get; set; }
-        */
         [Required]
         public string BoardDimension { get; set; }
 
         [ForeignKey("Result")]
-        public Result ResultId { get; set; }
+        public int ResultId { get; set; }
+        public virtual Result Result { get; set; }
+
+
     }   
 }
