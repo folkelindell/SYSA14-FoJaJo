@@ -46,7 +46,8 @@ namespace FoJaJo.Model
             Username = username;
             Email = email;
             Password = password;
-            Rating = 0;
+            Rating = rating;
+            TotalWins = totalWins;
         }
        
     }

@@ -12,8 +12,7 @@ namespace FoJaJo
         static void Main(string[] args)
         {
             GameContext gc = new GameContext();
-            Player p = new Player("Smeekis", "@gmail", "123");
-            gc.Players.Add(p);
+            
          
             gc.SaveChanges();
             
