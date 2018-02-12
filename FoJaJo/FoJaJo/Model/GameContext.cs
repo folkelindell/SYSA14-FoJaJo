@@ -9,7 +9,7 @@ namespace FoJaJo.Model
     {
 
         public DbSet<Player> Players { get; set; }
-        //public DbSet<PlayerInGame> PlayersInGame { get; set; }
+        public DbSet<PlayerInGame> PlayersInGame { get; set; }
         public DbSet<Result> Results { get; set; }
         public DbSet<Game> Games { get; set; }
 
