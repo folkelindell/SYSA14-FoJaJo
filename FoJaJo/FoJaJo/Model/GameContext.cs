@@ -10,6 +10,7 @@ namespace FoJaJo.Model
 
         public DbSet<Player> Players { get; set; }
 
+
         public GameContext() : base("LuffarSchack") { }
         // Twist our database
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
