@@ -14,13 +14,13 @@ namespace FoJaJo.Model
         [ForeignKey("Player")]
         [Column(Order = 1)]
         public string Username { get; set; }
-        public virtual Player Player { get; set; }
+        public Player Player { get; set; }
 
         [Key]
         [ForeignKey("Game")]
         [Column(Order = 2)]
         public string GameId { get; set; }
-        public virtual Game Game { get; set; }
+        public Game Game { get; set; }
         
         public int Score { get; set; }
     }
