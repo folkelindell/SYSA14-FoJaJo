@@ -55,7 +55,6 @@
     <Compile Include="Controller\PasswordController.cs" />
     <Compile Include="Controller\PlayerController.cs" />
     <Compile Include="Controller\GameLogic.cs" />
-    <Compile Include="LocalTest.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Game.cs" />
     <Compile Include="Model\PlayerInGame.cs" />
