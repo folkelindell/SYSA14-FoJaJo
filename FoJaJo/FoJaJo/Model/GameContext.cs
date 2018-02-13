@@ -9,7 +9,7 @@ namespace FoJaJo.Model
     {
 
         public DbSet<Player> Players { get; set; }
-        //public DbSet<PlayerInGame> PlayersInGame { get; set; }
+        public DbSet<PlayerInGame> PlayersInGame { get; set; }
         public DbSet<Result> Results { get; set; }
         public DbSet<Game> Games { get; set; }
 
@@ -19,6 +19,9 @@ namespace FoJaJo.Model
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
             base.OnModelCreating(modelBuilder);
         }
     }

@@ -10,8 +10,6 @@ namespace FoJaJo.Model
 {
     public class Player
     {
-        private int totalWins = 0;
-        private int rating = 0;
 
         [MaxLength(30)]
         [Required]
@@ -27,17 +25,10 @@ namespace FoJaJo.Model
         public string Password { get; set; }
 
         [Required]
-        public int Rating {
-            get { return rating; }
-            set { rating = value; }
-        }
+        public int Rating { get; set; }
 
         [Required]
-        public int TotalWins
-        {
-            get { return totalWins; }
-            set { totalWins = value; }
-        }
+        public int TotalWins { get; set; }
 
         public Player(){}
 
@@ -46,8 +37,8 @@ namespace FoJaJo.Model
             Username = username;
             Email = email;
             Password = password;
-            Rating = rating;
-            TotalWins = totalWins;
+            Rating = 0;
+            TotalWins = 0;
         }
        
     }

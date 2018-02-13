@@ -12,7 +12,10 @@ namespace FoJaJo
         static void Main(string[] args)
         {
             GameContext gc = new GameContext();
-            
+
+            Player p = new Player("hejsan", "hej", "hej");
+
+            //gc.Players.Add(p);
          
             gc.SaveChanges();
             

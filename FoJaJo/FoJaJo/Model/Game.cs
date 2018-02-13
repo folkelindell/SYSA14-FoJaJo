@@ -10,29 +10,21 @@ namespace FoJaJo.Model
 {
     public class Game
     {
-        [Key]
-        [Required]
-        public string GameID{get; set;}
-        
-        [ForeignKey("username")]
-        [Required]
-        public Player StartedPlayerUsername { get; set; }
+        [Key, Required]
+        public string GameID { get; set; }
+
+        [ForeignKey("StartedPlayer"), Required]
+        public string StartedPlayerUsername { get; set; }
+        public Player StartedPlayer { get; set; }
 
         [Required]
         public int MaxNumberOfPlayers { get; set; }
 
-        /*
-        [Timestamp]
-        [Required]
-        public DateTime StartTime { get; set; }
-
-        [Timestamp]
-        public DateTime EndTime { get; set; }
-        */
         [Required]
         public string BoardDimension { get; set; }
 
         [ForeignKey("Result")]
-        public Result ResultId { get; set; }
-    }   
+        public int ResultId { get; set; }
+        public Result Result { get; set; }
+    }
 }
