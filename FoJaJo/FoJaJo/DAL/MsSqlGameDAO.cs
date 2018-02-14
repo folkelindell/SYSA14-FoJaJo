@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FoJaJo.Controller
+namespace FoJaJo.DAL
 {
-    class PasswordController
+    class MsSqlGameDAO
     {
     }
 }
