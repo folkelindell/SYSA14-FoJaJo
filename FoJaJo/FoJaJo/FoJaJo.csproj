@@ -54,9 +54,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\GameController.cs" />
-    <Compile Include="Controller\PasswordController.cs" />
     <Compile Include="Controller\PlayerController.cs" />
     <Compile Include="Controller\GameLogic.cs" />
+    <Compile Include="DAL\MsSqlGameDAO.cs" />
+    <Compile Include="DAL\MsSqlPlayerDAO.cs" />
     <Compile Include="GUI\RootForm.cs">
       <SubType>Form</SubType>
     </Compile>
