@@ -41,8 +41,10 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,6 +57,18 @@
     <Compile Include="Controller\PasswordController.cs" />
     <Compile Include="Controller\PlayerController.cs" />
     <Compile Include="Controller\GameLogic.cs" />
+    <Compile Include="GUI\RootForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RootForm.Designer.cs">
+      <DependentUpon>RootForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LoginControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\LoginControl.Designer.cs">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Game.cs" />
     <Compile Include="Model\PlayerInGame.cs" />
@@ -68,8 +82,14 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="GUI\" />
+    <EmbeddedResource Include="GUI\RootForm.resx">
+      <DependentUpon>RootForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LoginControl.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
