@@ -10,8 +10,20 @@ namespace FoJaJo.Model
 {
     public class Game
     {
+        public Game() { }
+        public Game(int maxNumberOfPlayers, string boardDimension, Result r, Player p)
+        {
+            MaxNumberOfPlayers = maxNumberOfPlayers;
+            BoardDimension = boardDimension;
+            Result = r;
+            ResultId = Result.ResultId;
+            StartedPlayer = p;
+            StartedPlayerUsername = p.Username;
+
+        }
         [Key, Required]
-        public string GameID { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int GameID { get; set; }
 
         [ForeignKey("StartedPlayer"), Required]
         public string StartedPlayerUsername { get; set; }
@@ -24,16 +36,8 @@ namespace FoJaJo.Model
         public string BoardDimension { get; set; }
 
         [ForeignKey("Result")]
-        public int ResultID { get; set; }
+        public int ResultId { get; set; }
         public Result Result { get; set; }
 
-        public Game(string gameID, Player player, int maxNumberOfPlayers, string boardDimension, Result result)
-        {
-            GameID = gameID;
-            StartedPlayerUsername = player.Username;
-            MaxNumberOfPlayers = maxNumberOfPlayers;
-            BoardDimension = boardDimension;
-            ResultID = result.ResultId;
-        }
     }
 }

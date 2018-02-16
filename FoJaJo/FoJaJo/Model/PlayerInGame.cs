@@ -15,7 +15,7 @@ namespace FoJaJo.Model
         public Player Player { get; set; }
 
         [Key, ForeignKey("Game"), Column(Order = 1)]
-        public string GameId { get; set; }
+        public int GameId { get; set; }
         public Game Game { get; set; }
         
         public int Score { get; set; }
