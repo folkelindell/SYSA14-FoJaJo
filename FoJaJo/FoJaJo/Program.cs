@@ -11,8 +11,7 @@ namespace FoJaJo
     {
         static void Main(string[] args)
         {
-           // GameContext gc = new GameContext();
-
+            
             
             
         }
