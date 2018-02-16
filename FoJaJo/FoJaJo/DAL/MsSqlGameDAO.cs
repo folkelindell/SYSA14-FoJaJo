@@ -8,5 +8,6 @@ namespace FoJaJo.DAL
 {
     class MsSqlGameDAO
     {
+
     }
 }
