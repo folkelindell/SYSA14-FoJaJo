@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace FoJaJo.Model
 {
-    public class Player
+    public class    Player
     {
 
         [MaxLength(30)]

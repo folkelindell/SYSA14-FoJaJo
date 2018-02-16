@@ -10,6 +10,9 @@ namespace FoJaJo.Model
 {
     public class Result
     {
+        public Result() { }
+        public Result(int id, string reason) { ResultId = id; Reason = reason; }
+
         [Key]
         public int ResultId { get; set; }
 
