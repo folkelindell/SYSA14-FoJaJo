@@ -56,11 +56,12 @@
     <Compile Include="Controller\GameLogic.cs" />
     <Compile Include="DAL\MsSqlGameDAO.cs" />
     <Compile Include="DAL\MsSqlPlayerDAO.cs" />
+    <Compile Include="DAL\MsSqlPlayerInGame.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Game.cs" />
     <Compile Include="Model\PlayerInGame.cs" />
     <Compile Include="Model\Result.cs" />
-    <Compile Include="Model\GameContext.cs" />
+    <Compile Include="DAL\EntityContext.cs" />
     <Compile Include="Model\Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

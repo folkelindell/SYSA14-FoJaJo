@@ -19,5 +19,12 @@ namespace FoJaJo.Model
         public Game Game { get; set; }
         
         public int Score { get; set; }
+
+        public PlayerInGame(Player player, Game game, int score)
+        {
+            Username = Player.Username;
+            GameId = Game.GameID;
+            Score = score;
+        }
     }
 }

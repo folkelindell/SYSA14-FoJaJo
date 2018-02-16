@@ -11,22 +11,39 @@ namespace FoJaJo.Controller
     public class PlayerController
     {
         MsSqlPlayerDAO playerDAO;
+        public PlayerController()
+        {
+            playerDAO = new MsSqlPlayerDAO();
+        }
+
         public void RegisterPlayer(string username, string email, string password)
         {
-            
-            playerDAO = new MsSqlPlayerDAO();
             Player player = new Player(username, email, password);
             try
             {
-                //  playerDAO.
+                playerDAO.RegisterPlayer(player);
             }
             catch
             {
 
-            }
-             
+            }    
         }
-        public void 
+        public Player GetPlayer(string username)
+        {
+            try
+            {
+                Player player = playerDAO.GetPlayer(username);
+                return player;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+        
+         
         
         
     }
