@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using FoJaJo.Model;
 
-namespace FoJaJo.Model
+namespace FoJaJo.DAL
 {
-    public class GameContext : DbContext
+    public class EntityContext : DbContext
     {
 
         public DbSet<Player> Players { get; set; }
@@ -14,7 +15,7 @@ namespace FoJaJo.Model
         public DbSet<Game> Games { get; set; }
 
 
-        public GameContext() : base("LuffarSchack") { }
+        public EntityContext() : base("LuffarSchack") { }
         // Twist our database
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
