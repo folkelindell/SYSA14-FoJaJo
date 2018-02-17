@@ -5,7 +5,7 @@ namespace FoJaJo.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<FoJaJo.Model.GameContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<FoJaJo.DAL.EntityContext>
     {
         //Update skiten: Update-Database -Verbose -Force
         public Configuration()
@@ -13,7 +13,7 @@ namespace FoJaJo.Migrations
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(FoJaJo.Model.GameContext context)
+        protected override void Seed(FoJaJo.DAL.EntityContext context)
         {
             //  This method will be called after migrating to the latest version.
 

@@ -24,7 +24,16 @@ namespace FoJaJo.Model
         public string BoardDimension { get; set; }
 
         [ForeignKey("Result")]
-        public int ResultId { get; set; }
+        public int ResultID { get; set; }
         public Result Result { get; set; }
+
+        public Game(string gameID, Player player, int maxNumberOfPlayers, string boardDimension, Result result)
+        {
+            GameID = gameID;
+            StartedPlayerUsername = player.Username;
+            MaxNumberOfPlayers = maxNumberOfPlayers;
+            BoardDimension = boardDimension;
+            ResultID = result.ResultId;
+        }
     }
 }
