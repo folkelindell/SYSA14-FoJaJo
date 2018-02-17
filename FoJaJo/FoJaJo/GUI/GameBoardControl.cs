@@ -17,6 +17,7 @@ namespace FoJaJo.GUI
         public GameBoardControl()
         {
             InitializeComponent();
+            this.squareControl1.Value = 1;
         }
     }
 }
