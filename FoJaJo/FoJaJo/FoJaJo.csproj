@@ -58,6 +58,27 @@
     <Compile Include="Controller\GameLogic.cs" />
     <Compile Include="DAL\MsSqlGameDAO.cs" />
     <Compile Include="DAL\MsSqlPlayerDAO.cs" />
+    <Compile Include="GUI\SquareControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\GameBoardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GameBoardControl.Designer.cs">
+      <DependentUpon>GameBoardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GameControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GameControl.Designer.cs">
+      <DependentUpon>GameControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PlayerInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\PlayerInfoControl.Designer.cs">
+      <DependentUpon>PlayerInfoControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\RootForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +90,12 @@
     </Compile>
     <Compile Include="GUI\LoginControl.Designer.cs">
       <DependentUpon>LoginControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PlayerPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\PlayerPanel.Designer.cs">
+      <DependentUpon>PlayerPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Game.cs" />
@@ -85,6 +112,18 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <EmbeddedResource Include="GUI\GameBoardControl.resx">
+      <DependentUpon>GameBoardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GameControl.resx">
+      <DependentUpon>GameControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PlayerInfoControl.resx">
+      <DependentUpon>PlayerInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PlayerPanel.resx">
+      <DependentUpon>PlayerPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\RootForm.resx">
       <DependentUpon>RootForm.cs</DependentUpon>
     </EmbeddedResource>
