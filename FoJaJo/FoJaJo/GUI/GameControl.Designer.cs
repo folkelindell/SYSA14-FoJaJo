@@ -28,15 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.gameBoardControl1 = new FoJaJo.GUI.GameBoardControl();
             this.SuspendLayout();
             // 
             // gameBoardControl1
             // 
+            this.gameBoardControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gameBoardControl1.Location = new System.Drawing.Point(0, 0);
+            this.gameBoardControl1.Name = "gameBoardControl1";
+            this.gameBoardControl1.Size = new System.Drawing.Size(150, 150);
+            this.gameBoardControl1.TabIndex = 0;
             // 
             // GameControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.gameBoardControl1);
             this.Name = "GameControl";
             this.ResumeLayout(false);
 
@@ -44,5 +51,6 @@
 
         #endregion
 
+        private GameBoardControl gameBoardControl1;
     }
 }

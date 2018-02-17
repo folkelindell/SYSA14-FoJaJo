@@ -92,6 +92,12 @@
       <DependentUpon>PlayerPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="DAL\MsSqlPlayerInGame.cs" />
+    <Compile Include="GUI\LoginControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\LoginControl.Designer.cs">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Game.cs" />
     <Compile Include="Model\PlayerInGame.cs" />
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GameControl.resx">
       <DependentUpon>GameControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LoginControl.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PlayerInfoControl.resx">
       <DependentUpon>PlayerInfoControl.cs</DependentUpon>

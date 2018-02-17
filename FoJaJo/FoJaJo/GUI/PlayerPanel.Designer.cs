@@ -28,24 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.playerInfoControl = new FoJaJo.GUI.PlayerInfoControl();
+            this.playerInfoControl1 = new FoJaJo.GUI.PlayerInfoControl();
+            this.loginControl1 = new FoJaJo.GUI.LoginControl();
             this.SuspendLayout();
             // 
-            // playerInfoControl
+            // playerInfoControl1
             // 
-            this.playerInfoControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.playerInfoControl.Location = new System.Drawing.Point(0, 0);
-            this.playerInfoControl.Name = "playerInfoControl";
-            this.playerInfoControl.Size = new System.Drawing.Size(394, 302);
-            this.playerInfoControl.TabIndex = 1;
+            this.playerInfoControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.playerInfoControl1.Location = new System.Drawing.Point(0, 0);
+            this.playerInfoControl1.Name = "playerInfoControl1";
+            this.playerInfoControl1.Size = new System.Drawing.Size(394, 302);
+            this.playerInfoControl1.TabIndex = 0;
             // 
             // loginControl1
             // 
+            this.loginControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.loginControl1.Location = new System.Drawing.Point(0, 0);
+            this.loginControl1.Name = "loginControl1";
+            this.loginControl1.Size = new System.Drawing.Size(394, 302);
+            this.loginControl1.TabIndex = 1;
             // 
             // PlayerPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.loginControl1);
+            this.Controls.Add(this.playerInfoControl1);
             this.Name = "PlayerPanel";
             this.Size = new System.Drawing.Size(394, 302);
             this.ResumeLayout(false);
@@ -53,6 +61,8 @@
         }
 
         #endregion
-        private PlayerInfoControl playerInfoControl;
+
+        private PlayerInfoControl playerInfoControl1;
+        private LoginControl loginControl1;
     }
 }
