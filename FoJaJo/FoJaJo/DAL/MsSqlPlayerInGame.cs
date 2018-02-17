@@ -7,37 +7,33 @@ using FoJaJo.Model;
 
 namespace FoJaJo.DAL
 {
-    
-    public class MsSqlPlayerDAO
+    public class MsSqlPlayerInGame
     {
         EntityContext ec = new EntityContext();
-
-        public void RegisterPlayer(Player newPlayer)
+        public void CreatePlayerInGame(Player player, Game game, int score)
         {
             try
             {
-                ec.Players.Add(newPlayer);
+                PlayerInGame playerInGame = new PlayerInGame(player, game, score);
+                ec.PlayersInGame.Add(playerInGame);
                 ec.SaveChanges();
             }
             catch
             {
 
             }
-
         }
-        public Player GetPlayer(string username)
+        public PlayerInGame GetPlayerInGame(Player player, Game game)
         {
-            
             try
             {
-                Player player = ec.Players.Find(username);
-                return player;
+                PlayerInGame pig = ec.PlayersInGame.Find(player, game);
+                return pig;
             }
             catch
             {
                 return null;
             }
- 
         }
     }
 }
