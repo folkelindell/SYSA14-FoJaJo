@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.playerInfoControl = new FoJaJo.GUI.PlayerInfoControl();
-            this.loginControl1 = new FoJaJo.GUI.LoginControl();
             this.SuspendLayout();
             // 
             // playerInfoControl
@@ -42,18 +41,11 @@
             // 
             // loginControl1
             // 
-            this.loginControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.loginControl1.Location = new System.Drawing.Point(0, 0);
-            this.loginControl1.Name = "loginControl1";
-            this.loginControl1.Size = new System.Drawing.Size(394, 302);
-            this.loginControl1.TabIndex = 2;
             // 
             // PlayerPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.loginControl1);
-            this.Controls.Add(this.playerInfoControl);
             this.Name = "PlayerPanel";
             this.Size = new System.Drawing.Size(394, 302);
             this.ResumeLayout(false);
@@ -62,6 +54,5 @@
 
         #endregion
         private PlayerInfoControl playerInfoControl;
-        private LoginControl loginControl1;
     }
 }

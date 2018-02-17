@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.p1 = new FoJaJo.GUI.PlayerPanel();
             this.playerPanel1 = new FoJaJo.GUI.PlayerPanel();
-            this.playerInfoControl1 = new FoJaJo.GUI.PlayerInfoControl();
-            this.playerPanel2 = new FoJaJo.GUI.PlayerPanel();
             this.gameControl1 = new FoJaJo.GUI.GameControl();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -44,10 +43,9 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel1.Controls.Add(this.p1, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.playerPanel1, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.playerInfoControl1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.playerPanel2, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.gameControl1, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.gameControl1, 4, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -60,28 +58,19 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(709, 479);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // p1
+            // 
+            this.p1.Location = new System.Drawing.Point(23, 250);
+            this.p1.Name = "p1";
+            this.p1.Size = new System.Drawing.Size(185, 210);
+            this.p1.TabIndex = 0;
+            // 
             // playerPanel1
             // 
-            this.playerPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.playerPanel1.Location = new System.Drawing.Point(23, 14);
             this.playerPanel1.Name = "playerPanel1";
             this.playerPanel1.Size = new System.Drawing.Size(185, 220);
-            this.playerPanel1.TabIndex = 0;
-            // 
-            // playerInfoControl1
-            // 
-            this.playerInfoControl1.Location = new System.Drawing.Point(3, 3);
-            this.playerInfoControl1.Name = "playerInfoControl1";
-            this.playerInfoControl1.Size = new System.Drawing.Size(14, 5);
-            this.playerInfoControl1.TabIndex = 1;
-            // 
-            // playerPanel2
-            // 
-            this.playerPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.playerPanel2.Location = new System.Drawing.Point(23, 250);
-            this.playerPanel2.Name = "playerPanel2";
-            this.playerPanel2.Size = new System.Drawing.Size(185, 210);
-            this.playerPanel2.TabIndex = 2;
+            this.playerPanel1.TabIndex = 1;
             // 
             // gameControl1
             // 
@@ -89,8 +78,8 @@
             this.gameControl1.Location = new System.Drawing.Point(229, 14);
             this.gameControl1.Name = "gameControl1";
             this.tableLayoutPanel1.SetRowSpan(this.gameControl1, 3);
-            this.gameControl1.Size = new System.Drawing.Size(463, 446);
-            this.gameControl1.TabIndex = 3;
+            this.gameControl1.Size = new System.Drawing.Size(477, 446);
+            this.gameControl1.TabIndex = 2;
             // 
             // RootForm
             // 
@@ -108,9 +97,8 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private GUI.PlayerPanel playerPanel1;
-        private GUI.PlayerInfoControl playerInfoControl1;
-        private GUI.PlayerPanel playerPanel2;
+        private PlayerPanel p1;
+        private PlayerPanel playerPanel1;
         private GameControl gameControl1;
     }
 }
