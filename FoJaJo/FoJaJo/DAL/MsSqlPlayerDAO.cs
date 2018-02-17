@@ -23,21 +23,19 @@ namespace FoJaJo.DAL
             {
 
             }
-
         }
         public Player GetPlayer(string username)
         {
-            
             try
             {
                 Player player = ec.Players.Find(username);
                 return player;
             }
-            catch
+            catch (Exception)
             {
-                return null;
+
+                throw;
             }
- 
         }
     }
 }
