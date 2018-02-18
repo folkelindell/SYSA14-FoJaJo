@@ -26,6 +26,7 @@ namespace FoJaJo.GUI
             }else if(Value > 0)
             {
                 BackColor = System.Drawing.Color.IndianRed;
+
             }
 
             base.OnPaint(pevent);

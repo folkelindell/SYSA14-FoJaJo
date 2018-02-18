@@ -16,5 +16,6 @@ namespace FoJaJo.GUI
         {
             InitializeComponent();
         }
+
     }
 }

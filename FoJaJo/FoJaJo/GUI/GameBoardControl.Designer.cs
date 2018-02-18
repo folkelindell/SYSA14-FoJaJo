@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.squareControl1 = new FoJaJo.GUI.SquareControl();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -36,6 +38,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.squareControl1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -45,6 +48,19 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(363, 339);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // squareControl1
+            // 
+            this.squareControl1.BackColor = System.Drawing.Color.IndianRed;
+            this.squareControl1.Location = new System.Drawing.Point(3, 3);
+            this.squareControl1.Name = "squareControl1";
+            this.squareControl1.Size = new System.Drawing.Size(75, 23);
+            this.squareControl1.TabIndex = 1;
+            this.squareControl1.Text = "squareControl1";
+            this.squareControl1.UseVisualStyleBackColor = true;
+            this.squareControl1.Value = 0;
+            this.squareControl1.XPos = 0;
+            this.squareControl1.YPos = 0;
+            // 
             // GameBoardControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -52,6 +68,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "GameBoardControl";
             this.Size = new System.Drawing.Size(363, 339);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -59,5 +76,6 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private SquareControl squareControl1;
     }
 }
