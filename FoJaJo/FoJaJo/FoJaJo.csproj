@@ -44,6 +44,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -110,6 +111,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="GUI\GameBoardControl.resx">
@@ -130,6 +132,9 @@
     <EmbeddedResource Include="GUI\RootForm.resx">
       <DependentUpon>RootForm.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
