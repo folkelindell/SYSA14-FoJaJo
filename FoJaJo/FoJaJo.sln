@@ -4,13 +4,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoJaJo", "FoJaJo\FoJaJo.csproj", "{26289487-BF7B-4B6C-8B29-A454F2A8C6CE}"
-	ProjectSection(ProjectDependencies) = postProject
-		{828AFC52-9B83-43BF-B6BC-70BD2247B955} = {828AFC52-9B83-43BF-B6BC-70BD2247B955}
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{466E1D08-C059-42C5-B856-C716D3C039FE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoJaJoWebServer", "FoJaJoWebServer\FoJaJoWebServer.csproj", "{828AFC52-9B83-43BF-B6BC-70BD2247B955}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,10 +21,6 @@ Global
 		{466E1D08-C059-42C5-B856-C716D3C039FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{466E1D08-C059-42C5-B856-C716D3C039FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{466E1D08-C059-42C5-B856-C716D3C039FE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{828AFC52-9B83-43BF-B6BC-70BD2247B955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{828AFC52-9B83-43BF-B6BC-70BD2247B955}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{828AFC52-9B83-43BF-B6BC-70BD2247B955}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{828AFC52-9B83-43BF-B6BC-70BD2247B955}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
