@@ -26,7 +26,7 @@ namespace FoJaJo.Model
         [ForeignKey("Result")]
         public int ResultID { get; set; }
         public Result Result { get; set; }
-
+        public Game() { }
         public Game(string gameID, Player player, int maxNumberOfPlayers, string boardDimension, Result result)
         {
             GameID = gameID;
