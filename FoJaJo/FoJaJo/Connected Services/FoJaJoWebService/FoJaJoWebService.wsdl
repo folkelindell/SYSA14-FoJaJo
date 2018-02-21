@@ -57,7 +57,7 @@
       </s:complexType>
       <s:complexType name="Game">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="GameID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GameID" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="StartedPlayerUsername" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="StartedPlayer" type="tns:Player" />
           <s:element minOccurs="1" maxOccurs="1" name="MaxNumberOfPlayers" type="s:int" />
@@ -72,6 +72,16 @@
           <s:element minOccurs="0" maxOccurs="1" name="Reason" type="s:string" />
         </s:sequence>
       </s:complexType>
+      <s:element name="GetPlayers">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPlayersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPlayersResult" type="tns:ArrayOfPlayer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="FindFile">
         <s:complexType>
           <s:sequence>
@@ -86,13 +96,24 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="GetPlayers">
-        <s:complexType />
-      </s:element>
-      <s:element name="GetPlayersResponse">
+      <s:element name="getBudgetBuffer">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="GetPlayersResult" type="tns:ArrayOfPlayer" />
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getBudgetBufferResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getBudgetBufferResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -116,17 +137,23 @@
   <wsdl:message name="GetAllGamesSoapOut">
     <wsdl:part name="parameters" element="tns:GetAllGamesResponse" />
   </wsdl:message>
+  <wsdl:message name="GetPlayersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPlayers" />
+  </wsdl:message>
+  <wsdl:message name="GetPlayersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPlayersResponse" />
+  </wsdl:message>
   <wsdl:message name="FindFileSoapIn">
     <wsdl:part name="parameters" element="tns:FindFile" />
   </wsdl:message>
   <wsdl:message name="FindFileSoapOut">
     <wsdl:part name="parameters" element="tns:FindFileResponse" />
   </wsdl:message>
-  <wsdl:message name="GetPlayersSoapIn">
-    <wsdl:part name="parameters" element="tns:GetPlayers" />
+  <wsdl:message name="getBudgetBufferSoapIn">
+    <wsdl:part name="parameters" element="tns:getBudgetBuffer" />
   </wsdl:message>
-  <wsdl:message name="GetPlayersSoapOut">
-    <wsdl:part name="parameters" element="tns:GetPlayersResponse" />
+  <wsdl:message name="getBudgetBufferSoapOut">
+    <wsdl:part name="parameters" element="tns:getBudgetBufferResponse" />
   </wsdl:message>
   <wsdl:portType name="FoJaJoWebServiceSoap">
     <wsdl:operation name="GetPlayer">
@@ -141,13 +168,17 @@
       <wsdl:input message="tns:GetAllGamesSoapIn" />
       <wsdl:output message="tns:GetAllGamesSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="GetPlayers">
+      <wsdl:input message="tns:GetPlayersSoapIn" />
+      <wsdl:output message="tns:GetPlayersSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="FindFile">
       <wsdl:input message="tns:FindFileSoapIn" />
       <wsdl:output message="tns:FindFileSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="GetPlayers">
-      <wsdl:input message="tns:GetPlayersSoapIn" />
-      <wsdl:output message="tns:GetPlayersSoapOut" />
+    <wsdl:operation name="getBudgetBuffer">
+      <wsdl:input message="tns:getBudgetBufferSoapIn" />
+      <wsdl:output message="tns:getBudgetBufferSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="FoJaJoWebServiceSoap" type="tns:FoJaJoWebServiceSoap">
@@ -179,6 +210,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetPlayers">
+      <soap:operation soapAction="http://tempuri.org/GetPlayers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="FindFile">
       <soap:operation soapAction="http://tempuri.org/FindFile" style="document" />
       <wsdl:input>
@@ -188,8 +228,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetPlayers">
-      <soap:operation soapAction="http://tempuri.org/GetPlayers" style="document" />
+    <wsdl:operation name="getBudgetBuffer">
+      <soap:operation soapAction="http://tempuri.org/getBudgetBuffer" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -227,6 +267,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetPlayers">
+      <soap12:operation soapAction="http://tempuri.org/GetPlayers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="FindFile">
       <soap12:operation soapAction="http://tempuri.org/FindFile" style="document" />
       <wsdl:input>
@@ -236,8 +285,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetPlayers">
-      <soap12:operation soapAction="http://tempuri.org/GetPlayers" style="document" />
+    <wsdl:operation name="getBudgetBuffer">
+      <soap12:operation soapAction="http://tempuri.org/getBudgetBuffer" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

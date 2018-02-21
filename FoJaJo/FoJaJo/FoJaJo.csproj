@@ -65,12 +65,19 @@
     <Compile Include="Controller\PlayerController.cs" />
     <Compile Include="Controller\GameLogic.cs" />
     <Compile Include="Controller\RootController.cs" />
+    <Compile Include="DAL\ERPIntegration.cs" />
     <Compile Include="DAL\MsSqlGameDAO.cs" />
     <Compile Include="DAL\MsSqlPlayerDAO.cs" />
     <Compile Include="FoJaJoDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FoJaJoDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ERPIntegration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ERPIntegration.Designer.cs">
+      <DependentUpon>ERPIntegration.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\IView.cs" />
     <Compile Include="GUI\LuffarRootControl.cs">
@@ -119,11 +126,11 @@
     <Compile Include="GUI\LoginControl.Designer.cs">
       <DependentUpon>LoginControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\WebServiceOpenFile.cs">
+    <Compile Include="GUI\OpenFileShowPlayers.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\WebServiceOpenFile.Designer.cs">
-      <DependentUpon>WebServiceOpenFile.cs</DependentUpon>
+    <Compile Include="GUI\OpenFileShowPlayers.Designer.cs">
+      <DependentUpon>OpenFileShowPlayers.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Game.cs" />
@@ -141,22 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.FindFileResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.Game.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetAllGamesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetAllPlayersResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetPlayerResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetPlayersResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.Player.datasource">
@@ -182,6 +174,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GUI\ERPIntegration.resx">
+      <DependentUpon>ERPIntegration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GameBoardControl.resx">
       <DependentUpon>GameBoardControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,8 +198,8 @@
     <EmbeddedResource Include="GUI\RootForm.resx">
       <DependentUpon>RootForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\WebServiceOpenFile.resx">
-      <DependentUpon>WebServiceOpenFile.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\OpenFileShowPlayers.resx">
+      <DependentUpon>OpenFileShowPlayers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

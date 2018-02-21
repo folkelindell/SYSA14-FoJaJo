@@ -25,5 +25,7 @@ namespace FoJaJo.Controller
             List<Player> list = new List<Player>(client.GetAllPlayers());
             return list;
         }
+
+
     }
 }

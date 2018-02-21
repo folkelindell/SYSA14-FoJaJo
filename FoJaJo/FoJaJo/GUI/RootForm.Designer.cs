@@ -30,9 +30,9 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.luffarRootControl1 = new FoJaJo.GUI.LuffarRootControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.webServiceOpenFile1 = new FoJaJo.GUI.webServiceOpenFile();
+            this.openFileShowPlayers1 = new FoJaJo.GUI.OpenFileShowPlayers();
+            this.luffarRootControl1 = new FoJaJo.GUI.LuffarRootControl();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -60,17 +60,9 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // luffarRootControl1
-            // 
-            this.luffarRootControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.luffarRootControl1.Location = new System.Drawing.Point(3, 3);
-            this.luffarRootControl1.Name = "luffarRootControl1";
-            this.luffarRootControl1.Size = new System.Drawing.Size(849, 632);
-            this.luffarRootControl1.TabIndex = 0;
-            // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.webServiceOpenFile1);
+            this.tabPage2.Controls.Add(this.openFileShowPlayers1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -79,13 +71,20 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // webServiceOpenFile1
+            // openFileShowPlayers1
             // 
-            this.webServiceOpenFile1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webServiceOpenFile1.Location = new System.Drawing.Point(3, 3);
-            this.webServiceOpenFile1.Name = "webServiceOpenFile1";
-            this.webServiceOpenFile1.Size = new System.Drawing.Size(849, 632);
-            this.webServiceOpenFile1.TabIndex = 0;
+            this.openFileShowPlayers1.Location = new System.Drawing.Point(85, 30);
+            this.openFileShowPlayers1.Name = "openFileShowPlayers1";
+            this.openFileShowPlayers1.Size = new System.Drawing.Size(631, 511);
+            this.openFileShowPlayers1.TabIndex = 0;
+            // 
+            // luffarRootControl1
+            // 
+            this.luffarRootControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.luffarRootControl1.Location = new System.Drawing.Point(3, 3);
+            this.luffarRootControl1.Name = "luffarRootControl1";
+            this.luffarRootControl1.Size = new System.Drawing.Size(849, 632);
+            this.luffarRootControl1.TabIndex = 0;
             // 
             // RootForm
             // 
@@ -108,6 +107,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private LuffarRootControl luffarRootControl1;
-        private webServiceOpenFile webServiceOpenFile1;
+        private OpenFileShowPlayers openFileShowPlayers1;
     }
 }

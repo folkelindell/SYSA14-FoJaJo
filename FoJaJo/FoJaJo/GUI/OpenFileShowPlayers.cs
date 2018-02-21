@@ -13,11 +13,11 @@ using FoJaJo.DAL;
 
 namespace FoJaJo.GUI
 {
-    public partial class webServiceOpenFile : UserControl
+    public partial class OpenFileShowPlayers : UserControl
     {
-        WebServiceController1 wc = new WebServiceController1();
+        WebServiceController1 wc; 
 
-        public webServiceOpenFile()
+        public OpenFileShowPlayers()
         {
             InitializeComponent();
         }
@@ -29,8 +29,12 @@ namespace FoJaJo.GUI
 
         private void OpenFile_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFile = new OpenFileDialog();
-            openFile.Filter = "txt files (*.txt)|*.txt";
+            wc = new WebServiceController1();
+
+            OpenFileDialog openFile = new OpenFileDialog
+            {
+                Filter = "txt files (*.txt)|*.txt"
+            };
 
             if (openFile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
@@ -38,12 +42,12 @@ namespace FoJaJo.GUI
                 txtBox.Text = "";
                 string strFilePath = openFile.InitialDirectory + openFile.FileName;
                 string fileText = wc.OpenFile(strFilePath);
-                txtBox.Text = fileText+"\n\n"+strFilePath;
+                txtBox.Text = fileText;
 
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void TxtBoxOpenFile_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -55,8 +59,9 @@ namespace FoJaJo.GUI
 
         private void BtnShowPlayers_Click(object sender, EventArgs e)
         {
-            dataGridPlayers.DataSource = null;
-            dataGridPlayers.DataSource = wc.GetAllPlayers();
+            wc = new WebServiceController1();
+            dataGridGetAllPlayers.DataSource = null;
+            dataGridGetAllPlayers.DataSource = wc.GetAllPlayers();
         }
     }
 }
