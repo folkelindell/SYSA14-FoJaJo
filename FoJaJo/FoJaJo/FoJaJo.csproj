@@ -56,8 +56,16 @@
     <Compile Include="Controller\GameController.cs" />
     <Compile Include="Controller\PlayerController.cs" />
     <Compile Include="Controller\GameLogic.cs" />
+    <Compile Include="Controller\RootController.cs" />
     <Compile Include="DAL\MsSqlGameDAO.cs" />
     <Compile Include="DAL\MsSqlPlayerDAO.cs" />
+    <Compile Include="GUI\IView.cs" />
+    <Compile Include="GUI\LuffarRootControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\LuffarRootControl.Designer.cs">
+      <DependentUpon>LuffarRootControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\RootForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PlayerPanel.resx">
       <DependentUpon>PlayerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LuffarRootControl.resx">
+      <DependentUpon>LuffarRootControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\RootForm.resx">
       <DependentUpon>RootForm.cs</DependentUpon>

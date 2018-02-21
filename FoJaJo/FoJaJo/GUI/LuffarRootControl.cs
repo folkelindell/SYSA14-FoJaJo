@@ -1,5 +1,4 @@
-﻿using FoJaJo.Controller;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,16 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FoJaJo.GUI;
 
 namespace FoJaJo.GUI
 {
-    public partial class RootForm : Form
+    public partial class LuffarRootControl : UserControl
     {
-        public RootController Controller { get; set; }
-        public RootForm()
+        public LuffarRootControl()
         {
             InitializeComponent();
-            Controller = new RootController(this);
         }
     }
 }
