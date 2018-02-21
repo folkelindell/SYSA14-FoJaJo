@@ -14,7 +14,7 @@ namespace WebService
     /// <summary>
     /// Summary description for FoJaJoWebservice
     /// </summary>
-    [WebService(Namespace = "FoJaJo.ics.lu.se")]
+    [WebService(Namespace = "http://tempuri.org")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 

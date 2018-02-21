@@ -8,12 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using FoJaJo.Controller;
+using FoJaJo.DAL;
 
 namespace FoJaJo.GUI
 {
-    public partial class WebServiceOpenFile : UserControl
+    public partial class webServiceOpenFile : UserControl
     {
-        public WebServiceOpenFile()
+        WebServiceController1 wc = new WebServiceController1();
+
+        public webServiceOpenFile()
         {
             InitializeComponent();
         }
@@ -31,12 +35,28 @@ namespace FoJaJo.GUI
             if (openFile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
 
+                txtBox.Text = "";
                 string strFilePath = openFile.InitialDirectory + openFile.FileName;
+                string fileText = wc.OpenFile(strFilePath);
+                txtBox.Text = fileText+"\n\n"+strFilePath;
 
-                //System.IO.StreamReader sr = new System.IO.StreamReader(openFile.FileName);
-                MessageBox.Show(strFilePath);
-                //sr.Close();
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataGridPlayers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void BtnShowPlayers_Click(object sender, EventArgs e)
+        {
+            dataGridPlayers.DataSource = null;
+            dataGridPlayers.DataSource = wc.GetAllPlayers();
         }
     }
 }
