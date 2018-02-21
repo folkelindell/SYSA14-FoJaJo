@@ -14,7 +14,7 @@ namespace WebService
     /// <summary>
     /// Summary description for FoJaJoWebservice
     /// </summary>
-    [WebService(Namespace = "http://tempuri.org/")]
+    [WebService(Namespace = "FoJaJo.ics.lu.se")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
@@ -24,7 +24,7 @@ namespace WebService
     {
         
         DataSet ds = new DataSet();
-        SqlConnection connection = new SqlConnection("data source=DESKTOP-34D95N6;initial catalog=LuffarSchackDB;integrated security=True;");
+        SqlConnection connection = new SqlConnection("data source=laptop-7hibdffa;initial catalog=FoJaJoDB;integrated security=True;");
         SqlDataAdapter da = new SqlDataAdapter();
         
         [WebMethod]
