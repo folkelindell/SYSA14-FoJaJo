@@ -5,31 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 using FoJaJo.Model;
 using FoJaJo.DAL;
+using FoJaJo.GUI;
 
 namespace FoJaJo.Controller
 {
     public class GameController
     {
-        private int[,] board;
-        public Player PlayerOne { get; set; }
-        public Player PlayerTwo { get; set; }
-
-        public GameController(int x, int y, Player a, Player b)
-        {
-            board = new int[x, y];
-            PlayerOne = a;
-            PlayerTwo = b;
-        }
-
-        public int makeMove(int x, int y, int player)
-        {
-            return 0;
-        }
-
         MsSqlGameDAO GameDAO;
-        public GameController()
+        public GameControl View { get; set; }
+
+        public void makeMove(object sender, System.EventArgs e)
+        {
+            Console.WriteLine(((SquareControl)sender).XPos);
+        }
+
+        public GameController(GameControl view)
         {
             GameDAO = new MsSqlGameDAO();
+            View = view;
         }
         public void CreateGame(string gameID, Player player, int maxNumberOfPlayers, string boardDimension, Result result)
         {
