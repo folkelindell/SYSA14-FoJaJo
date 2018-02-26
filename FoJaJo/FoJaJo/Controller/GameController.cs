@@ -12,17 +12,58 @@ namespace FoJaJo.Controller
     public class GameController
     {
         MsSqlGameDAO GameDAO;
-        public GameControl View { get; set; }
+        public delegate void gameStartEvent();
+        public delegate void gameWonEvent();
+        public PlayerController PlayerController { get; set; }
+        public GameBoardState BoardState { get; set; }
+        public GameBoardControl BoardView { get; set; }
+        public gameStartEvent GameStarted { get; set; }
+        public gameWonEvent GameWon { get; set; }
 
-        public void makeMove(object sender, System.EventArgs e)
-        {
-            Console.WriteLine(((SquareControl)sender).XPos);
-        }
-
-        public GameController(GameControl view)
+        public GameController()
         {
             GameDAO = new MsSqlGameDAO();
-            View = view;
+            PlayerController = new PlayerController();
+        }
+
+        public void MakeMove(int x, int y)
+        {
+            if (BoardState.BoardValues[x, y].SquareValue == 0)
+            {
+                BoardState.SetValue(x, y);
+                if (BoardState.WinCheck(x, y) {
+                    GameWon();
+                    GameDAO.CreateGame()
+                }
+                else BoardState.NextTurn();
+            }
+        }
+
+        public Player LogInPlayer(String usr, String pw)
+        {
+            return PlayerController.LogInPlayer(usr, pw);
+        }
+
+        public Boolean LogOutPlayer()
+        {
+            if(BoardState != null && BoardState.Winner != null)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public void NewGame(Player p1, Player p2, int x, int y)
+        {
+            if (p1 != null && p2 != null)
+            {
+                if (!p1.Username.Equals(p2.Username))
+                {
+                    BoardState = new GameBoardState(p1, p2, x, y);
+                    GameStarted();
+                }
+            }
+
         }
         public void CreateGame(string gameID, Player player, int maxNumberOfPlayers, string boardDimension, Result result)
         {
@@ -34,7 +75,7 @@ namespace FoJaJo.Controller
             catch
             {
 
-            } 
+            }
         }
         public Game GetGame(int gameID)
         {

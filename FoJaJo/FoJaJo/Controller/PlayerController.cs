@@ -12,11 +12,9 @@ namespace FoJaJo.Controller
     public class PlayerController
     {
         MsSqlPlayerDAO playerDAO;
-        public PlayerPanel View { get; set; }
-        public PlayerController(PlayerPanel view)
+        public PlayerController()
         {
             playerDAO = new MsSqlPlayerDAO();
-            View = view;
         }
         public Player LogInPlayer(string usr, string pw)
         {
@@ -32,10 +30,6 @@ namespace FoJaJo.Controller
             }
         }
 
-        public Boolean LogOutPlayer()
-        {
-            return true;
-        }
         public void RegisterPlayer(string username, string email, string password)
         {
             Player player = new Player(username, email, password);

@@ -14,7 +14,6 @@ namespace FoJaJo.GUI
 {
     public partial class LoginControl : UserControl
     {
-        public PlayerController Controller { get; set; }
         public LoginControl()
         {
             InitializeComponent();
@@ -22,7 +21,7 @@ namespace FoJaJo.GUI
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            Player player = Controller.LogInPlayer(usernameInput.Text, passwordInput.Text);
+            Player player = (Parent as PlayerPanel).Controller.LogInPlayer(usernameInput.Text, passwordInput.Text   );
             if (player == null)
             {
                 errorLabel.Show();

@@ -73,6 +73,7 @@
     <Compile Include="GUI\RootForm.Designer.cs">
       <DependentUpon>RootForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Square.cs" />
     <Compile Include="GUI\SquareControl.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -81,12 +82,6 @@
     </Compile>
     <Compile Include="GUI\GameBoardControl.Designer.cs">
       <DependentUpon>GameBoardControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GameControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\GameControl.Designer.cs">
-      <DependentUpon>GameControl.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\PlayerInfoControl.cs">
       <SubType>UserControl</SubType>
@@ -109,6 +104,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Game.cs" />
+    <Compile Include="Model\GameBoardState.cs" />
     <Compile Include="Model\PlayerInGame.cs" />
     <Compile Include="Model\Result.cs" />
     <Compile Include="DAL\EntityContext.cs" />
@@ -124,9 +120,6 @@
   <ItemGroup>
     <EmbeddedResource Include="GUI\GameBoardControl.resx">
       <DependentUpon>GameBoardControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GameControl.resx">
-      <DependentUpon>GameControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\LoginControl.resx">
       <DependentUpon>LoginControl.cs</DependentUpon>

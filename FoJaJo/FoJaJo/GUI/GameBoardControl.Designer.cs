@@ -28,15 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            
+            this.squareGrid = new System.Windows.Forms.TableLayoutPanel();
+            this.SuspendLayout();
+            // 
+            // squareGrid
+            // 
+            this.squareGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.squareGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.squareGrid.Location = new System.Drawing.Point(0, 0);
+            this.squareGrid.Name = "squareGrid";
+            this.squareGrid.Size = new System.Drawing.Size(1089, 593);
+            this.squareGrid.TabIndex = 0;
             // 
             // GameBoardControl
             // 
- 
+            this.Controls.Add(this.squareGrid);
+            this.Name = "GameBoardControl";
+            this.Size = new System.Drawing.Size(1089, 593);
+            this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.TableLayoutPanel squareGrid;
     }
 }
