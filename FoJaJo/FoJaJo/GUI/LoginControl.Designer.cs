@@ -44,7 +44,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21F));
             this.tableLayoutPanel1.Controls.Add(this.passwordInput, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.loginButton, 2, 6);
             this.tableLayoutPanel1.Controls.Add(this.usernameInput, 1, 2);
@@ -72,7 +72,7 @@
             this.passwordInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.passwordInput.Location = new System.Drawing.Point(23, 110);
             this.passwordInput.Name = "passwordInput";
-            this.passwordInput.Size = new System.Drawing.Size(192, 20);
+            this.passwordInput.Size = new System.Drawing.Size(191, 20);
             this.passwordInput.TabIndex = 1;
             // 
             // loginButton
@@ -80,7 +80,7 @@
             this.loginButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.loginButton.Location = new System.Drawing.Point(82, 168);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(133, 23);
+            this.loginButton.Size = new System.Drawing.Size(132, 23);
             this.loginButton.TabIndex = 2;
             this.loginButton.Text = "Log in";
             this.loginButton.UseVisualStyleBackColor = true;
@@ -92,7 +92,7 @@
             this.usernameInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.usernameInput.Location = new System.Drawing.Point(23, 52);
             this.usernameInput.Name = "usernameInput";
-            this.usernameInput.Size = new System.Drawing.Size(192, 20);
+            this.usernameInput.Size = new System.Drawing.Size(191, 20);
             this.usernameInput.TabIndex = 0;
             // 
             // usernameLabel
@@ -123,7 +123,7 @@
             this.errorLabel.ForeColor = System.Drawing.Color.Red;
             this.errorLabel.Location = new System.Drawing.Point(23, 136);
             this.errorLabel.Name = "errorLabel";
-            this.errorLabel.Size = new System.Drawing.Size(192, 29);
+            this.errorLabel.Size = new System.Drawing.Size(191, 29);
             this.errorLabel.TabIndex = 5;
             this.errorLabel.Text = "Invalid username or password";
             this.errorLabel.Visible = false;

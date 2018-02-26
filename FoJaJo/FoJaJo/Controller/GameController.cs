@@ -31,9 +31,8 @@ namespace FoJaJo.Controller
             if (BoardState.BoardValues[x, y].SquareValue == 0)
             {
                 BoardState.SetValue(x, y);
-                if (BoardState.WinCheck(x, y) {
+                if (BoardState.WinCheck(x, y)) {
                     GameWon();
-                    GameDAO.CreateGame()
                 }
                 else BoardState.NextTurn();
             }
