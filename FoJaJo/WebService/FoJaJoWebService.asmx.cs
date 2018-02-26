@@ -14,7 +14,7 @@ namespace WebService
     /// <summary>
     /// Summary description for FoJaJoWebservice
     /// </summary>
-    [WebService(Namespace = "http://tempuri.org/")]
+    [WebService(Namespace = "http://tempuri.org")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
@@ -22,15 +22,19 @@ namespace WebService
 
     public class FoJaJoWebService : System.Web.Services.WebService
     {
-        
+
         DataSet ds = new DataSet();
-        SqlConnection connection = new SqlConnection("data source=DESKTOP-34D95N6;initial catalog=LuffarSchackDB;integrated security=True;");
+
+        SqlConnection navConnection = new SqlConnection("data source=laptop-7hibdffa;initial catalog = Demo Database NAV (5-0);user id=sa;password=12345;integrated security=True");
+        SqlConnection luffarSchackCon = new SqlConnection("data source=laptop-7hibdffa;initial catalog=FoJaJoDB;integrated security=True;");
         SqlDataAdapter da = new SqlDataAdapter();
-        
+
+        #region PK
         [WebMethod]
         public Player GetPlayer(string username)
         {
-            using (EntityContext ec = new EntityContext()) {
+            using (EntityContext ec = new EntityContext())
+            {
                 Player player = ec.Players.Find(username);
                 return player;
             }
@@ -61,20 +65,16 @@ namespace WebService
                 return list;
             }
         }
-        
-        
-        [WebMethod]
-        public string FindFile(string filePath)
-        {
-            return File.ReadAllText(filePath);
-        }
-        
+
+
+
+
         [WebMethod]
         public List<Player> GetPlayers()
         {
             List<Player> players = new List<Player>();
-            connection.Open();
-            using (SqlCommand command = new SqlCommand("SELECT * FROM Player", connection))
+            luffarSchackCon.Open();
+            using (SqlCommand command = new SqlCommand("SELECT * FROM Player", luffarSchackCon))
             {
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
@@ -91,6 +91,31 @@ namespace WebService
                 }
             }
             return players;
+        }
+        #endregion
+
+        [WebMethod]
+        public string FindFile(string filePath)
+        {
+            return File.ReadAllText(filePath);
+        }
+
+        [WebMethod]
+        public DataSet getBudgetBuffer(string filter)
+        {
+            string sqlCommand = "select * from [CRONUS Sverige AB$G_L Acc_ Budget Buffer] where Code like '%" + filter + "%'";
+
+            navConnection.Open();
+            using (SqlCommand command = new SqlCommand(sqlCommand, navConnection))
+            {
+                command.CommandText = filter;
+                da.SelectCommand = command;
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                navConnection.Close();
+                
+                return ds;
+            }
         }
     }
 }

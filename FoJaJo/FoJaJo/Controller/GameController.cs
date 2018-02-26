@@ -65,11 +65,11 @@ namespace FoJaJo.Controller
             }
 
         }
-        public void CreateGame(string gameID, Player player, int maxNumberOfPlayers, string boardDimension, Result result)
+        public void CreateGame(Player player, int maxNumberOfPlayers, string boardDimension, Result result)
         {
             try
             {
-                Game game = new Game(gameID, player, maxNumberOfPlayers, boardDimension, result);
+                Game game = new Game(player, maxNumberOfPlayers, boardDimension, result);
                 GameDAO.CreateGame(game);
             }
             catch
