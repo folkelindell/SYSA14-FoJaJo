@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FoJaJo.Model;
 using FoJaJo.DAL;
+using FoJaJo.GUI;
 
 namespace FoJaJo.Controller
 {
@@ -15,36 +16,33 @@ namespace FoJaJo.Controller
         {
             playerDAO = new MsSqlPlayerDAO();
         }
+        public Player LogInPlayer(string usr, string pw)
+        {
+            Console.WriteLine(usr);
+            Player player = GetPlayer(usr);
+            if (player != null && player.Password.Equals(pw))
+            {
+                return player;
+            }
+            else
+            {
+                return null;
+            }
+        }
 
         public void RegisterPlayer(string username, string email, string password)
         {
             Player player = new Player(username, email, password);
-            try
-            {
-                playerDAO.RegisterPlayer(player);
-            }
-            catch
-            {
-
-            }    
+            playerDAO.RegisterPlayer(player);
         }
         public Player GetPlayer(string username)
         {
-            try
-            {
-                Player player = playerDAO.GetPlayer(username);
-                return player;
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-
+            Player player = playerDAO.GetPlayer(username);
+            return player;
         }
-        
-         
-        
-        
+
+
+
+
     }
 }

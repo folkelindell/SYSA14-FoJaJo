@@ -28,77 +28,85 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.p1 = new FoJaJo.GUI.PlayerPanel();
-            this.playerPanel1 = new FoJaJo.GUI.PlayerPanel();
-            this.gameControl1 = new FoJaJo.GUI.GameControl();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.openFileShowPlayers1 = new FoJaJo.GUI.OpenFileShowPlayers();
+            this.luffarRootControl1 = new FoJaJo.GUI.LuffarRootControl();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // tabControl1
             // 
-            this.tableLayoutPanel1.ColumnCount = 5;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 191F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.tableLayoutPanel1.Controls.Add(this.p1, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.playerPanel1, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.gameControl1, 4, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.64135F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 95.35865F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 216F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(709, 479);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(906, 698);
+            this.tabControl1.TabIndex = 0;
             // 
-            // p1
+            // tabPage1
             // 
-            this.p1.Location = new System.Drawing.Point(23, 250);
-            this.p1.Name = "p1";
-            this.p1.Size = new System.Drawing.Size(185, 210);
-            this.p1.TabIndex = 0;
+            this.tabPage1.Controls.Add(this.luffarRootControl1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(898, 672);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // playerPanel1
+            // tabPage2
             // 
-            this.playerPanel1.Location = new System.Drawing.Point(23, 14);
-            this.playerPanel1.Name = "playerPanel1";
-            this.playerPanel1.Size = new System.Drawing.Size(185, 220);
-            this.playerPanel1.TabIndex = 1;
+            this.tabPage2.Controls.Add(this.openFileShowPlayers1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(855, 638);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // gameControl1
+            // openFileShowPlayers1
             // 
-            this.gameControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gameControl1.Location = new System.Drawing.Point(229, 14);
-            this.gameControl1.Name = "gameControl1";
-            this.tableLayoutPanel1.SetRowSpan(this.gameControl1, 3);
-            this.gameControl1.Size = new System.Drawing.Size(477, 446);
-            this.gameControl1.TabIndex = 2;
+            this.openFileShowPlayers1.Location = new System.Drawing.Point(85, 30);
+            this.openFileShowPlayers1.Name = "openFileShowPlayers1";
+            this.openFileShowPlayers1.Size = new System.Drawing.Size(631, 511);
+            this.openFileShowPlayers1.TabIndex = 0;
+            // 
+            // luffarRootControl1
+            // 
+            this.luffarRootControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.luffarRootControl1.Location = new System.Drawing.Point(3, 3);
+            this.luffarRootControl1.Name = "luffarRootControl1";
+            this.luffarRootControl1.Size = new System.Drawing.Size(892, 666);
+            this.luffarRootControl1.TabIndex = 0;
             // 
             // RootForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(709, 479);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(906, 698);
+            this.Controls.Add(this.tabControl1);
             this.Name = "RootForm";
-            this.Text = "Form1";
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.Text = "RootForm";
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private PlayerPanel p1;
-        private PlayerPanel playerPanel1;
-        private GameControl gameControl1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private LuffarRootControl luffarRootControl1;
+        private OpenFileShowPlayers openFileShowPlayers1;
     }
 }

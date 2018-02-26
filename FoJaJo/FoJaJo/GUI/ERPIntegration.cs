@@ -10,12 +10,16 @@ using System.Windows.Forms;
 
 namespace FoJaJo.GUI
 {
-    public partial class GameControl : UserControl
+    public partial class ERPIntegration : UserControl
     {
-        public GameControl()
+        public ERPIntegration()
         {
             InitializeComponent();
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org">
+      <s:element name="GetPlayer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlayerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPlayerResult" type="tns:Player" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Player">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Rating" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalWins" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllPlayers">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllPlayersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllPlayersResult" type="tns:ArrayOfPlayer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPlayer">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Player" nillable="true" type="tns:Player" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllGames">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllGamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllGamesResult" type="tns:ArrayOfGame" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGame">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Game" nillable="true" type="tns:Game" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Game">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="GameID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="StartedPlayerUsername" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StartedPlayer" type="tns:Player" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxNumberOfPlayers" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BoardDimension" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="tns:Result" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Result">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResultId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reason" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPlayers">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPlayersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPlayersResult" type="tns:ArrayOfPlayer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filePath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getBudgetBuffer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getBudgetBufferResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getBudgetBufferResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPlayerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPlayer" />
+  </wsdl:message>
+  <wsdl:message name="GetPlayerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPlayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllPlayersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllPlayers" />
+  </wsdl:message>
+  <wsdl:message name="GetAllPlayersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllPlayersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllGamesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllGames" />
+  </wsdl:message>
+  <wsdl:message name="GetAllGamesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllGamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPlayersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPlayers" />
+  </wsdl:message>
+  <wsdl:message name="GetPlayersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPlayersResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindFileSoapIn">
+    <wsdl:part name="parameters" element="tns:FindFile" />
+  </wsdl:message>
+  <wsdl:message name="FindFileSoapOut">
+    <wsdl:part name="parameters" element="tns:FindFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="getBudgetBufferSoapIn">
+    <wsdl:part name="parameters" element="tns:getBudgetBuffer" />
+  </wsdl:message>
+  <wsdl:message name="getBudgetBufferSoapOut">
+    <wsdl:part name="parameters" element="tns:getBudgetBufferResponse" />
+  </wsdl:message>
+  <wsdl:portType name="FoJaJoWebServiceSoap">
+    <wsdl:operation name="GetPlayer">
+      <wsdl:input message="tns:GetPlayerSoapIn" />
+      <wsdl:output message="tns:GetPlayerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPlayers">
+      <wsdl:input message="tns:GetAllPlayersSoapIn" />
+      <wsdl:output message="tns:GetAllPlayersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGames">
+      <wsdl:input message="tns:GetAllGamesSoapIn" />
+      <wsdl:output message="tns:GetAllGamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayers">
+      <wsdl:input message="tns:GetPlayersSoapIn" />
+      <wsdl:output message="tns:GetPlayersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindFile">
+      <wsdl:input message="tns:FindFileSoapIn" />
+      <wsdl:output message="tns:FindFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getBudgetBuffer">
+      <wsdl:input message="tns:getBudgetBufferSoapIn" />
+      <wsdl:output message="tns:getBudgetBufferSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FoJaJoWebServiceSoap" type="tns:FoJaJoWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPlayer">
+      <soap:operation soapAction="http://tempuri.org/GetPlayer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPlayers">
+      <soap:operation soapAction="http://tempuri.org/GetAllPlayers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGames">
+      <soap:operation soapAction="http://tempuri.org/GetAllGames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayers">
+      <soap:operation soapAction="http://tempuri.org/GetPlayers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindFile">
+      <soap:operation soapAction="http://tempuri.org/FindFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBudgetBuffer">
+      <soap:operation soapAction="http://tempuri.org/getBudgetBuffer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FoJaJoWebServiceSoap12" type="tns:FoJaJoWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPlayer">
+      <soap12:operation soapAction="http://tempuri.org/GetPlayer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPlayers">
+      <soap12:operation soapAction="http://tempuri.org/GetAllPlayers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGames">
+      <soap12:operation soapAction="http://tempuri.org/GetAllGames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayers">
+      <soap12:operation soapAction="http://tempuri.org/GetPlayers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindFile">
+      <soap12:operation soapAction="http://tempuri.org/FindFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBudgetBuffer">
+      <soap12:operation soapAction="http://tempuri.org/getBudgetBuffer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FoJaJoWebService">
+    <wsdl:port name="FoJaJoWebServiceSoap" binding="tns:FoJaJoWebServiceSoap">
+      <soap:address location="http://localhost:62463/FoJaJoWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FoJaJoWebServiceSoap12" binding="tns:FoJaJoWebServiceSoap12">
+      <soap12:address location="http://localhost:62463/FoJaJoWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
