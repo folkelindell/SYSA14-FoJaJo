@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace FoJaJo.GUI
 {
-    public class SquareControl : Button, IView
+    public class SquareControl : Button
     {
         public int XPos { get; set; }
         public int YPos { get; set; }

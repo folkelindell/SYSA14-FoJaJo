@@ -60,10 +60,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Controller\ErrorHandler.cs" />
     <Compile Include="Controller\WebServiceController1.cs" />
     <Compile Include="Controller\GameController.cs" />
     <Compile Include="Controller\PlayerController.cs" />
-    <Compile Include="Controller\GameLogic.cs" />
     <Compile Include="Controller\RootController.cs" />
     <Compile Include="DAL\ERPIntegration.cs" />
     <Compile Include="DAL\MsSqlGameDAO.cs" />
@@ -79,12 +79,17 @@
     <Compile Include="GUI\ERPIntegration.Designer.cs">
       <DependentUpon>ERPIntegration.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\IView.cs" />
     <Compile Include="GUI\LuffarRootControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\LuffarRootControl.Designer.cs">
       <DependentUpon>LuffarRootControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RegisterPlayerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\RegisterPlayerControl.Designer.cs">
+      <DependentUpon>RegisterPlayerControl.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\RootForm.cs">
       <SubType>Form</SubType>
@@ -183,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\LoginControl.resx">
       <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RegisterPlayerControl.resx">
+      <DependentUpon>RegisterPlayerControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PlayerInfoControl.resx">
       <DependentUpon>PlayerInfoControl.cs</DependentUpon>

@@ -16,7 +16,9 @@ namespace FoJaJo.GUI
     public partial class PlayerPanel : UserControl
     {
         private GameController controller;
-        public GameController Controller { get
+        public GameController Controller
+        {
+            get
             {
                 return controller;
             }
@@ -24,17 +26,55 @@ namespace FoJaJo.GUI
             {
                 controller = value;
                 playerInfoControl.Controller = value;
+                registerPlayerControl1.Controller = value;
+            }
+        }
+        private bool showRegisterPlayer;
+        public bool ShowRegisterPlayer
+        {
+            set
+            {
+                if (currentPlayer == null)
+                {
+                    showRegisterPlayer = value;
+                    if (showRegisterPlayer)
+                    {
+                        playerInfoControl.Hide();
+                        loginControl.Hide();
+                        registerPlayerControl1.Show();
+                    }
+                    else
+                    {
+                        registerPlayerControl1.Hide();
+                        playerInfoControl.Hide();
+                        loginControl.Show();
+                    }
+                }
+            }
+        }
+        private StatusLabel status;
+        public StatusLabel Status
+        {
+            get { return status; }
+            set
+            {
+                status = value;
+                loginControl.Status = status;
+                playerInfoControl.Status = status;
+                registerPlayerControl1.Status = status;
             }
         }
         private Player currentPlayer;
-        public Player CurrentPlayer { get
+        public Player CurrentPlayer
+        {
+            get
             {
                 return currentPlayer;
             }
             set
             {
                 currentPlayer = value;
-                if(currentPlayer != null)
+                if (currentPlayer != null)
                 {
                     loginControl.Hide();
                     playerInfoControl.CurrentPlayer = currentPlayer;

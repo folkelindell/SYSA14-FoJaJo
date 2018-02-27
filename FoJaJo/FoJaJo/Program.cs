@@ -8,6 +8,7 @@ using FoJaJo.Controller;
 using System.Data;
 using System.Collections;
 using System.Windows.Forms;
+using FoJaJo.DAL;
 
 namespace FoJaJo
 {

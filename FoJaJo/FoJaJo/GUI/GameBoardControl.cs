@@ -12,9 +12,10 @@ using FoJaJo.Model;
 
 namespace FoJaJo.GUI
 {
-    public partial class GameBoardControl : UserControl, IView
+    public partial class GameBoardControl : UserControl
     {
         private SquareControl[,] board;
+        public StatusLabel Status { get; set; }
         public GameController controller;
         public GameController Controller
         {
@@ -78,6 +79,7 @@ namespace FoJaJo.GUI
             {
                 BoardState = Controller.BoardState;
                 CreateBoard();
+                Status.ShowStatus("Game started!");
                 Enabled = true;
             }
         }
