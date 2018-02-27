@@ -8,60 +8,77 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FoJaJo.Controller;
+using FoJaJo.Model;
 
 namespace FoJaJo.GUI
 {
-    public partial class GameBoardControl : UserControl
+    public partial class GameBoardControl : UserControl, IView
     {
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private Button[,] board;
-        public GameController gameController { get; set; }
+        private SquareControl[,] board;
+        public GameController controller;
+        public GameController Controller
+        {
+            get
+            {
+                return controller;
+            }
+            set
+            {
+                controller = value;
+                if (controller != null)
+                {
+                    controller.GameStarted += UpdateView;
+                }
+            }
+        }
+        public GameBoardState BoardState { get; set; }
         public GameBoardControl()
         {
-            int x = 20;
-            int y = 20;
             InitializeComponent();
-            betterInit(x, y);
+            Enabled = false;
         }
 
-        private void betterInit(int x, int y)
+        public void CreateBoard()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.squareGrid.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = x;
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = y;
-            this.tableLayoutPanel1.TabIndex = 0;
-            this.tableLayoutPanel1.Margin = Padding.Empty;
+            this.squareGrid.ColumnStyles.Clear();
 
-            createSquares(x, y);
+            this.squareGrid.Controls.Clear();
 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "GameBoardControl";
-            this.Size = new System.Drawing.Size(363, 339);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.ResumeLayout(false);
+            CreateSquares();
 
+            this.squareGrid.ResumeLayout(true);
+            this.ResumeLayout(true);
         }
 
-        private void createSquares(int x, int y)
+        private void CreateSquares()
         {
-            board = new SquareControl[x, y];
-            for (int a = 0; a < x; a++)
+            board = new SquareControl[BoardState.XDim, BoardState.YDim];
+            for (int a = 0; a < BoardState.XDim; a++)
             {
-                for (int b = 0; b < y; b++)
+                for (int b = 0; b < BoardState.YDim; b++)
                 {
-                    board[a, b] = new SquareControl(a, b);
-                    tableLayoutPanel1.Controls.Add(board[a, b], a, b);
+                    board[a, b] = new SquareControl(a, b, BoardState.BoardValues[a, b])
+                    {
+                        Controller = Controller
+                    };
+                    squareGrid.Controls.Add(board[a, b], a, b);
                 }
+            }
+        }
+
+        public void UpdateView()
+        {
+            if (Controller.BoardState == null)
+            {
+                squareGrid.Controls.Clear();
+            }
+            else if (!Controller.BoardState.Equals(BoardState))
+            {
+                BoardState = Controller.BoardState;
+                CreateBoard();
+                Enabled = true;
             }
         }
     }

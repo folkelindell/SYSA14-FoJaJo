@@ -37,7 +37,7 @@
             this.loginControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.loginControl.Location = new System.Drawing.Point(0, 0);
             this.loginControl.Name = "loginControl";
-            this.loginControl.Size = new System.Drawing.Size(394, 302);
+            this.loginControl.Size = new System.Drawing.Size(392, 300);
             this.loginControl.TabIndex = 1;
             // 
             // playerInfoControl
@@ -45,17 +45,18 @@
             this.playerInfoControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.playerInfoControl.Location = new System.Drawing.Point(0, 0);
             this.playerInfoControl.Name = "playerInfoControl";
-            this.playerInfoControl.Size = new System.Drawing.Size(394, 302);
+            this.playerInfoControl.Size = new System.Drawing.Size(392, 300);
             this.playerInfoControl.TabIndex = 0;
             // 
             // PlayerPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.loginControl);
             this.Controls.Add(this.playerInfoControl);
             this.Name = "PlayerPanel";
-            this.Size = new System.Drawing.Size(394, 302);
+            this.Size = new System.Drawing.Size(392, 300);
             this.ResumeLayout(false);
 
         }

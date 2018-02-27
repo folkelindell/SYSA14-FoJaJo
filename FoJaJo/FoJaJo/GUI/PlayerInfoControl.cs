@@ -14,7 +14,35 @@ namespace FoJaJo.GUI
 {
     public partial class PlayerInfoControl : UserControl
     {
-        public PlayerController Controller { get; set; }
+        public GameController controller;
+        public GameController Controller
+        {
+            get
+            {
+                return controller;
+            }
+            set
+            {
+                controller = value;
+                if (controller != null)
+                    controller.GameStarted += NewGameBoard;
+            }
+        }
+        private GameBoardState boardState;
+        public GameBoardState BoardState
+        {
+            get
+            {
+                return boardState;
+            }
+            set
+            {
+                boardState = value;
+                if (boardState != null)
+                    boardState.GameBoardChanged += this.UpdateView;
+                UpdateView();
+            }
+        }
         private Player currentPlayer;
         public Player CurrentPlayer
         {
@@ -37,8 +65,25 @@ namespace FoJaJo.GUI
 
         private void logoutButton_Click(object sender, EventArgs e)
         {
-            if (Controller.LogOutPlayer())
+            if ((Parent as PlayerPanel).Controller.LogOutPlayer())
                 (Parent as PlayerPanel).CurrentPlayer = null;
+        }
+        public void UpdateView()
+        {
+            if (BoardState != null && BoardState.CurrentPlayer.Equals(CurrentPlayer))
+            {
+                BorderStyle = BorderStyle.FixedSingle;
+            }
+            else
+            {
+                BorderStyle = BorderStyle.None;
+            }
+        }
+
+        public void NewGameBoard()
+        {
+            BorderStyle = BorderStyle.None;
+            BoardState = Controller.BoardState;
         }
     }
 }

@@ -15,7 +15,17 @@ namespace FoJaJo.GUI
 {
     public partial class PlayerPanel : UserControl
     {
-        public PlayerController Controller { get; set; }
+        private GameController controller;
+        public GameController Controller { get
+            {
+                return controller;
+            }
+            set
+            {
+                controller = value;
+                playerInfoControl.Controller = value;
+            }
+        }
         private Player currentPlayer;
         public Player CurrentPlayer { get
             {
@@ -32,6 +42,7 @@ namespace FoJaJo.GUI
                 }
                 else
                 {
+                    playerInfoControl.CurrentPlayer = currentPlayer;
                     playerInfoControl.Hide();
                     loginControl.Show();
                 }
@@ -40,9 +51,6 @@ namespace FoJaJo.GUI
         public PlayerPanel()
         {
             InitializeComponent();
-            Controller = new PlayerController(this);
-            loginControl.Controller = Controller;
-            playerInfoControl.Controller = Controller;
         }
     }
 }

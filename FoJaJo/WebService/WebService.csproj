@@ -8,7 +8,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1FB02F52-AB1B-4C6C-986C-153D0C1D50EC}</ProjectGuid>
+    <ProjectGuid>{C49C5E2B-90CE-4F25-948B-90E2E6AE8DEE}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -54,6 +54,8 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -72,6 +74,23 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CronusContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CronusContext.edmx</DependentUpon>
+      <LastGenOutput>CronusContext.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="CronusContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CronusContext.edmx</DependentUpon>
+      <LastGenOutput>CronusContext.cs</LastGenOutput>
+    </Content>
+    <EntityDeploy Include="CronusContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CronusContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="CronusContext.edmx.diagram">
+      <DependentUpon>CronusContext.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Web.Debug.config">
@@ -82,12 +101,46 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="FoJaJoWebService.asmx" />
+    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Company.cs">
+      <DependentUpon>CronusContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CronusContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CronusContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CronusContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CronusContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CronusContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CronusContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="CRONUS_Sverige_AB_Employee.cs">
+      <DependentUpon>CronusContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRONUS_Sverige_AB_Employee_Absence.cs">
+      <DependentUpon>CronusContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRONUS_Sverige_AB_Employee_Portal_Setup.cs">
+      <DependentUpon>CronusContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRONUS_Sverige_AB_Employee_Qualification.cs">
+      <DependentUpon>CronusContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRONUS_Sverige_AB_Employee_Relative.cs">
+      <DependentUpon>CronusContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRONUS_Sverige_AB_Employee_Statistics_Group.cs">
+      <DependentUpon>CronusContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\EmployeeRelative.cs" />
     <Compile Include="Model\MetaDataColumn.cs" />
     <Compile Include="Model\Company.cs" />
@@ -102,6 +155,8 @@
       <DependentUpon>FoJaJoWebService.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FoJaJo\FoJaJo.csproj">
@@ -110,7 +165,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
@@ -126,7 +181,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50859</DevelopmentServerPort>
+          <DevelopmentServerPort>50105</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:62463/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
