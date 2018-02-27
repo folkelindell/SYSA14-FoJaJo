@@ -29,7 +29,7 @@ namespace FoJaJo.GUI
 
         private void OpenFile_Click(object sender, EventArgs e)
         {
-            wc = new WebServiceController1();
+            wc = new WebServiceController1();   
 
             OpenFileDialog openFile = new OpenFileDialog
             {
@@ -63,5 +63,6 @@ namespace FoJaJo.GUI
             dataGridGetAllPlayers.DataSource = null;
             dataGridGetAllPlayers.DataSource = wc.GetAllPlayers();
         }
+
     }
 }

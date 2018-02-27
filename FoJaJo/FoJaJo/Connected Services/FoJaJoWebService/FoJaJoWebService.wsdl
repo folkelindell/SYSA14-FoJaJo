@@ -82,6 +82,192 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="GetMetaColumns1">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMetaColumns1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMetaColumns1Result" type="tns:ArrayOfMetaDataColumn" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMetaDataColumn">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MetaDataColumn" nillable="true" type="tns:MetaDataColumn" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MetaDataColumn">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Table_Catalog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Table_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Data_Type" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMetaColumns2">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMetaColumns2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMetaColumns2Result" type="tns:ArrayOfMetaDataColumn2" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMetaDataColumn2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MetaDataColumn2" nillable="true" type="tns:MetaDataColumn2" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MetaDataColumn2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="User_type_Id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Object_Id" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMetaIndexes">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMetaIndexesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMetaIndexesResult" type="tns:ArrayOfMetaDataIndex" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMetaDataIndex">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MetaDataIndex" nillable="true" type="tns:MetaDataIndex" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MetaDataIndex">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Object_Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type_Desc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMetaConstraints">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMetaConstraintsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMetaConstraintsResult" type="tns:ArrayOfMetaDataTableConstraint" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMetaDataTableConstraint">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MetaDataTableConstraint" nillable="true" type="tns:MetaDataTableConstraint" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MetaDataTableConstraint">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Constraint_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Table_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Constraint_Type" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMetaKeys">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMetaKeysResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMetaKeysResult" type="tns:ArrayOfMetaDataKey" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMetaDataKey">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MetaDataKey" nillable="true" type="tns:MetaDataKey" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MetaDataKey">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Object_Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMetaTables">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMetaTablesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMetaTablesResult" type="tns:ArrayOfMetaDataTable" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMetaDataTable">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MetaDataTable" nillable="true" type="tns:MetaDataTable" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MetaDataTable">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Table_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Table_Type" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMetaTables2">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMetaTables2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMetaTables2Result" type="tns:ArrayOfMetaDataTable2" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMetaDataTable2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MetaDataTable2" nillable="true" type="tns:MetaDataTable2" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MetaDataTable2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Object_Id" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertCompany">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertCompanyResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEmployeeRelative">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEmployeeRelativeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeeRelativeResult" type="tns:ArrayOfEmployeeRelative" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEmployeeRelative">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EmployeeRelative" nillable="true" type="tns:EmployeeRelative" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EmployeeRelative">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EmpFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmpLastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmpJobTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RelativeFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RelativeCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
       <s:element name="FindFile">
         <s:complexType>
           <s:sequence>
@@ -93,27 +279,6 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="FindFileResult" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="getBudgetBuffer">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="filter" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="getBudgetBufferResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="getBudgetBufferResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -143,17 +308,65 @@
   <wsdl:message name="GetPlayersSoapOut">
     <wsdl:part name="parameters" element="tns:GetPlayersResponse" />
   </wsdl:message>
+  <wsdl:message name="GetMetaColumns1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetMetaColumns1" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaColumns1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetMetaColumns1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaColumns2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetMetaColumns2" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaColumns2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetMetaColumns2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaIndexesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMetaIndexes" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaIndexesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMetaIndexesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaConstraintsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMetaConstraints" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaConstraintsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMetaConstraintsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaKeysSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMetaKeys" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaKeysSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMetaKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaTablesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMetaTables" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaTablesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMetaTablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaTables2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetMetaTables2" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaTables2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetMetaTables2Response" />
+  </wsdl:message>
+  <wsdl:message name="InsertCompanySoapIn">
+    <wsdl:part name="parameters" element="tns:InsertCompany" />
+  </wsdl:message>
+  <wsdl:message name="InsertCompanySoapOut">
+    <wsdl:part name="parameters" element="tns:InsertCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeRelativeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployeeRelative" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeRelativeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeeRelativeResponse" />
+  </wsdl:message>
   <wsdl:message name="FindFileSoapIn">
     <wsdl:part name="parameters" element="tns:FindFile" />
   </wsdl:message>
   <wsdl:message name="FindFileSoapOut">
     <wsdl:part name="parameters" element="tns:FindFileResponse" />
-  </wsdl:message>
-  <wsdl:message name="getBudgetBufferSoapIn">
-    <wsdl:part name="parameters" element="tns:getBudgetBuffer" />
-  </wsdl:message>
-  <wsdl:message name="getBudgetBufferSoapOut">
-    <wsdl:part name="parameters" element="tns:getBudgetBufferResponse" />
   </wsdl:message>
   <wsdl:portType name="FoJaJoWebServiceSoap">
     <wsdl:operation name="GetPlayer">
@@ -172,13 +385,45 @@
       <wsdl:input message="tns:GetPlayersSoapIn" />
       <wsdl:output message="tns:GetPlayersSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="GetMetaColumns1">
+      <wsdl:input message="tns:GetMetaColumns1SoapIn" />
+      <wsdl:output message="tns:GetMetaColumns1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaColumns2">
+      <wsdl:input message="tns:GetMetaColumns2SoapIn" />
+      <wsdl:output message="tns:GetMetaColumns2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaIndexes">
+      <wsdl:input message="tns:GetMetaIndexesSoapIn" />
+      <wsdl:output message="tns:GetMetaIndexesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaConstraints">
+      <wsdl:input message="tns:GetMetaConstraintsSoapIn" />
+      <wsdl:output message="tns:GetMetaConstraintsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaKeys">
+      <wsdl:input message="tns:GetMetaKeysSoapIn" />
+      <wsdl:output message="tns:GetMetaKeysSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaTables">
+      <wsdl:input message="tns:GetMetaTablesSoapIn" />
+      <wsdl:output message="tns:GetMetaTablesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaTables2">
+      <wsdl:input message="tns:GetMetaTables2SoapIn" />
+      <wsdl:output message="tns:GetMetaTables2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCompany">
+      <wsdl:input message="tns:InsertCompanySoapIn" />
+      <wsdl:output message="tns:InsertCompanySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeRelative">
+      <wsdl:input message="tns:GetEmployeeRelativeSoapIn" />
+      <wsdl:output message="tns:GetEmployeeRelativeSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="FindFile">
       <wsdl:input message="tns:FindFileSoapIn" />
       <wsdl:output message="tns:FindFileSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="getBudgetBuffer">
-      <wsdl:input message="tns:getBudgetBufferSoapIn" />
-      <wsdl:output message="tns:getBudgetBufferSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="FoJaJoWebServiceSoap" type="tns:FoJaJoWebServiceSoap">
@@ -219,8 +464,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="FindFile">
-      <soap:operation soapAction="http://tempuri.org/FindFile" style="document" />
+    <wsdl:operation name="GetMetaColumns1">
+      <soap:operation soapAction="http://tempuri.org/GetMetaColumns1" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -228,8 +473,80 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="getBudgetBuffer">
-      <soap:operation soapAction="http://tempuri.org/getBudgetBuffer" style="document" />
+    <wsdl:operation name="GetMetaColumns2">
+      <soap:operation soapAction="http://tempuri.org/GetMetaColumns2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaIndexes">
+      <soap:operation soapAction="http://tempuri.org/GetMetaIndexes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaConstraints">
+      <soap:operation soapAction="http://tempuri.org/GetMetaConstraints" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaKeys">
+      <soap:operation soapAction="http://tempuri.org/GetMetaKeys" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaTables">
+      <soap:operation soapAction="http://tempuri.org/GetMetaTables" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaTables2">
+      <soap:operation soapAction="http://tempuri.org/GetMetaTables2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCompany">
+      <soap:operation soapAction="http://tempuri.org/InsertCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeRelative">
+      <soap:operation soapAction="http://tempuri.org/GetEmployeeRelative" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindFile">
+      <soap:operation soapAction="http://tempuri.org/FindFile" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -276,8 +593,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="FindFile">
-      <soap12:operation soapAction="http://tempuri.org/FindFile" style="document" />
+    <wsdl:operation name="GetMetaColumns1">
+      <soap12:operation soapAction="http://tempuri.org/GetMetaColumns1" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -285,8 +602,80 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="getBudgetBuffer">
-      <soap12:operation soapAction="http://tempuri.org/getBudgetBuffer" style="document" />
+    <wsdl:operation name="GetMetaColumns2">
+      <soap12:operation soapAction="http://tempuri.org/GetMetaColumns2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaIndexes">
+      <soap12:operation soapAction="http://tempuri.org/GetMetaIndexes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaConstraints">
+      <soap12:operation soapAction="http://tempuri.org/GetMetaConstraints" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaKeys">
+      <soap12:operation soapAction="http://tempuri.org/GetMetaKeys" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaTables">
+      <soap12:operation soapAction="http://tempuri.org/GetMetaTables" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaTables2">
+      <soap12:operation soapAction="http://tempuri.org/GetMetaTables2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCompany">
+      <soap12:operation soapAction="http://tempuri.org/InsertCompany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeRelative">
+      <soap12:operation soapAction="http://tempuri.org/GetEmployeeRelative" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindFile">
+      <soap12:operation soapAction="http://tempuri.org/FindFile" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

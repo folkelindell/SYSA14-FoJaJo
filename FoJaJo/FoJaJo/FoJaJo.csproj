@@ -151,13 +151,77 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.Game.datasource">
+    <None Include="App.config" />
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.EmployeeRelative.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.Player.datasource">
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.FindFileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.Game1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetAllGamesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetAllPlayersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetEmployeeRelativeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetMetaColumns1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetMetaColumns2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetMetaConstraintsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetMetaIndexesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetMetaKeysResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetMetaTables2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetMetaTablesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetPlayerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetPlayersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.InsertCompanyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.MetaDataColumn.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.MetaDataColumn2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.MetaDataIndex.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.MetaDataKey.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.MetaDataTable.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.MetaDataTable2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.MetaDataTableConstraint.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.Player1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\FoJaJoWebService\FoJaJoWebService.wsdl" />
@@ -174,6 +238,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -206,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\OpenFileShowPlayers.resx">
       <DependentUpon>OpenFileShowPlayers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802270020389_Test.resx">
+      <DependentUpon>201802270020389_Test.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
