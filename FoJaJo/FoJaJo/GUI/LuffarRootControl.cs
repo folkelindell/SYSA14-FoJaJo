@@ -15,15 +15,25 @@ namespace FoJaJo.GUI
 {
     public partial class LuffarRootControl : UserControl
     {
-        public GameController Controller { get; set; }
+        public StatusLabel Status { get; set; }
+        private GameController controller;
+        public GameController Controller { get
+            {
+                return controller;
+            }
+            set
+            {
+                controller = value;
+                gameControl.Controller = Controller;
+                playerOnePanel.Controller = Controller;
+                playerTwoPanel.Controller = Controller;
+                if (controller != null) Controller.OnGameWon += this.GameWonEvent;
+            }
+        }
         public LuffarRootControl()
         {
             InitializeComponent();
-            Controller = new GameController();
-            Controller.GameWon += this.GameWon;
-            gameControl.Controller = Controller;
-            playerOnePanel.Controller = Controller;
-            playerTwoPanel.Controller = Controller;
+            
         }
 
         private void newGameButton_Click(object sender, EventArgs e)
@@ -31,7 +41,7 @@ namespace FoJaJo.GUI
             Controller.NewGame(playerOnePanel.CurrentPlayer, playerTwoPanel.CurrentPlayer, 20, 20);
         }
 
-        public void GameWon()
+        private void GameWonEvent()
         {
             MessageBox.Show(Controller.BoardState.CurrentPlayer.Username + " WON!", "Winner", MessageBoxButtons.OK, MessageBoxIcon.None);
             gameControl.Enabled = false;

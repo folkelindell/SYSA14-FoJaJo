@@ -18,7 +18,7 @@ namespace FoJaJo.Controller
         public GameBoardState BoardState { get; set; }
         public GameBoardControl BoardView { get; set; }
         public gameStartEvent GameStarted { get; set; }
-        public gameWonEvent GameWon { get; set; }
+        public gameWonEvent OnGameWon { get; set; }
 
         public GameController()
         {
@@ -32,7 +32,7 @@ namespace FoJaJo.Controller
             {
                 BoardState.SetValue(x, y);
                 if (BoardState.WinCheck(x, y)) {
-                    GameWon();
+                    OnGameWon();
                 }
                 else BoardState.NextTurn();
             }

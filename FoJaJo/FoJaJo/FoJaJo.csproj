@@ -92,9 +92,8 @@
     <Compile Include="GUI\RootForm.Designer.cs">
       <DependentUpon>RootForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201802270020389_Test.cs" />
-    <Compile Include="Migrations\201802270020389_Test.Designer.cs">
-      <DependentUpon>201802270020389_Test.cs</DependentUpon>
+    <Compile Include="GUI\StatusLabel.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Model\Square.cs" />
     <Compile Include="GUI\SquareControl.cs">
@@ -147,7 +146,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.Game.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -197,9 +198,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\OpenFileShowPlayers.resx">
       <DependentUpon>OpenFileShowPlayers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802270020389_Test.resx">
-      <DependentUpon>201802270020389_Test.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
