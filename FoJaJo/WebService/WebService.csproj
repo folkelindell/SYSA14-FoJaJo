@@ -141,12 +141,20 @@
     <Compile Include="CRONUS_Sverige_AB_Employee_Statistics_Group.cs">
       <DependentUpon>CronusContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\EmployeeRelative.cs" />
+    <Compile Include="Model\MetaDataColumn.cs" />
+    <Compile Include="Model\Company.cs" />
+    <Compile Include="Model\MetaDataColumn2.cs" />
+    <Compile Include="Model\MetaDataIndex.cs" />
+    <Compile Include="Model\MetaDataKey.cs" />
+    <Compile Include="Model\MetaDataTable.cs" />
+    <Compile Include="Model\MetaDataTable2.cs" />
+    <Compile Include="Model\MetaDataTableConstraint.cs" />
     <Compile Include="FoJaJoWebService.asmx.cs">
       <DependentUpon>FoJaJoWebService.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FoJaJo\FoJaJo.csproj">

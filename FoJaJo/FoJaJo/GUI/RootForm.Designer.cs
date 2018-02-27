@@ -35,16 +35,21 @@
             this.openFileShowPlayers1 = new FoJaJo.GUI.OpenFileShowPlayers();
             this.statusLabel1 = new FoJaJo.GUI.StatusLabel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.erpIntegration1 = new FoJaJo.GUI.ERPIntegration();
+            this.playerTableAdapter1 = new FoJaJo.FoJaJoDBDataSetTableAdapters.PlayerTableAdapter();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
@@ -86,11 +91,34 @@
             // 
             // openFileShowPlayers1
             // 
-            this.openFileShowPlayers1.Location = new System.Drawing.Point(85, 30);
+            this.openFileShowPlayers1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.openFileShowPlayers1.Location = new System.Drawing.Point(3, 3);
             this.openFileShowPlayers1.Name = "openFileShowPlayers1";
-            this.openFileShowPlayers1.Size = new System.Drawing.Size(631, 511);
+            this.openFileShowPlayers1.Size = new System.Drawing.Size(849, 632);
             this.openFileShowPlayers1.TabIndex = 0;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.erpIntegration1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(855, 638);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // erpIntegration1
+            // 
+            this.erpIntegration1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.erpIntegration1.Location = new System.Drawing.Point(3, 3);
+            this.erpIntegration1.Name = "erpIntegration1";
+            this.erpIntegration1.Size = new System.Drawing.Size(849, 632);
+            this.erpIntegration1.TabIndex = 0;
+            // 
+            // playerTableAdapter1
             // statusLabel1
             // 
             this.statusLabel1.AutoSize = true;
@@ -115,6 +143,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(902, 681);
             this.tableLayoutPanel1.TabIndex = 2;
+            this.playerTableAdapter1.ClearBeforeFill = true;
             // 
             // RootForm
             // 
@@ -127,6 +156,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -140,6 +170,9 @@
         private System.Windows.Forms.TabPage tabPage2;
         private LuffarRootControl luffarRootControl1;
         private OpenFileShowPlayers openFileShowPlayers1;
+        private System.Windows.Forms.TabPage tabPage3;
+        private FoJaJoDBDataSetTableAdapters.PlayerTableAdapter playerTableAdapter1;
+        private ERPIntegration erpIntegration1;
         private StatusLabel statusLabel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
