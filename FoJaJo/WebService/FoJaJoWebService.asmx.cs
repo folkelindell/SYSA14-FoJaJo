@@ -22,18 +22,7 @@ namespace WebService
     {
 
         SqlConnection connection = new SqlConnection("data source=DESKTOP-34D95N6;initial catalog=LuffarSchackDB;integrated security=True;");
-        SqlConnection erpConnection = new SqlConnection("data source=DESKTOP-34D95N6;initial catalog=Demo Database NAV (5-0); user id=sa; password=12345;");
-
-        //QUERYS
-        readonly string getInfoSchemCol = "select * from INFORMATION_SCHEMA.COLUMNS where table_name = 'CRONUS Sverige AB$Employee'";
-        readonly string getSysCol = "select * from sys.columns where object_id = object_id('CRONUS Sverige AB$Employee')";
-        readonly string getInfoSchemTable = "select * from INFORMATION_SCHEMA.TABLES";
-        readonly string getSysTable = "select * from sys.tables";
-        readonly string getKeys = "select * from sys.key_constraints";
-        readonly string getAllTablCon = "select * from INFORMATION_SCHEMA.TABLE_CONSTRAINTS";
-        readonly string getMinCol = "SELECT TABLE_SCHEMA, TABLE_NAME, number = COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS GROUP BY TABLE_SCHEMA, TABLE_NAME HAVING (COUNT(*) < 3)";
-        readonly string getAllSick = "select [timestamp], [Entry No_], [From Date], [To Date], [Description] from [CRONUS Sverige AB$Employee Absence] where [From Date] <'2005-01-01 00:00:00:000'";
-        readonly string getInfoPersRealtives = "select [First Name] from [CRONUS Sverige AB$Employee] where No_ in(select[Employee No_] from[CRONUS Sverige AB$Employee Absence] where[Cause of Absence Code]='SJUK' group by[Employee No_])";
+        SqlConnection navConnection = new SqlConnection("data source=laptop-7hibdffa;initial catalog=Demo Database NAV (5-0); user id=sa; password=12345;");
 
 
         //////////////////
@@ -304,6 +293,8 @@ namespace WebService
             }
             navConnection.Close();
             return keys;
+        }
+        [WebMethod]
         public List<CRONUS_Sverige_AB_Employee_Relative> GetAllEmployeeRelative()
         {
             using (CronusContext cc = new CronusContext())
@@ -407,10 +398,6 @@ namespace WebService
         }
         #endregion
 
-        [WebMethod]
-        public string FindFile(string filePath)
-        {
-            return File.ReadAllText(filePath);
         [WebMethod]
         public List<CRONUS_Sverige_AB_Employee_Relative> GetEmployeeRelatives(string employeeNr)
         {

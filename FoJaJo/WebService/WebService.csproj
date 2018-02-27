@@ -150,13 +150,11 @@
     <Compile Include="Model\MetaDataTable.cs" />
     <Compile Include="Model\MetaDataTable2.cs" />
     <Compile Include="Model\MetaDataTableConstraint.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FoJaJoWebService.asmx.cs">
       <DependentUpon>FoJaJoWebService.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FoJaJo\FoJaJo.csproj">
