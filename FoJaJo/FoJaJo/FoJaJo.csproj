@@ -199,6 +199,9 @@
     <EmbeddedResource Include="GUI\OpenFileShowPlayers.resx">
       <DependentUpon>OpenFileShowPlayers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802270020389_Test.resx">
+      <DependentUpon>201802270020389_Test.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
