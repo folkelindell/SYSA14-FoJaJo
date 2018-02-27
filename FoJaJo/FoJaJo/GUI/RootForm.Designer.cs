@@ -45,10 +45,11 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(896, 647);
+            this.tabControl1.Size = new System.Drawing.Size(896, 655);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -57,7 +58,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(888, 621);
+            this.tabPage1.Size = new System.Drawing.Size(888, 629);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -68,7 +69,8 @@
             this.luffarRootControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.luffarRootControl1.Location = new System.Drawing.Point(3, 3);
             this.luffarRootControl1.Name = "luffarRootControl1";
-            this.luffarRootControl1.Size = new System.Drawing.Size(882, 615);
+            this.luffarRootControl1.Size = new System.Drawing.Size(882, 623);
+            this.luffarRootControl1.Status = null;
             this.luffarRootControl1.TabIndex = 0;
             // 
             // tabPage2
@@ -77,7 +79,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(894, 658);
+            this.tabPage2.Size = new System.Drawing.Size(888, 621);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -93,7 +95,7 @@
             // 
             this.statusLabel1.AutoSize = true;
             this.statusLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.statusLabel1.Location = new System.Drawing.Point(3, 653);
+            this.statusLabel1.Location = new System.Drawing.Point(3, 661);
             this.statusLabel1.Name = "statusLabel1";
             this.statusLabel1.Size = new System.Drawing.Size(896, 20);
             this.statusLabel1.TabIndex = 1;
@@ -111,14 +113,14 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(902, 673);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(902, 681);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // RootForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(902, 673);
+            this.ClientSize = new System.Drawing.Size(902, 681);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "RootForm";
             this.Text = "RootForm";
