@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,21 +12,21 @@ using System.Data.Entity.Migrations;
 
 namespace WebService
 {
-    
+
     [WebService(Namespace = "http://fojajo.ics.lu.se")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
-    
+
     public class FoJaJoWebService : System.Web.Services.WebService
     {
-        
+
         SqlConnection connection = new SqlConnection("data source=DESKTOP-34D95N6;initial catalog=LuffarSchackDB;integrated security=True;");
         SqlConnection erpConnection = new SqlConnection("data source=DESKTOP-34D95N6;initial catalog=Demo Database NAV (5-0); user id=sa; password=12345;");
-        
+
         //QUERYS
         readonly string getInfoSchemCol = "select * from INFORMATION_SCHEMA.COLUMNS where table_name = 'CRONUS Sverige AB$Employee'";
-        readonly string getSysCol= "select * from sys.columns where object_id = object_id('CRONUS Sverige AB$Employee')";
-        readonly string getInfoSchemTable= "select * from INFORMATION_SCHEMA.TABLES";
+        readonly string getSysCol = "select * from sys.columns where object_id = object_id('CRONUS Sverige AB$Employee')";
+        readonly string getInfoSchemTable = "select * from INFORMATION_SCHEMA.TABLES";
         readonly string getSysTable = "select * from sys.tables";
         readonly string getKeys = "select * from sys.key_constraints";
         readonly string getAllTablCon = "select * from INFORMATION_SCHEMA.TABLE_CONSTRAINTS";
@@ -48,7 +48,8 @@ namespace WebService
         [WebMethod]
         public Player GetPlayer(string username)
         {
-            using (EntityContext ec = new EntityContext()) {
+            using (EntityContext ec = new EntityContext())
+            {
                 Player player = ec.Players.Find(username);
                 return player;
             }
@@ -99,11 +100,11 @@ namespace WebService
         }
 
         [WebMethod]
-        public void AddCompany(string companyName)
+        public void AddCompany(string companyName, string description)
         {
             using (CronusContext cc = new CronusContext())
             {
-                Company company = new Company(companyName);
+                Company company = new Company(companyName, description);
                 cc.Company.Add(company);
                 cc.SaveChanges();
             }
@@ -143,7 +144,7 @@ namespace WebService
             {
                 List<CRONUS_Sverige_AB_Employee> list = cc.CRONUS_Sverige_AB_Employee.ToList();
                 return list;
-            }       
+            }
         }
 
         [WebMethod]

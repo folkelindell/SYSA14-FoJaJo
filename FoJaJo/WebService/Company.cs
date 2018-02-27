@@ -18,9 +18,10 @@ namespace WebService
         public string Name { get; set; }
         public string Description { get; set; }
         public Company() { }
-        public Company(string name)
+        public Company(string name, string description)
         {
             Name = name;
+            Description = description;
         }
     }
 }
