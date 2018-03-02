@@ -22,10 +22,6 @@ namespace FoJaJo
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FoJaJo.GUI.RootForm());
 
-            //FoJaJoWebServiceSoapClient wc = new FoJaJoWebServiceSoapClient();
-
-            Console.Read();
-
         }
     }
 }

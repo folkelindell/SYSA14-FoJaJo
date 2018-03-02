@@ -10,6 +10,8 @@ using System.Data.SqlClient;
 using System.IO;
 using WebService.Model;
 using System.Data.Entity.Migrations;
+using System.Data.Entity.Core;
+using System.Web.Services.Protocols;
 
 namespace WebService
 {
@@ -20,29 +22,38 @@ namespace WebService
 
     public class FoJaJoWebService : System.Web.Services.WebService
     {
+        SqlConnection navConnection = new SqlConnection("data source=DESKTOP-34D95N6;initial catalog=Demo Database NAV (5-0); user id=sa; password=12345;");
 
-        SqlConnection connection = new SqlConnection("data source=DESKTOP-34D95N6;initial catalog=LuffarSchackDB;integrated security=True;");
-        SqlConnection navConnection = new SqlConnection("data source=laptop-7hibdffa;initial catalog=Demo Database NAV (5-0); user id=sa; password=12345;");
-
-
-        //////////////////
-        ///LUFFARSCHACK///
-        //////////////////
-
+        #region LUFFARSCHACK
         [WebMethod]
         public string FindFile(string filePath)
         {
-            return File.ReadAllText(filePath);
+            try
+            {
+                return File.ReadAllText(filePath);
+            }
+            catch (Exception e)
+            {
+                throw new SoapException("Could not read file", SoapException.ServerFaultCode);
+            }
         }
 
         [WebMethod]
         public Player GetPlayer(string username)
         {
-            using (EntityContext ec = new EntityContext())
+            try
             {
-                Player player = ec.Players.Find(username);
-                return player;
+                using (EntityContext ec = new EntityContext())
+                {
+                    Player player = ec.Players.Find(username);
+                    return player;
+                }
             }
+            catch(Exception e)
+            {
+               throw ExceptionHandler.HandleEFException(e);
+            }
+            
         }
 
         [WebMethod]
@@ -65,10 +76,11 @@ namespace WebService
             }
         }
 
-        //////////////////
-        //////CRONUS//////
-        //////////////////
+        #endregion
 
+        #region CRONUS
+
+        #region CRONUS COMPANY
         [WebMethod]
         public Company SelectCompany(string companyName)
         {
@@ -92,11 +104,28 @@ namespace WebService
         [WebMethod]
         public void AddCompany(string companyName, string description)
         {
-            using (CronusContext cc = new CronusContext())
+            try
             {
-                Company company = new Company(companyName, description);
-                cc.Company.Add(company);
-                cc.SaveChanges();
+                using (CronusContext cc = new CronusContext())
+                {
+                    if (companyName != "")
+                    {
+                        Company company = new Company(companyName, description);
+                        cc.Company.Add(company);
+                        cc.SaveChanges();
+                    }
+                    else
+                    {
+                        companyName = null;
+                        Company company = new Company(companyName, description);
+                        cc.Company.Add(company);
+                        cc.SaveChanges();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleEFException(e);
             }
         }
 
@@ -123,9 +152,17 @@ namespace WebService
             }
         }
 
-        ///////////////////
-        //CRONUS EMPLOYEE//
-        ///////////////////
+        [WebMethod]
+        public void InsertCompany(string name)
+        {
+            navConnection.Open();
+            SqlCommand cmd = new SqlCommand("insert into Company values(default,'" + name + "')", navConnection);
+            cmd.ExecuteNonQuery();
+            navConnection.Close();
+        }
+        #endregion
+
+        #region CRONUS EMPLOYEE
 
         [WebMethod]
         public List<CRONUS_Sverige_AB_Employee> GetAllEmployee()
@@ -167,8 +204,74 @@ namespace WebService
             }
         }
 
-        #region CRONUS
-        #region MetaData
+        [WebMethod]
+        public List<CRONUS_Sverige_AB_Employee_Relative> GetEmployeeRelatives(string employeeNr)
+        {
+            using (CronusContext cc = new CronusContext())
+            {
+                List<CRONUS_Sverige_AB_Employee_Relative> list = cc.CRONUS_Sverige_AB_Employee_Relative.Where(e => e.Employee_No_ == employeeNr).ToList();
+                return list;
+            }
+        }
+
+        [WebMethod]
+        public List<CRONUS_Sverige_AB_Employee_Absence> GetEmployeeAbsence2004()
+        {
+            using (CronusContext cc = new CronusContext())
+            {
+                List<CRONUS_Sverige_AB_Employee_Absence> list = cc.CRONUS_Sverige_AB_Employee_Absence.Where(e => e.From_Date.Year == 2004).ToList();
+                return list;
+            }
+        }
+
+        [WebMethod]
+        public List<CRONUS_Sverige_AB_Employee_Relative> GetAllEmployeeRelative()
+        {
+            using (CronusContext cc = new CronusContext())
+            {
+                List<CRONUS_Sverige_AB_Employee_Relative> list = cc.CRONUS_Sverige_AB_Employee_Relative.ToList();
+                return list;
+            }
+        }
+
+        public List<CRONUS_Sverige_AB_Employee_Statistics_Group> GetAllEmployeeStatisticsGroup()
+        {
+            using (CronusContext cc = new CronusContext())
+            {
+                List<CRONUS_Sverige_AB_Employee_Statistics_Group> list = cc.CRONUS_Sverige_AB_Employee_Statistics_Group.ToList();
+                return list;
+            }
+        }
+
+        [WebMethod]
+        public List<EmployeeRelative> GetEmployeeRelative()
+        {
+            List<EmployeeRelative> relatives = new List<EmployeeRelative>();
+            navConnection.Open();
+            using (SqlCommand command = new SqlCommand("select employee.[First Name], employee.[Last Name], employee.[Job Title], relative.[First Name], relative.[Relative Code] from[CRONUS Sverige AB$Employee] employee right join[CRONUS Sverige AB$Employee Relative] relative on employee.No_ = relative.[Employee No_]", navConnection))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        EmployeeRelative tmp = new EmployeeRelative
+                        {
+                            EmpFirstName = reader.GetValue(0) as string,
+                            EmpLastName = reader.GetValue(1) as string,
+                            EmpJobTitle = reader.GetValue(2) as string,
+                            RelativeFirstName = reader.GetValue(3) as string,
+                            RelativeCode = reader.GetValue(4) as string
+                        };
+                        relatives.Add(tmp);
+                    }
+                }
+            }
+            navConnection.Close();
+            return relatives;
+        }
+        #endregion
+
+        #region CRONUS METADATA
         [WebMethod]
         public List<MetaDataColumn> GetMetaColumns1()
         {
@@ -294,15 +397,7 @@ namespace WebService
             navConnection.Close();
             return keys;
         }
-        [WebMethod]
-        public List<CRONUS_Sverige_AB_Employee_Relative> GetAllEmployeeRelative()
-        {
-            using (CronusContext cc = new CronusContext())
-            {
-                List<CRONUS_Sverige_AB_Employee_Relative> list = cc.CRONUS_Sverige_AB_Employee_Relative.ToList();
-                return list;
-            }
-        }
+        
 
         [WebMethod]
         public List<MetaDataTable> GetMetaTables()
@@ -327,14 +422,7 @@ namespace WebService
             navConnection.Close();
             return tables;
         }
-        public List<CRONUS_Sverige_AB_Employee_Statistics_Group> GetAllEmployeeStatisticsGroup()
-        {
-            using (CronusContext cc = new CronusContext())
-            {
-                List<CRONUS_Sverige_AB_Employee_Statistics_Group> list = cc.CRONUS_Sverige_AB_Employee_Statistics_Group.ToList();
-                return list;
-            }
-        }
+        
 
         [WebMethod]
         public List<MetaDataTable2> GetMetaTables2()
@@ -361,64 +449,7 @@ namespace WebService
         }
         #endregion
 
-        [WebMethod]
-        public void InsertCompany(string name)
-        {
-            navConnection.Open();
-            SqlCommand cmd = new SqlCommand("insert into Company values(default,'"+name+"')", navConnection);
-            cmd.ExecuteNonQuery();
-            navConnection.Close();
-        }
-
-        [WebMethod]
-        public List<EmployeeRelative> GetEmployeeRelative()
-        {
-            List<EmployeeRelative> relatives = new List<EmployeeRelative>();
-            navConnection.Open();
-            using (SqlCommand command = new SqlCommand("select employee.[First Name], employee.[Last Name], employee.[Job Title], relative.[First Name], relative.[Relative Code] from[CRONUS Sverige AB$Employee] employee right join[CRONUS Sverige AB$Employee Relative] relative on employee.No_ = relative.[Employee No_]", navConnection))
-            {
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        EmployeeRelative tmp = new EmployeeRelative
-                        {
-                            EmpFirstName = reader.GetValue(0) as string,
-                            EmpLastName = reader.GetValue(1) as string,
-                            EmpJobTitle = reader.GetValue(2) as string,
-                            RelativeFirstName = reader.GetValue(3) as string,
-                            RelativeCode = reader.GetValue(4) as string
-                        };
-                        relatives.Add(tmp);
-                    }
-                }
-            }
-            navConnection.Close();
-            return relatives;
-        }
         #endregion
-
-        [WebMethod]
-        public List<CRONUS_Sverige_AB_Employee_Relative> GetEmployeeRelatives(string employeeNr)
-        {
-            using (CronusContext cc = new CronusContext())
-            {
-                List<CRONUS_Sverige_AB_Employee_Relative> list = cc.CRONUS_Sverige_AB_Employee_Relative.Where(e => e.Employee_No_ == employeeNr).ToList();
-                return list;
-            }
-        }
-
-        [WebMethod]
-        public List<CRONUS_Sverige_AB_Employee_Absence> GetEmployeeAbsence()
-        {
-            using (CronusContext cc = new CronusContext())
-            {
-                List<CRONUS_Sverige_AB_Employee_Absence> list = cc.CRONUS_Sverige_AB_Employee_Absence.Where(e => e.From_Date.Year == 2004).ToList();
-                return list;
-            }
-        }
-
-
 
     }
 }
