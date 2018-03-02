@@ -156,6 +156,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\MostSick.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FoJaJo\FoJaJo.csproj">

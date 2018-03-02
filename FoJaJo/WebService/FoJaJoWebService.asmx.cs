@@ -32,9 +32,9 @@ namespace WebService
             {
                 return File.ReadAllText(filePath);
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                throw new SoapException("Could not read file", SoapException.ServerFaultCode);
+                throw;
             }
         }
 
@@ -49,9 +49,9 @@ namespace WebService
                     return player;
                 }
             }
-            catch(Exception e)
+            catch(Exception)
             {
-               throw ExceptionHandler.HandleEFException(e);
+                throw;
             }
             
         }
@@ -59,21 +59,36 @@ namespace WebService
         [WebMethod]
         public List<Player> GetAllPlayers()
         {
-            using (EntityContext ec = new EntityContext())
+            try
             {
-                List<Player> list = ec.Players.ToList();
-                return list;
+                using (EntityContext ec = new EntityContext())
+                {
+                    List<Player> list = ec.Players.ToList();
+                    return list;
+                }
             }
+            catch
+            {
+                throw;
+            }
+            
         }
 
         [WebMethod]
         public List<Game> GetAllGames()
         {
-            using (EntityContext ec = new EntityContext())
+            try
             {
-                List<Game> list = ec.Games.ToList();
-                return list;
+                using (EntityContext ec = new EntityContext())
+                {
+                    List<Game> list = ec.Games.ToList();
+                    return list;
+                }
+            }catch(Exception)
+            {
+                throw;
             }
+            
         }
 
         #endregion
@@ -84,21 +99,37 @@ namespace WebService
         [WebMethod]
         public Company SelectCompany(string companyName)
         {
-            using (CronusContext cc = new CronusContext())
+            try
             {
-                Company company = cc.Company.Find(companyName);
-                return company;
+                using (CronusContext cc = new CronusContext())
+                {
+                    Company company = cc.Company.Find(companyName);
+                    return company;
+                }
             }
+            catch(Exception)
+            {
+                throw;
+            }
+            
         }
 
         [WebMethod]
         public List<Company> SelectAllCompany()
         {
-            using (CronusContext cc = new CronusContext())
+            try
             {
-                List<Company> list = cc.Company.ToList();
-                return list;
+                using (CronusContext cc = new CronusContext())
+                {
+                    List<Company> list = cc.Company.ToList();
+                    return list;
+                }
             }
+            catch (Exception)
+            {
+                throw;
+            }
+            
         }
 
         [WebMethod]
@@ -123,43 +154,51 @@ namespace WebService
                     }
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                ExceptionHandler.HandleEFException(e);
+                throw;
             }
         }
 
         [WebMethod]
         public void RemoveCompany(string companyName)
         {
-            using (CronusContext cc = new CronusContext())
+            try
             {
-                Company company = SelectCompany(companyName);
-                cc.Company.Attach(company);
-                cc.Company.Remove(company);
-                cc.SaveChanges();
+                using (CronusContext cc = new CronusContext())
+                {
+                    Company company = SelectCompany(companyName);
+                    cc.Company.Attach(company);
+                    cc.Company.Remove(company);
+                    cc.SaveChanges();
+                }
             }
+            catch (Exception)
+            {
+                throw;
+            }
+            
         }
 
         [WebMethod]
         public void UpdateCompany(string oldCompanyName, string description)
         {
-            using (CronusContext cc = new CronusContext())
+            try
             {
-                Company company = cc.Company.Find(oldCompanyName);
-                company.Description = description;
-                cc.SaveChanges();
+                using (CronusContext cc = new CronusContext())
+                {
+                    Company company = cc.Company.Find(oldCompanyName);
+                    company.Description = description;
+                    cc.SaveChanges();
+                }
             }
+            catch (Exception)
+            {
+                throw;
+            }
+            
         }
 
-        [WebMethod]
-        public void InsertCompany(string name)
-        {
-            navConnection.Open();
-            SqlCommand cmd = new SqlCommand("insert into Company values(default,'" + name + "')", navConnection);
-            cmd.ExecuteNonQuery();
-            navConnection.Close();
-        }
         #endregion
 
         #region CRONUS EMPLOYEE
@@ -167,107 +206,217 @@ namespace WebService
         [WebMethod]
         public List<CRONUS_Sverige_AB_Employee> GetAllEmployee()
         {
-            using (CronusContext cc = new CronusContext())
+            try
             {
-                List<CRONUS_Sverige_AB_Employee> list = cc.CRONUS_Sverige_AB_Employee.ToList();
-                return list;
+                using (CronusContext cc = new CronusContext())
+                {
+                    List<CRONUS_Sverige_AB_Employee> list = cc.CRONUS_Sverige_AB_Employee.ToList();
+                    return list;
+                }
             }
+            catch (Exception)
+            {
+                throw;
+            }
+            
         }
 
         [WebMethod]
         public List<CRONUS_Sverige_AB_Employee_Absence> GetAllEmployeeAbsence()
         {
-            using (CronusContext cc = new CronusContext())
+            try
             {
-                List<CRONUS_Sverige_AB_Employee_Absence> list = cc.CRONUS_Sverige_AB_Employee_Absence.ToList();
-                return list;
+                using (CronusContext cc = new CronusContext())
+                {
+                    List<CRONUS_Sverige_AB_Employee_Absence> list = cc.CRONUS_Sverige_AB_Employee_Absence.ToList();
+                    return list;
+                }
             }
+            catch (Exception)
+            {
+                throw;
+            }
+            
         }
 
         [WebMethod]
         public List<CRONUS_Sverige_AB_Employee_Portal_Setup> GetAllEmployeePortalSetup()
         {
-            using (CronusContext cc = new CronusContext())
+            try
             {
-                List<CRONUS_Sverige_AB_Employee_Portal_Setup> list = cc.CRONUS_Sverige_AB_Employee_Portal_Setup.ToList();
-                return list;
+                using (CronusContext cc = new CronusContext())
+                {
+                    List<CRONUS_Sverige_AB_Employee_Portal_Setup> list = cc.CRONUS_Sverige_AB_Employee_Portal_Setup.ToList();
+                    return list;
+                }
             }
+            catch (Exception)
+            {
+                throw;
+            }
+            
         }
 
         [WebMethod]
         public List<CRONUS_Sverige_AB_Employee_Qualification> GetAllEmployeeQualification()
         {
-            using (CronusContext cc = new CronusContext())
+            try
             {
-                List<CRONUS_Sverige_AB_Employee_Qualification> list = cc.CRONUS_Sverige_AB_Employee_Qualification.ToList();
-                return list;
+                using (CronusContext cc = new CronusContext())
+                {
+                    List<CRONUS_Sverige_AB_Employee_Qualification> list = cc.CRONUS_Sverige_AB_Employee_Qualification.ToList();
+                    return list;
+                }
             }
+            catch (Exception)
+            {
+                throw;
+            }
+            
         }
 
         [WebMethod]
         public List<CRONUS_Sverige_AB_Employee_Relative> GetEmployeeRelatives(string employeeNr)
         {
-            using (CronusContext cc = new CronusContext())
+            try
             {
-                List<CRONUS_Sverige_AB_Employee_Relative> list = cc.CRONUS_Sverige_AB_Employee_Relative.Where(e => e.Employee_No_ == employeeNr).ToList();
-                return list;
+                using (CronusContext cc = new CronusContext())
+                {
+                    List<CRONUS_Sverige_AB_Employee_Relative> list = cc.CRONUS_Sverige_AB_Employee_Relative.Where(e => e.Employee_No_ == employeeNr).ToList();
+                    return list;
+                }
             }
+            catch
+            {
+                throw;
+            }
+            
         }
 
         [WebMethod]
         public List<CRONUS_Sverige_AB_Employee_Absence> GetEmployeeAbsence2004()
         {
-            using (CronusContext cc = new CronusContext())
+            try
             {
-                List<CRONUS_Sverige_AB_Employee_Absence> list = cc.CRONUS_Sverige_AB_Employee_Absence.Where(e => e.From_Date.Year == 2004).ToList();
-                return list;
+                using (CronusContext cc = new CronusContext())
+                {
+                    List<CRONUS_Sverige_AB_Employee_Absence> list = cc.CRONUS_Sverige_AB_Employee_Absence.Where(e => e.From_Date.Year == 2004).ToList();
+                    return list;
+                }
             }
+            catch (Exception)
+            {
+                throw;
+            }
+            
         }
 
         [WebMethod]
         public List<CRONUS_Sverige_AB_Employee_Relative> GetAllEmployeeRelative()
         {
-            using (CronusContext cc = new CronusContext())
+            try
             {
-                List<CRONUS_Sverige_AB_Employee_Relative> list = cc.CRONUS_Sverige_AB_Employee_Relative.ToList();
-                return list;
+                using (CronusContext cc = new CronusContext())
+                {
+                    List<CRONUS_Sverige_AB_Employee_Relative> list = cc.CRONUS_Sverige_AB_Employee_Relative.ToList();
+                    return list;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
             }
         }
 
+        [WebMethod]
         public List<CRONUS_Sverige_AB_Employee_Statistics_Group> GetAllEmployeeStatisticsGroup()
         {
-            using (CronusContext cc = new CronusContext())
+            try
             {
-                List<CRONUS_Sverige_AB_Employee_Statistics_Group> list = cc.CRONUS_Sverige_AB_Employee_Statistics_Group.ToList();
-                return list;
+                using (CronusContext cc = new CronusContext())
+                {
+                    List<CRONUS_Sverige_AB_Employee_Statistics_Group> list = cc.CRONUS_Sverige_AB_Employee_Statistics_Group.ToList();
+                    return list;
+                }
             }
+            catch (Exception)
+            {
+                throw;
+            }
+            
         }
 
         [WebMethod]
         public List<EmployeeRelative> GetEmployeeRelative()
         {
-            List<EmployeeRelative> relatives = new List<EmployeeRelative>();
-            navConnection.Open();
-            using (SqlCommand command = new SqlCommand("select employee.[First Name], employee.[Last Name], employee.[Job Title], relative.[First Name], relative.[Relative Code] from[CRONUS Sverige AB$Employee] employee right join[CRONUS Sverige AB$Employee Relative] relative on employee.No_ = relative.[Employee No_]", navConnection))
+            try
             {
-                using (SqlDataReader reader = command.ExecuteReader())
+                List<EmployeeRelative> relatives = new List<EmployeeRelative>();
+                navConnection.Open();
+                using (SqlCommand command = new SqlCommand("select employee.[First Name], employee.[Last Name], employee.[Job Title], relative.[First Name], relative.[Relative Code] from[CRONUS Sverige AB$Employee] employee right join[CRONUS Sverige AB$Employee Relative] relative on employee.No_ = relative.[Employee No_]", navConnection))
                 {
-                    while (reader.Read())
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        EmployeeRelative tmp = new EmployeeRelative
+                        while (reader.Read())
                         {
-                            EmpFirstName = reader.GetValue(0) as string,
-                            EmpLastName = reader.GetValue(1) as string,
-                            EmpJobTitle = reader.GetValue(2) as string,
-                            RelativeFirstName = reader.GetValue(3) as string,
-                            RelativeCode = reader.GetValue(4) as string
-                        };
-                        relatives.Add(tmp);
+                            EmployeeRelative tmp = new EmployeeRelative
+                            {
+                                EmpFirstName = reader.GetValue(0) as string,
+                                EmpLastName = reader.GetValue(1) as string,
+                                EmpJobTitle = reader.GetValue(2) as string,
+                                RelativeFirstName = reader.GetValue(3) as string,
+                                RelativeCode = reader.GetValue(4) as string
+                            };
+                            relatives.Add(tmp);
+                        }
                     }
                 }
+                navConnection.Close();
+                return relatives;
             }
-            navConnection.Close();
-            return relatives;
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                navConnection.Close();
+            }
+
+        }
+
+        public List<MostSick> GetMostSick()
+        {
+            try
+            {
+                List<MostSick> list = new List<MostSick>();
+                navConnection.Open();
+                using (SqlCommand command = new SqlCommand("select top 5 [First Name] from [CRONUS Sverige AB$Employee] where No_ in(select[Employee No_] from[CRONUS Sverige AB$Employee Absence] where[Cause of Absence Code] = 'SJUK' group by[Employee No_])", navConnection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            MostSick tmp = new MostSick
+                            {
+                                Name = reader.GetValue(0) as string,
+                            };
+                            list.Add(tmp);
+                        }
+                    }
+                }
+                navConnection.Close();
+                return list;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                navConnection.Close();
+            }
+            
         }
         #endregion
 
@@ -275,177 +424,256 @@ namespace WebService
         [WebMethod]
         public List<MetaDataColumn> GetMetaColumns1()
         {
-            List<MetaDataColumn> columns = new List<MetaDataColumn>();
-            navConnection.Open();
-            using (SqlCommand command = new SqlCommand("select top 20 [TABLE_CATALOG], [TABLE_NAME], [DATA_TYPE] from INFORMATION_SCHEMA.COLUMNS", navConnection))
+            try
             {
-                using (SqlDataReader reader = command.ExecuteReader())
+                List<MetaDataColumn> columns = new List<MetaDataColumn>();
+                navConnection.Open();
+                using (SqlCommand command = new SqlCommand("select top 20 [TABLE_CATALOG], [TABLE_NAME], [DATA_TYPE] from INFORMATION_SCHEMA.COLUMNS", navConnection))
                 {
-                    while (reader.Read())
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        MetaDataColumn tmp = new MetaDataColumn
+                        while (reader.Read())
                         {
-                            Table_Catalog = reader.GetValue(0) as string,
-                            Table_Name = reader.GetValue(1) as string,
-                            Data_Type = reader.GetValue(2) as string
-                        };
-                        columns.Add(tmp);
+                            MetaDataColumn tmp = new MetaDataColumn
+                            {
+                                Table_Catalog = reader.GetValue(0) as string,
+                                Table_Name = reader.GetValue(1) as string,
+                                Data_Type = reader.GetValue(2) as string
+                            };
+                            columns.Add(tmp);
+                        }
                     }
                 }
+                navConnection.Close();
+                return columns;
             }
-            navConnection.Close();
-            return columns;
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                navConnection.Close();
+            }
+
         }
         [WebMethod]
         public List<MetaDataColumn2> GetMetaColumns2()
         {
-            List<MetaDataColumn2> columns = new List<MetaDataColumn2>();
-            navConnection.Open();
-            using (SqlCommand command = new SqlCommand("select top 20 name, user_type_id, object_id from sys.columns ", navConnection))
+            try
             {
-                using (SqlDataReader reader = command.ExecuteReader())
+                List<MetaDataColumn2> columns = new List<MetaDataColumn2>();
+                navConnection.Open();
+                using (SqlCommand command = new SqlCommand("select top 20 name, user_type_id, object_id from sys.columns ", navConnection))
                 {
-                    while (reader.Read())
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        MetaDataColumn2 tmp = new MetaDataColumn2
+                        while (reader.Read())
                         {
-                            Name = reader.GetValue(0) as string,
-                            User_type_Id = reader.GetInt32(1),
-                            Object_Id = reader.GetInt32(2)
-                        };
-                        columns.Add(tmp);
+                            MetaDataColumn2 tmp = new MetaDataColumn2
+                            {
+                                Name = reader.GetValue(0) as string,
+                                User_type_Id = reader.GetInt32(1),
+                                Object_Id = reader.GetInt32(2)
+                            };
+                            columns.Add(tmp);
+                        }
                     }
                 }
+                navConnection.Close();
+                return columns;
             }
-            navConnection.Close();
-            return columns;
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                navConnection.Close();
+            }
+
         }
 
         [WebMethod]
         public List<MetaDataIndex> GetMetaIndexes()
         {
-            List<MetaDataIndex> indexes = new List<MetaDataIndex>();
-            navConnection.Open();
-            using (SqlCommand command = new SqlCommand("select top 20 object_id, name, type_desc from sys.indexes", navConnection))
+            try
             {
-                using (SqlDataReader reader = command.ExecuteReader())
+                List<MetaDataIndex> indexes = new List<MetaDataIndex>();
+                navConnection.Open();
+                using (SqlCommand command = new SqlCommand("select top 20 object_id, name, type_desc from sys.indexes", navConnection))
                 {
-                    while (reader.Read())
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        MetaDataIndex tmp = new MetaDataIndex
+                        while (reader.Read())
                         {
-                            Object_Id = reader.GetInt32(0),
-                            Name = reader.GetValue(1) as string,
-                            Type_Desc = reader.GetValue(2) as string
-                        };
-                        indexes.Add(tmp);
+                            MetaDataIndex tmp = new MetaDataIndex
+                            {
+                                Object_Id = reader.GetInt32(0),
+                                Name = reader.GetValue(1) as string,
+                                Type_Desc = reader.GetValue(2) as string
+                            };
+                            indexes.Add(tmp);
+                        }
                     }
                 }
+                navConnection.Close();
+                return indexes;
             }
-            navConnection.Close();
-            return indexes;
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                navConnection.Close();
+            }
+  
         }
 
         [WebMethod]
         public List<MetaDataTableConstraint> GetMetaConstraints()
         {
-
-            List<MetaDataTableConstraint> constraints = new List<MetaDataTableConstraint>();
-            navConnection.Open();
-            using (SqlCommand command = new SqlCommand("select top 20 [CONSTRAINT_NAME], [TABLE_NAME], [CONSTRAINT_TYPE] from INFORMATION_SCHEMA.TABLE_CONSTRAINTS", navConnection))
+            try
             {
-                using (SqlDataReader reader = command.ExecuteReader())
+                List<MetaDataTableConstraint> constraints = new List<MetaDataTableConstraint>();
+                navConnection.Open();
+                using (SqlCommand command = new SqlCommand("select top 20 [CONSTRAINT_NAME], [TABLE_NAME], [CONSTRAINT_TYPE] from INFORMATION_SCHEMA.TABLE_CONSTRAINTS", navConnection))
                 {
-                    while (reader.Read())
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        MetaDataTableConstraint tmp = new MetaDataTableConstraint
+                        while (reader.Read())
                         {
-                            Constraint_Name = reader.GetValue(0) as string,
-                            Table_Name = reader.GetValue(1) as string,
-                            Constraint_Type = reader.GetValue(2) as string
-                        };
-                        constraints.Add(tmp);
+                            MetaDataTableConstraint tmp = new MetaDataTableConstraint
+                            {
+                                Constraint_Name = reader.GetValue(0) as string,
+                                Table_Name = reader.GetValue(1) as string,
+                                Constraint_Type = reader.GetValue(2) as string
+                            };
+                            constraints.Add(tmp);
+                        }
                     }
                 }
+                navConnection.Close();
+                return constraints;
             }
-            navConnection.Close();
-            return constraints;
+            catch (Exception)
+            { 
+                throw;
+            }
+            finally
+            {
+                navConnection.Close();
+            }
         }
 
         [WebMethod]
         public List<MetaDataKey> GetMetaKeys()
         {
-
-            List<MetaDataKey> keys = new List<MetaDataKey>();
-            navConnection.Open();
-            using (SqlCommand command = new SqlCommand("select top 20 [name], [object_id], [type] from sys.key_constraints", navConnection))
+            try
             {
-                using (SqlDataReader reader = command.ExecuteReader())
+                List<MetaDataKey> keys = new List<MetaDataKey>();
+                navConnection.Open();
+                using (SqlCommand command = new SqlCommand("select top 20 [name], [object_id], [type] from sys.key_constraints", navConnection))
                 {
-                    while (reader.Read())
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        MetaDataKey tmp = new MetaDataKey
+                        while (reader.Read())
                         {
-                            Name = reader.GetValue(0) as string,
-                            Object_Id = reader.GetInt32(1),
-                            Type = reader.GetValue(2) as string
-                        };
-                        keys.Add(tmp);
+                            MetaDataKey tmp = new MetaDataKey
+                            {
+                                Name = reader.GetValue(0) as string,
+                                Object_Id = reader.GetInt32(1),
+                                Type = reader.GetValue(2) as string
+                            };
+                            keys.Add(tmp);
+                        }
                     }
                 }
+                navConnection.Close();
+                return keys;
             }
-            navConnection.Close();
-            return keys;
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                navConnection.Close();
+            }
         }
         
 
         [WebMethod]
         public List<MetaDataTable> GetMetaTables()
         {
-            List<MetaDataTable> tables = new List<MetaDataTable>();
-            navConnection.Open();
-            using (SqlCommand command = new SqlCommand("select top 20 [TABLE_NAME], [TABLE_TYPE] from INFORMATION_SCHEMA.TABLES", navConnection))
+            try
             {
-                using (SqlDataReader reader = command.ExecuteReader())
+                List<MetaDataTable> tables = new List<MetaDataTable>();
+                navConnection.Open();
+                using (SqlCommand command = new SqlCommand("select top 20 [TABLE_NAME], [TABLE_TYPE] from INFORMATION_SCHEMA.TABLES", navConnection))
                 {
-                    while (reader.Read())
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        MetaDataTable tmp = new MetaDataTable
+                        while (reader.Read())
                         {
-                            Table_Name = reader.GetValue(0) as string,
-                            Table_Type = reader.GetValue(1) as string
-                        };
-                        tables.Add(tmp);
+                            MetaDataTable tmp = new MetaDataTable
+                            {
+                                Table_Name = reader.GetValue(0) as string,
+                                Table_Type = reader.GetValue(1) as string
+                            };
+                            tables.Add(tmp);
+                        }
                     }
                 }
+                navConnection.Close();
+                return tables;
             }
-            navConnection.Close();
-            return tables;
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                navConnection.Close();
+            }
         }
         
 
         [WebMethod]
         public List<MetaDataTable2> GetMetaTables2()
         {
-            List<MetaDataTable2> tables = new List<MetaDataTable2>();
-            navConnection.Open();
-            using (SqlCommand command = new SqlCommand("select top 20 [name], [object_id] from sys.tables", navConnection))
+            try
             {
-                using (SqlDataReader reader = command.ExecuteReader())
+                List<MetaDataTable2> tables = new List<MetaDataTable2>();
+                navConnection.Open();
+                using (SqlCommand command = new SqlCommand("select top 20 [name], [object_id] from sys.tables", navConnection))
                 {
-                    while (reader.Read())
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        MetaDataTable2 tmp = new MetaDataTable2
+                        while (reader.Read())
                         {
-                            Name = reader.GetValue(0) as string,
-                            Object_Id = reader.GetInt32(1)
-                        };
-                        tables.Add(tmp);
+                            MetaDataTable2 tmp = new MetaDataTable2
+                            {
+                                Name = reader.GetValue(0) as string,
+                                Object_Id = reader.GetInt32(1)
+                            };
+                            tables.Add(tmp);
+                        }
                     }
                 }
+                navConnection.Close();
+                return tables;
             }
-            navConnection.Close();
-            return tables;
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                navConnection.Close();
+            }
+
         }
         #endregion
 
