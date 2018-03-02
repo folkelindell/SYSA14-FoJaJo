@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.newGameButton = new System.Windows.Forms.Button();
             this.playerTwoPanel = new FoJaJo.GUI.PlayerPanel();
             this.playerOnePanel = new FoJaJo.GUI.PlayerPanel();
             this.gameControl = new FoJaJo.GUI.GameBoardControl();
-            this.newGameButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,10 +40,10 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 5;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel1.Controls.Add(this.playerTwoPanel, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.playerOnePanel, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.gameControl, 3, 1);
@@ -60,24 +60,39 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(866, 637);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // newGameButton
+            // 
+            this.newGameButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newGameButton.Location = new System.Drawing.Point(23, 296);
+            this.newGameButton.Name = "newGameButton";
+            this.newGameButton.Size = new System.Drawing.Size(234, 44);
+            this.newGameButton.TabIndex = 3;
+            this.newGameButton.Text = "Go";
+            this.newGameButton.UseVisualStyleBackColor = true;
+            this.newGameButton.Click += new System.EventHandler(this.newGameButton_Click);
+            // 
             // playerTwoPanel
             // 
+            this.playerTwoPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.playerTwoPanel.Controller = null;
             this.playerTwoPanel.CurrentPlayer = null;
             this.playerTwoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.playerTwoPanel.Location = new System.Drawing.Point(23, 346);
             this.playerTwoPanel.Name = "playerTwoPanel";
-            this.playerTwoPanel.Size = new System.Drawing.Size(155, 267);
+            this.playerTwoPanel.Size = new System.Drawing.Size(234, 267);
+            this.playerTwoPanel.Status = null;
             this.playerTwoPanel.TabIndex = 0;
             // 
             // playerOnePanel
             // 
+            this.playerOnePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.playerOnePanel.Controller = null;
             this.playerOnePanel.CurrentPlayer = null;
             this.playerOnePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.playerOnePanel.Location = new System.Drawing.Point(23, 23);
             this.playerOnePanel.Name = "playerOnePanel";
-            this.playerOnePanel.Size = new System.Drawing.Size(155, 267);
+            this.playerOnePanel.Size = new System.Drawing.Size(234, 267);
+            this.playerOnePanel.Status = null;
             this.playerOnePanel.TabIndex = 1;
             // 
             // gameControl
@@ -86,22 +101,11 @@
             this.gameControl.Controller = null;
             this.gameControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gameControl.Enabled = false;
-            this.gameControl.Location = new System.Drawing.Point(204, 23);
+            this.gameControl.Location = new System.Drawing.Point(283, 23);
             this.gameControl.Name = "gameControl";
             this.tableLayoutPanel1.SetRowSpan(this.gameControl, 3);
-            this.gameControl.Size = new System.Drawing.Size(638, 590);
+            this.gameControl.Size = new System.Drawing.Size(555, 590);
             this.gameControl.TabIndex = 2;
-            // 
-            // newGameButton
-            // 
-            this.newGameButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.newGameButton.Location = new System.Drawing.Point(23, 296);
-            this.newGameButton.Name = "newGameButton";
-            this.newGameButton.Size = new System.Drawing.Size(155, 44);
-            this.newGameButton.TabIndex = 3;
-            this.newGameButton.Text = "Go";
-            this.newGameButton.UseVisualStyleBackColor = true;
-            this.newGameButton.Click += new System.EventHandler(this.newGameButton_Click);
             // 
             // LuffarRootControl
             // 

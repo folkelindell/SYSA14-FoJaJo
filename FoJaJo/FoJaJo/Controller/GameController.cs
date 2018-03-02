@@ -16,12 +16,18 @@ namespace FoJaJo.Controller
         public delegate void gameWonEvent();
         public PlayerController PlayerController { get; set; }
         public GameBoardState BoardState { get; set; }
-        public GameBoardControl BoardView { get; set; }
         public gameStartEvent GameStarted { get; set; }
         public gameWonEvent OnGameWon { get; set; }
+        public LuffarRootControl View { get; set; }
 
         public GameController()
         {
+            GameDAO = new MsSqlGameDAO();
+            PlayerController = new PlayerController();
+        }
+        public GameController(LuffarRootControl lrc)
+        {
+            View = lrc;
             GameDAO = new MsSqlGameDAO();
             PlayerController = new PlayerController();
         }
@@ -33,6 +39,7 @@ namespace FoJaJo.Controller
                 BoardState.SetValue(x, y);
                 if (BoardState.WinCheck(x, y)) {
                     OnGameWon();
+
                 }
                 else BoardState.NextTurn();
             }
@@ -40,12 +47,12 @@ namespace FoJaJo.Controller
 
         public Player LogInPlayer(String usr, String pw)
         {
-            return PlayerController.LogInPlayer(usr, pw);
+                return PlayerController.LogInPlayer(usr, pw);
         }
 
         public Boolean LogOutPlayer()
         {
-            if(BoardState != null && BoardState.Winner != null)
+            if(BoardState == null || BoardState.Winner != null)
             {
                 return true;
             }
@@ -75,6 +82,11 @@ namespace FoJaJo.Controller
             {
 
             }
+        }
+
+        public void RegisterPlayer(String usr, String email, String pw)
+        {
+            PlayerController.RegisterPlayer(usr, email, pw);
         }
         public Game GetGame(int gameID)
         {

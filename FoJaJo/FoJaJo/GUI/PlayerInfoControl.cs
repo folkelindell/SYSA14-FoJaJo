@@ -14,7 +14,8 @@ namespace FoJaJo.GUI
 {
     public partial class PlayerInfoControl : UserControl
     {
-        public GameController controller;
+        public StatusLabel Status { get; set; }
+        private GameController controller;
         public GameController Controller
         {
             get
@@ -66,7 +67,10 @@ namespace FoJaJo.GUI
         private void logoutButton_Click(object sender, EventArgs e)
         {
             if ((Parent as PlayerPanel).Controller.LogOutPlayer())
+            {
+                Status.ShowStatus((Parent as PlayerPanel).CurrentPlayer.Username + " logged out.");
                 (Parent as PlayerPanel).CurrentPlayer = null;
+            }
         }
         public void UpdateView()
         {
