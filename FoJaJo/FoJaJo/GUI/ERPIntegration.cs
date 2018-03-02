@@ -40,7 +40,6 @@ namespace FoJaJo.GUI
             dGVERP.DataSource = null;
             if(cBoxERP.SelectedIndex > -1)
             {
-
                 switch(cBoxERP.SelectedIndex)
                 {
                     case 0:
@@ -65,37 +64,55 @@ namespace FoJaJo.GUI
                         dGVERP.DataSource = wc.GetMetaColumns2();
                         break;
                     case 7:
-                        MessageBox.Show("EMPLOYEEE");
-                        //dGVERP.DataSource = wc.();
+                        dGVERP.DataSource = wc.GetAllEmployees().Select(o => new
+                        { o.First_Name, o.Job_Title, o.City }).ToList();
                         break;
                     case 8:
-                       // dGVERP.DataSource = wc.getMetaIndexes();
+                        dGVERP.DataSource = wc.GetMetaColumns();
                         break;
                     case 9:
-                        dGVERP.DataSource = wc.getEmployeeRelatives();
+                        dGVERP.DataSource = wc.GetEmployeeRelatives();
                         break;
                     case 10:
-                        //dGVERP.DataSource = wc.getMetaIndexes();
+                        dGVERP.DataSource = wc.GetEmployeeAbsence().Select(o => new {  o.Employee_No_,  o.Cause_of_Absence_Code, o.Description, From_Date = o.From_Date.ToString() }).ToList();
                         break;
                     case 11:
-                        //dGVERP.DataSource = wc.getMetaIndexes();
+                        dGVERP.DataSource = wc.GetMostSick();
                         break;
-
-
+                    case 12:
+                        dGVERP.DataSource = wc.GetAllEmployeeAbsence().Select(o => new {  o.Entry_No_, o.Employee_No_, o.Cause_of_Absence_Code }).ToList();
+                        break;
+                    case 13:
+                        dGVERP.DataSource = wc.GetAllPortalSetup().Select(o => new { o.Config_TP_Group_Capt_ID, o.Config_Tool_Pane_Caption, o.Search_Tool_Pane_Caption}).ToList();
+                        break;
+                    case 14:
+                        dGVERP.DataSource = wc.GetAllQualification().Select(o => new { o.Description,  o.Qualification_Code, o.Institution_Company }).ToList();
+                        break;
                 }
             }
         }
 
         private void BtnDeleteCompany_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Du kommer att ta bort företaget ur databasen","Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if(dr == DialogResult.Yes)
+            string companyName = txtBoxCompany.Text;
+            if (companyName != null)
             {
+                DialogResult dr = MessageBox.Show("Du kommer att ta bort företaget ur databasen", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dr == DialogResult.Yes)
+                {
+                    try
+                    {
+                        wc.RemoveCompany(companyName);
+                        dGVERP.DataSource = null;
+                        txtBoxCompany.Text = "";
+                        txtBoxCompanyDescription.Text = "";
+                    }
+                    catch
+                    {
 
-            }
-            else
-            {
-
+                    }
+                    
+                }
             }
         }
 
@@ -105,12 +122,71 @@ namespace FoJaJo.GUI
             try
             {
                 string text = txtBoxCompany.Text;
-                wc.InsertCompany(text);
-                txtBoxCompany.Text = "";
+                string desc = txtBoxCompanyDescription.Text;
+                if (text != null)
+                {
+                    wc.AddCompany(text, desc);
+                    txtBoxCompany.Text = "";
+                    txtBoxCompanyDescription.Text = "";
+                }
+                
             }
-            catch
+            catch (Exception)
             {
+                MessageBox.Show("PK VIOLATION");
+            }
+        }
 
+        private void BtnShowCompany_Click(object sender, EventArgs e)
+        {
+            string company = txtBoxCompany.Text;
+            wc = new WebServiceController1();
+            if (string.IsNullOrWhiteSpace(txtBoxCompany.Text))
+            {
+                try
+                {
+                    dGVERP.DataSource = wc.SelectAllCompany().Select(o => new { o.Name, o.Description }).ToList();
+                }
+                catch
+                {
+
+                }
+            }
+            else
+            {
+                try
+                {
+                    dGVERP.DataSource = wc.GetCompany(company).Select(o => new { o.Name, o.Description }).ToList();
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+        private void BtnUpdateCompany_Click(object sender, EventArgs e)
+        {
+            string name = txtBoxCompany.Text;
+            string desc = txtBoxCompanyDescription.Text;
+            wc = new WebServiceController1();
+            if (string.IsNullOrWhiteSpace(txtBoxCompanyDescription.Text) && string.IsNullOrWhiteSpace(txtBoxCompany.Text))
+            {
+                //STATUSLABLE UPPDATERAS
+            }
+            else
+            {
+                try
+                {
+                    wc.UpdateCompany(name, desc);
+                    dGVERP.DataSource = wc.GetCompany(name).Select(o => new { o.Name, o.Description }).ToList();
+                    txtBoxCompany.Text = "";
+                    txtBoxCompanyDescription.Text = "";
+                }
+                catch
+                {
+
+                }
             }
         }
     }

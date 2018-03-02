@@ -36,7 +36,7 @@ namespace FoJaJo.GUI
             this.btnShowCompany = new System.Windows.Forms.Button();
             this.btnAddCompany = new System.Windows.Forms.Button();
             this.lblNewCompanyName = new System.Windows.Forms.Label();
-            this.txtBoxUpdateCompanyName = new System.Windows.Forms.TextBox();
+            this.txtBoxCompanyDescription = new System.Windows.Forms.TextBox();
             this.lblCompanyName = new System.Windows.Forms.Label();
             this.txtBoxCompany = new System.Windows.Forms.TextBox();
             this.cBoxERP = new System.Windows.Forms.ComboBox();
@@ -56,7 +56,7 @@ namespace FoJaJo.GUI
             this.tblLayOutERP.Controls.Add(this.btnShowCompany, 0, 7);
             this.tblLayOutERP.Controls.Add(this.btnAddCompany, 1, 7);
             this.tblLayOutERP.Controls.Add(this.lblNewCompanyName, 0, 6);
-            this.tblLayOutERP.Controls.Add(this.txtBoxUpdateCompanyName, 1, 6);
+            this.tblLayOutERP.Controls.Add(this.txtBoxCompanyDescription, 1, 6);
             this.tblLayOutERP.Controls.Add(this.lblCompanyName, 0, 5);
             this.tblLayOutERP.Controls.Add(this.txtBoxCompany, 1, 5);
             this.tblLayOutERP.Controls.Add(this.cBoxERP, 0, 0);
@@ -100,6 +100,7 @@ namespace FoJaJo.GUI
             this.btnUpdateCompany.TabIndex = 19;
             this.btnUpdateCompany.Text = "Uppdatera";
             this.btnUpdateCompany.UseVisualStyleBackColor = true;
+            this.btnUpdateCompany.Click += new System.EventHandler(this.BtnUpdateCompany_Click);
             // 
             // btnShowCompany
             // 
@@ -109,6 +110,7 @@ namespace FoJaJo.GUI
             this.btnShowCompany.TabIndex = 17;
             this.btnShowCompany.Text = "Visa";
             this.btnShowCompany.UseVisualStyleBackColor = true;
+            this.btnShowCompany.Click += new System.EventHandler(this.BtnShowCompany_Click);
             // 
             // btnAddCompany
             // 
@@ -125,16 +127,16 @@ namespace FoJaJo.GUI
             this.lblNewCompanyName.AutoSize = true;
             this.lblNewCompanyName.Location = new System.Drawing.Point(3, 451);
             this.lblNewCompanyName.Name = "lblNewCompanyName";
-            this.lblNewCompanyName.Size = new System.Drawing.Size(58, 13);
+            this.lblNewCompanyName.Size = new System.Drawing.Size(60, 13);
             this.lblNewCompanyName.TabIndex = 15;
-            this.lblNewCompanyName.Text = "Nytt namn:";
+            this.lblNewCompanyName.Text = "Description";
             // 
-            // txtBoxUpdateCompanyName
+            // txtBoxCompanyDescription
             // 
-            this.txtBoxUpdateCompanyName.Location = new System.Drawing.Point(101, 454);
-            this.txtBoxUpdateCompanyName.Name = "txtBoxUpdateCompanyName";
-            this.txtBoxUpdateCompanyName.Size = new System.Drawing.Size(138, 20);
-            this.txtBoxUpdateCompanyName.TabIndex = 20;
+            this.txtBoxCompanyDescription.Location = new System.Drawing.Point(101, 454);
+            this.txtBoxCompanyDescription.Name = "txtBoxCompanyDescription";
+            this.txtBoxCompanyDescription.Size = new System.Drawing.Size(138, 20);
+            this.txtBoxCompanyDescription.TabIndex = 20;
             // 
             // lblCompanyName
             // 
@@ -169,7 +171,10 @@ namespace FoJaJo.GUI
             "MetadataEmployee",
             "Personal och släkt",
             "Sjuka2004",
-            "Mest sjuka"});
+            "Mest sjuka",
+            "Absence",
+            "Portal Setup",
+            "Qualifications"});
             this.cBoxERP.Location = new System.Drawing.Point(3, 3);
             this.cBoxERP.Name = "cBoxERP";
             this.cBoxERP.Size = new System.Drawing.Size(170, 21);
@@ -223,7 +228,7 @@ namespace FoJaJo.GUI
         private System.Windows.Forms.Button btnShowCompany;
         private System.Windows.Forms.Button btnAddCompany;
         private System.Windows.Forms.Label lblNewCompanyName;
-        private System.Windows.Forms.TextBox txtBoxUpdateCompanyName;
+        private System.Windows.Forms.TextBox txtBoxCompanyDescription;
         private System.Windows.Forms.Label lblCompanyName;
         private System.Windows.Forms.TextBox txtBoxCompany;
         private System.Windows.Forms.ComboBox cBoxERP;

@@ -1,4 +1,4 @@
-﻿ using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -113,11 +113,11 @@ namespace WebService
         }
 
         [WebMethod]
-        public void UpdateCompany(string oldCompanyName, string description)
+        public void UpdateCompany(string companyName, string description)
         {
             using (CronusContext cc = new CronusContext())
             {
-                Company company = cc.Company.Find(oldCompanyName);
+                Company company = cc.Company.Find(companyName);
                 company.Description = description;
                 cc.SaveChanges();
             }
@@ -174,7 +174,7 @@ namespace WebService
         {
             List<MetaDataColumn> columns = new List<MetaDataColumn>();
             navConnection.Open();
-            using (SqlCommand command = new SqlCommand("select top 20 [TABLE_CATALOG], [TABLE_NAME], [DATA_TYPE] from INFORMATION_SCHEMA.COLUMNS", navConnection))
+            using (SqlCommand command = new SqlCommand("select top 20 [TABLE_CATALOG], [TABLE_NAME], [DATA_TYPE] from INFORMATION_SCHEMA.COLUMNS where table_name = 'CRONUS Sverige AB$Employee'", navConnection))
             {
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
@@ -362,12 +362,26 @@ namespace WebService
         #endregion
 
         [WebMethod]
-        public void InsertCompany(string name)
+        public List<MostSick> GetMostSick()
         {
+            List<MostSick> sick = new List<MostSick>();
             navConnection.Open();
-            SqlCommand cmd = new SqlCommand("insert into Company values(default,'"+name+"')", navConnection);
-            cmd.ExecuteNonQuery();
+            using (SqlCommand command = new SqlCommand("select top 5 [First Name] from [CRONUS Sverige AB$Employee] where No_ in(select[Employee No_] from[CRONUS Sverige AB$Employee Absence] where[Cause of Absence Code] = 'SJUK' group by[Employee No_])", navConnection))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        MostSick tmp = new MostSick
+                        {
+                            Name = reader.GetValue(0) as string,
+                        };
+                        sick.Add(tmp);
+                    }
+                }
+            }
             navConnection.Close();
+            return sick;
         }
 
         [WebMethod]
@@ -409,11 +423,11 @@ namespace WebService
         }
 
         [WebMethod]
-        public List<CRONUS_Sverige_AB_Employee_Absence> GetEmployeeAbsence()
+        public List<CRONUS_Sverige_AB_Employee_Absence> GetEmployeeAbsence()    
         {
             using (CronusContext cc = new CronusContext())
             {
-                List<CRONUS_Sverige_AB_Employee_Absence> list = cc.CRONUS_Sverige_AB_Employee_Absence.Where(e => e.From_Date.Year == 2004).ToList();
+                List<CRONUS_Sverige_AB_Employee_Absence> list = cc.CRONUS_Sverige_AB_Employee_Absence.Where(e => e.From_Date.Year == 2004 && e.Cause_of_Absence_Code=="SJUK").ToList();
                 return list;
             }
         }

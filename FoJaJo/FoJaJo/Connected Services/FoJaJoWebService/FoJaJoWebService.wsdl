@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://fojajo.ics.lu.se" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://fojajo.ics.lu.se" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
-    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org">
+    <s:schema elementFormDefault="qualified" targetNamespace="http://fojajo.ics.lu.se">
+      <s:element name="FindFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filePath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="GetPlayer">
         <s:complexType>
           <s:sequence>
@@ -72,16 +86,247 @@
           <s:element minOccurs="0" maxOccurs="1" name="Reason" type="s:string" />
         </s:sequence>
       </s:complexType>
-      <s:element name="GetPlayers">
-        <s:complexType />
-      </s:element>
-      <s:element name="GetPlayersResponse">
+      <s:element name="SelectCompany">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="GetPlayersResult" type="tns:ArrayOfPlayer" />
+            <s:element minOccurs="0" maxOccurs="1" name="companyName" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="SelectCompanyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectCompanyResult" type="tns:Company" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Company">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="timestamp" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SelectAllCompany">
+        <s:complexType />
+      </s:element>
+      <s:element name="SelectAllCompanyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectAllCompanyResult" type="tns:ArrayOfCompany" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCompany">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Company" nillable="true" type="tns:Company" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddCompany">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="companyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCompanyResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="RemoveCompany">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="companyName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveCompanyResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateCompany">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="oldCompanyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCompanyResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllEmployee">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllEmployeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllEmployeeResult" type="tns:ArrayOfCRONUS_Sverige_AB_Employee" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCRONUS_Sverige_AB_Employee">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CRONUS_Sverige_AB_Employee" nillable="true" type="tns:CRONUS_Sverige_AB_Employee" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CRONUS_Sverige_AB_Employee">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="timestamp" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="No_" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="First_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Middle_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Last_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Initials" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Job_Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Search_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address_2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Post_Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="County" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone_No_" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mobile_Phone_No_" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="E_Mail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Alt__Address_Code" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Alt__Address_Start_Date" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Alt__Address_End_Date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Picture" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="Birth_Date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Social_Security_No_" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Union_Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Union_Membership_No_" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sex" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country_Region_Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Manager_No_" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Emplymt__Contract_Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Statistics_Group_Code" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Employment_Date" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Inactive_Date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cause_of_Inactivity_Code" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Termination_Date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Grounds_for_Term__Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Global_Dimension_1_Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Global_Dimension_2_Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Resource_No_" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Last_Date_Modified" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Extension" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pager" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax_No_" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Company_E_Mail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Salespers__Purch__Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="No__Series" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllEmployeeAbsence">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllEmployeeAbsenceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllEmployeeAbsenceResult" type="tns:ArrayOfCRONUS_Sverige_AB_Employee_Absence" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCRONUS_Sverige_AB_Employee_Absence">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CRONUS_Sverige_AB_Employee_Absence" nillable="true" type="tns:CRONUS_Sverige_AB_Employee_Absence" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CRONUS_Sverige_AB_Employee_Absence">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="timestamp" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="Entry_No_" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Employee_No_" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="From_Date" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="To_Date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cause_of_Absence_Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Unit_of_Measure_Code" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantity__Base_" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Qty__per_Unit_of_Measure" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllEmployeePortalSetup">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllEmployeePortalSetupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllEmployeePortalSetupResult" type="tns:ArrayOfCRONUS_Sverige_AB_Employee_Portal_Setup" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCRONUS_Sverige_AB_Employee_Portal_Setup">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CRONUS_Sverige_AB_Employee_Portal_Setup" nillable="true" type="tns:CRONUS_Sverige_AB_Employee_Portal_Setup" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CRONUS_Sverige_AB_Employee_Portal_Setup">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="timestamp" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="Primary_Key" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Search_Limit" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Temp__Key_Index" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Temp__Table_No_" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Temp__Key_String" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Temp__Option_Value" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Temp__Option_Caption" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Temp__SharePoint_Site_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Back_End_Public_Key" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="Back_End_Private_Key" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="Write_Debugging_Info_" type="s:unsignedByte" />
+          <s:element minOccurs="1" maxOccurs="1" name="Config_Tool_Pane_Caption_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Config_TP_WP_Request_Capt_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Config_TP_Initial_Req__Capt_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Config_TP_Group_Capt_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Search_Tool_Pane_Caption_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Search_Config_Table_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Search_TP_All_Tables_Capt_ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Config_Tool_Pane_Caption" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Config_TP_WP_Request_Caption" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Config_TP_Initial_Req__Caption" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Config_TP_Group_Caption" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Search_Tool_Pane_Caption" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Search_Config_Table_Caption" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Search_TP_All_Tables_Caption" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Debugging_Path" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllEmployeeQualification">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllEmployeeQualificationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllEmployeeQualificationResult" type="tns:ArrayOfCRONUS_Sverige_AB_Employee_Qualification" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCRONUS_Sverige_AB_Employee_Qualification">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CRONUS_Sverige_AB_Employee_Qualification" nillable="true" type="tns:CRONUS_Sverige_AB_Employee_Qualification" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CRONUS_Sverige_AB_Employee_Qualification">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="timestamp" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="Employee_No_" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Line_No_" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Qualification_Code" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="From_Date" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="To_Date" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Institution_Company" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Cost" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Course_Grade" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Employee_Status" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Expiration_Date" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
       <s:element name="GetMetaColumns1">
         <s:complexType />
       </s:element>
@@ -192,6 +437,35 @@
           <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
         </s:sequence>
       </s:complexType>
+      <s:element name="GetAllEmployeeRelative">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllEmployeeRelativeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllEmployeeRelativeResult" type="tns:ArrayOfCRONUS_Sverige_AB_Employee_Relative" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCRONUS_Sverige_AB_Employee_Relative">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CRONUS_Sverige_AB_Employee_Relative" nillable="true" type="tns:CRONUS_Sverige_AB_Employee_Relative" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CRONUS_Sverige_AB_Employee_Relative">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="timestamp" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="Employee_No_" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Line_No_" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relative_Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="First_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Middle_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Last_Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Birth_Date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone_No_" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relative_s_Employee_No_" type="s:string" />
+        </s:sequence>
+      </s:complexType>
       <s:element name="GetMetaTables">
         <s:complexType />
       </s:element>
@@ -234,16 +508,26 @@
           <s:element minOccurs="1" maxOccurs="1" name="Object_Id" type="s:int" />
         </s:sequence>
       </s:complexType>
-      <s:element name="InsertCompany">
+      <s:element name="GetMostSick">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMostSickResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GetMostSickResult" type="tns:ArrayOfMostSick" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="InsertCompanyResponse">
-        <s:complexType />
-      </s:element>
+      <s:complexType name="ArrayOfMostSick">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MostSick" nillable="true" type="tns:MostSick" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MostSick">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+        </s:sequence>
+      </s:complexType>
       <s:element name="GetEmployeeRelative">
         <s:complexType />
       </s:element>
@@ -268,22 +552,38 @@
           <s:element minOccurs="0" maxOccurs="1" name="RelativeCode" type="s:string" />
         </s:sequence>
       </s:complexType>
-      <s:element name="FindFile">
+      <s:element name="GetEmployeeRelatives">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="filePath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="employeeNr" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="FindFileResponse">
+      <s:element name="GetEmployeeRelativesResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="FindFileResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeeRelativesResult" type="tns:ArrayOfCRONUS_Sverige_AB_Employee_Relative" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployeeAbsence">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEmployeeAbsenceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeeAbsenceResult" type="tns:ArrayOfCRONUS_Sverige_AB_Employee_Absence" />
           </s:sequence>
         </s:complexType>
       </s:element>
     </s:schema>
   </wsdl:types>
+  <wsdl:message name="FindFileSoapIn">
+    <wsdl:part name="parameters" element="tns:FindFile" />
+  </wsdl:message>
+  <wsdl:message name="FindFileSoapOut">
+    <wsdl:part name="parameters" element="tns:FindFileResponse" />
+  </wsdl:message>
   <wsdl:message name="GetPlayerSoapIn">
     <wsdl:part name="parameters" element="tns:GetPlayer" />
   </wsdl:message>
@@ -302,11 +602,59 @@
   <wsdl:message name="GetAllGamesSoapOut">
     <wsdl:part name="parameters" element="tns:GetAllGamesResponse" />
   </wsdl:message>
-  <wsdl:message name="GetPlayersSoapIn">
-    <wsdl:part name="parameters" element="tns:GetPlayers" />
+  <wsdl:message name="SelectCompanySoapIn">
+    <wsdl:part name="parameters" element="tns:SelectCompany" />
   </wsdl:message>
-  <wsdl:message name="GetPlayersSoapOut">
-    <wsdl:part name="parameters" element="tns:GetPlayersResponse" />
+  <wsdl:message name="SelectCompanySoapOut">
+    <wsdl:part name="parameters" element="tns:SelectCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectAllCompanySoapIn">
+    <wsdl:part name="parameters" element="tns:SelectAllCompany" />
+  </wsdl:message>
+  <wsdl:message name="SelectAllCompanySoapOut">
+    <wsdl:part name="parameters" element="tns:SelectAllCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCompanySoapIn">
+    <wsdl:part name="parameters" element="tns:AddCompany" />
+  </wsdl:message>
+  <wsdl:message name="AddCompanySoapOut">
+    <wsdl:part name="parameters" element="tns:AddCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveCompanySoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveCompany" />
+  </wsdl:message>
+  <wsdl:message name="RemoveCompanySoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCompanySoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateCompany" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCompanySoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllEmployeeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllEmployee" />
+  </wsdl:message>
+  <wsdl:message name="GetAllEmployeeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllEmployeeAbsenceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeeAbsence" />
+  </wsdl:message>
+  <wsdl:message name="GetAllEmployeeAbsenceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeeAbsenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllEmployeePortalSetupSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeePortalSetup" />
+  </wsdl:message>
+  <wsdl:message name="GetAllEmployeePortalSetupSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeePortalSetupResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllEmployeeQualificationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeeQualification" />
+  </wsdl:message>
+  <wsdl:message name="GetAllEmployeeQualificationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeeQualificationResponse" />
   </wsdl:message>
   <wsdl:message name="GetMetaColumns1SoapIn">
     <wsdl:part name="parameters" element="tns:GetMetaColumns1" />
@@ -338,6 +686,12 @@
   <wsdl:message name="GetMetaKeysSoapOut">
     <wsdl:part name="parameters" element="tns:GetMetaKeysResponse" />
   </wsdl:message>
+  <wsdl:message name="GetAllEmployeeRelativeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeeRelative" />
+  </wsdl:message>
+  <wsdl:message name="GetAllEmployeeRelativeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeeRelativeResponse" />
+  </wsdl:message>
   <wsdl:message name="GetMetaTablesSoapIn">
     <wsdl:part name="parameters" element="tns:GetMetaTables" />
   </wsdl:message>
@@ -350,11 +704,11 @@
   <wsdl:message name="GetMetaTables2SoapOut">
     <wsdl:part name="parameters" element="tns:GetMetaTables2Response" />
   </wsdl:message>
-  <wsdl:message name="InsertCompanySoapIn">
-    <wsdl:part name="parameters" element="tns:InsertCompany" />
+  <wsdl:message name="GetMostSickSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMostSick" />
   </wsdl:message>
-  <wsdl:message name="InsertCompanySoapOut">
-    <wsdl:part name="parameters" element="tns:InsertCompanyResponse" />
+  <wsdl:message name="GetMostSickSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMostSickResponse" />
   </wsdl:message>
   <wsdl:message name="GetEmployeeRelativeSoapIn">
     <wsdl:part name="parameters" element="tns:GetEmployeeRelative" />
@@ -362,13 +716,23 @@
   <wsdl:message name="GetEmployeeRelativeSoapOut">
     <wsdl:part name="parameters" element="tns:GetEmployeeRelativeResponse" />
   </wsdl:message>
-  <wsdl:message name="FindFileSoapIn">
-    <wsdl:part name="parameters" element="tns:FindFile" />
+  <wsdl:message name="GetEmployeeRelativesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployeeRelatives" />
   </wsdl:message>
-  <wsdl:message name="FindFileSoapOut">
-    <wsdl:part name="parameters" element="tns:FindFileResponse" />
+  <wsdl:message name="GetEmployeeRelativesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeeRelativesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeAbsenceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployeeAbsence" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeAbsenceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeeAbsenceResponse" />
   </wsdl:message>
   <wsdl:portType name="FoJaJoWebServiceSoap">
+    <wsdl:operation name="FindFile">
+      <wsdl:input message="tns:FindFileSoapIn" />
+      <wsdl:output message="tns:FindFileSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="GetPlayer">
       <wsdl:input message="tns:GetPlayerSoapIn" />
       <wsdl:output message="tns:GetPlayerSoapOut" />
@@ -381,9 +745,41 @@
       <wsdl:input message="tns:GetAllGamesSoapIn" />
       <wsdl:output message="tns:GetAllGamesSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="GetPlayers">
-      <wsdl:input message="tns:GetPlayersSoapIn" />
-      <wsdl:output message="tns:GetPlayersSoapOut" />
+    <wsdl:operation name="SelectCompany">
+      <wsdl:input message="tns:SelectCompanySoapIn" />
+      <wsdl:output message="tns:SelectCompanySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllCompany">
+      <wsdl:input message="tns:SelectAllCompanySoapIn" />
+      <wsdl:output message="tns:SelectAllCompanySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCompany">
+      <wsdl:input message="tns:AddCompanySoapIn" />
+      <wsdl:output message="tns:AddCompanySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCompany">
+      <wsdl:input message="tns:RemoveCompanySoapIn" />
+      <wsdl:output message="tns:RemoveCompanySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompany">
+      <wsdl:input message="tns:UpdateCompanySoapIn" />
+      <wsdl:output message="tns:UpdateCompanySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployee">
+      <wsdl:input message="tns:GetAllEmployeeSoapIn" />
+      <wsdl:output message="tns:GetAllEmployeeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeeAbsence">
+      <wsdl:input message="tns:GetAllEmployeeAbsenceSoapIn" />
+      <wsdl:output message="tns:GetAllEmployeeAbsenceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeePortalSetup">
+      <wsdl:input message="tns:GetAllEmployeePortalSetupSoapIn" />
+      <wsdl:output message="tns:GetAllEmployeePortalSetupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeeQualification">
+      <wsdl:input message="tns:GetAllEmployeeQualificationSoapIn" />
+      <wsdl:output message="tns:GetAllEmployeeQualificationSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="GetMetaColumns1">
       <wsdl:input message="tns:GetMetaColumns1SoapIn" />
@@ -405,6 +801,10 @@
       <wsdl:input message="tns:GetMetaKeysSoapIn" />
       <wsdl:output message="tns:GetMetaKeysSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeeRelative">
+      <wsdl:input message="tns:GetAllEmployeeRelativeSoapIn" />
+      <wsdl:output message="tns:GetAllEmployeeRelativeSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="GetMetaTables">
       <wsdl:input message="tns:GetMetaTablesSoapIn" />
       <wsdl:output message="tns:GetMetaTablesSoapOut" />
@@ -413,23 +813,36 @@
       <wsdl:input message="tns:GetMetaTables2SoapIn" />
       <wsdl:output message="tns:GetMetaTables2SoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="InsertCompany">
-      <wsdl:input message="tns:InsertCompanySoapIn" />
-      <wsdl:output message="tns:InsertCompanySoapOut" />
+    <wsdl:operation name="GetMostSick">
+      <wsdl:input message="tns:GetMostSickSoapIn" />
+      <wsdl:output message="tns:GetMostSickSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="GetEmployeeRelative">
       <wsdl:input message="tns:GetEmployeeRelativeSoapIn" />
       <wsdl:output message="tns:GetEmployeeRelativeSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="FindFile">
-      <wsdl:input message="tns:FindFileSoapIn" />
-      <wsdl:output message="tns:FindFileSoapOut" />
+    <wsdl:operation name="GetEmployeeRelatives">
+      <wsdl:input message="tns:GetEmployeeRelativesSoapIn" />
+      <wsdl:output message="tns:GetEmployeeRelativesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeAbsence">
+      <wsdl:input message="tns:GetEmployeeAbsenceSoapIn" />
+      <wsdl:output message="tns:GetEmployeeAbsenceSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="FoJaJoWebServiceSoap" type="tns:FoJaJoWebServiceSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FindFile">
+      <soap:operation soapAction="http://fojajo.ics.lu.se/FindFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetPlayer">
-      <soap:operation soapAction="http://tempuri.org/GetPlayer" style="document" />
+      <soap:operation soapAction="http://fojajo.ics.lu.se/GetPlayer" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -438,7 +851,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetAllPlayers">
-      <soap:operation soapAction="http://tempuri.org/GetAllPlayers" style="document" />
+      <soap:operation soapAction="http://fojajo.ics.lu.se/GetAllPlayers" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -447,7 +860,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetAllGames">
-      <soap:operation soapAction="http://tempuri.org/GetAllGames" style="document" />
+      <soap:operation soapAction="http://fojajo.ics.lu.se/GetAllGames" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -455,8 +868,80 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetPlayers">
-      <soap:operation soapAction="http://tempuri.org/GetPlayers" style="document" />
+    <wsdl:operation name="SelectCompany">
+      <soap:operation soapAction="http://fojajo.ics.lu.se/SelectCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllCompany">
+      <soap:operation soapAction="http://fojajo.ics.lu.se/SelectAllCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCompany">
+      <soap:operation soapAction="http://fojajo.ics.lu.se/AddCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCompany">
+      <soap:operation soapAction="http://fojajo.ics.lu.se/RemoveCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompany">
+      <soap:operation soapAction="http://fojajo.ics.lu.se/UpdateCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployee">
+      <soap:operation soapAction="http://fojajo.ics.lu.se/GetAllEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeeAbsence">
+      <soap:operation soapAction="http://fojajo.ics.lu.se/GetAllEmployeeAbsence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeePortalSetup">
+      <soap:operation soapAction="http://fojajo.ics.lu.se/GetAllEmployeePortalSetup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeeQualification">
+      <soap:operation soapAction="http://fojajo.ics.lu.se/GetAllEmployeeQualification" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -465,7 +950,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMetaColumns1">
-      <soap:operation soapAction="http://tempuri.org/GetMetaColumns1" style="document" />
+      <soap:operation soapAction="http://fojajo.ics.lu.se/GetMetaColumns1" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -474,7 +959,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMetaColumns2">
-      <soap:operation soapAction="http://tempuri.org/GetMetaColumns2" style="document" />
+      <soap:operation soapAction="http://fojajo.ics.lu.se/GetMetaColumns2" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -483,7 +968,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMetaIndexes">
-      <soap:operation soapAction="http://tempuri.org/GetMetaIndexes" style="document" />
+      <soap:operation soapAction="http://fojajo.ics.lu.se/GetMetaIndexes" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -492,7 +977,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMetaConstraints">
-      <soap:operation soapAction="http://tempuri.org/GetMetaConstraints" style="document" />
+      <soap:operation soapAction="http://fojajo.ics.lu.se/GetMetaConstraints" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -501,7 +986,16 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMetaKeys">
-      <soap:operation soapAction="http://tempuri.org/GetMetaKeys" style="document" />
+      <soap:operation soapAction="http://fojajo.ics.lu.se/GetMetaKeys" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeeRelative">
+      <soap:operation soapAction="http://fojajo.ics.lu.se/GetAllEmployeeRelative" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -510,7 +1004,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMetaTables">
-      <soap:operation soapAction="http://tempuri.org/GetMetaTables" style="document" />
+      <soap:operation soapAction="http://fojajo.ics.lu.se/GetMetaTables" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -519,7 +1013,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMetaTables2">
-      <soap:operation soapAction="http://tempuri.org/GetMetaTables2" style="document" />
+      <soap:operation soapAction="http://fojajo.ics.lu.se/GetMetaTables2" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -527,8 +1021,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="InsertCompany">
-      <soap:operation soapAction="http://tempuri.org/InsertCompany" style="document" />
+    <wsdl:operation name="GetMostSick">
+      <soap:operation soapAction="http://fojajo.ics.lu.se/GetMostSick" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -537,7 +1031,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetEmployeeRelative">
-      <soap:operation soapAction="http://tempuri.org/GetEmployeeRelative" style="document" />
+      <soap:operation soapAction="http://fojajo.ics.lu.se/GetEmployeeRelative" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -545,8 +1039,17 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="FindFile">
-      <soap:operation soapAction="http://tempuri.org/FindFile" style="document" />
+    <wsdl:operation name="GetEmployeeRelatives">
+      <soap:operation soapAction="http://fojajo.ics.lu.se/GetEmployeeRelatives" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeAbsence">
+      <soap:operation soapAction="http://fojajo.ics.lu.se/GetEmployeeAbsence" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -557,8 +1060,17 @@
   </wsdl:binding>
   <wsdl:binding name="FoJaJoWebServiceSoap12" type="tns:FoJaJoWebServiceSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FindFile">
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/FindFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetPlayer">
-      <soap12:operation soapAction="http://tempuri.org/GetPlayer" style="document" />
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetPlayer" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -567,7 +1079,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetAllPlayers">
-      <soap12:operation soapAction="http://tempuri.org/GetAllPlayers" style="document" />
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetAllPlayers" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -576,7 +1088,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetAllGames">
-      <soap12:operation soapAction="http://tempuri.org/GetAllGames" style="document" />
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetAllGames" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -584,8 +1096,80 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetPlayers">
-      <soap12:operation soapAction="http://tempuri.org/GetPlayers" style="document" />
+    <wsdl:operation name="SelectCompany">
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/SelectCompany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllCompany">
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/SelectAllCompany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCompany">
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/AddCompany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCompany">
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/RemoveCompany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompany">
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/UpdateCompany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployee">
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetAllEmployee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeeAbsence">
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetAllEmployeeAbsence" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeePortalSetup">
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetAllEmployeePortalSetup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeeQualification">
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetAllEmployeeQualification" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -594,7 +1178,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMetaColumns1">
-      <soap12:operation soapAction="http://tempuri.org/GetMetaColumns1" style="document" />
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetMetaColumns1" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -603,7 +1187,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMetaColumns2">
-      <soap12:operation soapAction="http://tempuri.org/GetMetaColumns2" style="document" />
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetMetaColumns2" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -612,7 +1196,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMetaIndexes">
-      <soap12:operation soapAction="http://tempuri.org/GetMetaIndexes" style="document" />
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetMetaIndexes" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -621,7 +1205,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMetaConstraints">
-      <soap12:operation soapAction="http://tempuri.org/GetMetaConstraints" style="document" />
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetMetaConstraints" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -630,7 +1214,16 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMetaKeys">
-      <soap12:operation soapAction="http://tempuri.org/GetMetaKeys" style="document" />
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetMetaKeys" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeeRelative">
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetAllEmployeeRelative" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -639,7 +1232,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMetaTables">
-      <soap12:operation soapAction="http://tempuri.org/GetMetaTables" style="document" />
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetMetaTables" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -648,7 +1241,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMetaTables2">
-      <soap12:operation soapAction="http://tempuri.org/GetMetaTables2" style="document" />
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetMetaTables2" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -656,8 +1249,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="InsertCompany">
-      <soap12:operation soapAction="http://tempuri.org/InsertCompany" style="document" />
+    <wsdl:operation name="GetMostSick">
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetMostSick" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -666,7 +1259,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetEmployeeRelative">
-      <soap12:operation soapAction="http://tempuri.org/GetEmployeeRelative" style="document" />
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetEmployeeRelative" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -674,8 +1267,17 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="FindFile">
-      <soap12:operation soapAction="http://tempuri.org/FindFile" style="document" />
+    <wsdl:operation name="GetEmployeeRelatives">
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetEmployeeRelatives" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeAbsence">
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetEmployeeAbsence" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

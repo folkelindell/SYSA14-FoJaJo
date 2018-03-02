@@ -143,7 +143,6 @@
     </Compile>
     <Compile Include="Model\EmployeeRelative.cs" />
     <Compile Include="Model\MetaDataColumn.cs" />
-    <Compile Include="Model\Company.cs" />
     <Compile Include="Model\MetaDataColumn2.cs" />
     <Compile Include="Model\MetaDataIndex.cs" />
     <Compile Include="Model\MetaDataKey.cs" />
@@ -155,6 +154,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\MostSick.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FoJaJo\FoJaJo.csproj">

@@ -22,7 +22,7 @@ namespace FoJaJo.GUI
             InitializeComponent();
         }
 
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        private void OpenFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
 
         }
@@ -52,16 +52,19 @@ namespace FoJaJo.GUI
 
         }
 
-        private void DataGridPlayers_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void BtnShowPlayers_Click(object sender, EventArgs e)
         {
             wc = new WebServiceController1();
             dataGridGetAllPlayers.DataSource = null;
-            dataGridGetAllPlayers.DataSource = wc.GetAllPlayers();
+            try
+            {
+                dataGridGetAllPlayers.DataSource = wc.GetAllPlayers();
+            }
+            catch
+            {
+
+            }
+            
         }
 
     }

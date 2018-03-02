@@ -21,8 +21,11 @@ namespace FoJaJo
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FoJaJo.GUI.RootForm());
+            /*
+            FoJaJoWebServiceSoapClient wc = new FoJaJoWebServiceSoapClient();
+            wc.UpdateCompany("Mahara","wwewe");
+            */
 
-            //FoJaJoWebServiceSoapClient wc = new FoJaJoWebServiceSoapClient();
 
             Console.Read();
 
