@@ -14,6 +14,7 @@ namespace FoJaJo.Controller
 
         FoJaJoWebServiceSoapClient client = new FoJaJoWebServiceSoapClient();
 
+
         #region uppgift2
         public string OpenFile(string filePath)
         {
@@ -30,6 +31,7 @@ namespace FoJaJo.Controller
         #endregion
 
         #region ERP
+
         #region Metadata
         public List<MetaDataColumn> GetMetaColumns()
         {
@@ -73,15 +75,89 @@ namespace FoJaJo.Controller
             return list;
         }
         #endregion
-        public void InsertCompany(string name)
+
+        public void AddCompany(string name, string desc)
         {
-            client.InsertCompany(name);
+            client.AddCompany(name, desc);
         }
-        public List<EmployeeRelative> getEmployeeRelatives()
+
+        public Company SelectCompany(string name)
+        {
+            Company c = client.SelectCompany(name);
+            return c;
+        }
+
+        public List<Company> SelectAllCompany()
+        {
+            List<Company> list = new List<Company>(client.SelectAllCompany());
+            return list;
+        }
+
+        public void RemoveCompany(string name)
+        {
+            client.RemoveCompany(name);
+        }
+
+        public void UpdateCompany(string name, string desc)
+        {
+            client.UpdateCompany(name, desc);
+        }
+        public  List<CRONUS_Sverige_AB_Employee> GetAllEmployees()
+        {
+            List<CRONUS_Sverige_AB_Employee> list = new List<CRONUS_Sverige_AB_Employee>(client.GetAllEmployee());
+            return list;
+        }
+
+        public List<EmployeeRelative> GetEmployeeRelatives()
         {
             List<EmployeeRelative> list = new List<EmployeeRelative>(client.GetEmployeeRelative());
             return list;
         }
+
+        public List<CRONUS_Sverige_AB_Employee_Absence> GetEmployeeAbsence()
+        {
+            List<CRONUS_Sverige_AB_Employee_Absence> list = new List<CRONUS_Sverige_AB_Employee_Absence>(client.GetEmployeeAbsence());
+            return list;
+        }
+
+        public List<CRONUS_Sverige_AB_Employee_Absence> GetAllEmployeeAbsence()
+        {
+            List<CRONUS_Sverige_AB_Employee_Absence> list = new List<CRONUS_Sverige_AB_Employee_Absence>(client.GetAllEmployeeAbsence());
+            return list;
+        }
+
+        public List<MostSick> GetMostSick()
+        {
+            List<MostSick> list = new List<MostSick>(client.GetMostSick());
+            return list;
+        }
+
+        public List<CRONUS_Sverige_AB_Employee_Portal_Setup> GetAllPortalSetup()
+        {
+            List<CRONUS_Sverige_AB_Employee_Portal_Setup> list = new List<CRONUS_Sverige_AB_Employee_Portal_Setup>(client.GetAllEmployeePortalSetup());
+            return list;
+        }
+
+        public List<CRONUS_Sverige_AB_Employee_Qualification> GetAllQualification()
+        {
+            List<CRONUS_Sverige_AB_Employee_Qualification> list = new List<CRONUS_Sverige_AB_Employee_Qualification>(client.GetAllEmployeeQualification());
+            return list;
+        }
+
+        public List<CRONUS_Sverige_AB_Employee_Relative> getRelatives()
+        {
+            List<CRONUS_Sverige_AB_Employee_Relative> list = new List<CRONUS_Sverige_AB_Employee_Relative>(client.GetAllEmployeeRelative());
+            return list;
+        }
+
+        public List<Company> GetCompany(string name)
+        {
+
+            List<Company> list = new List<Company>();
+            list.Add(client.SelectCompany(name));
+            return list;
+        }
+
 
         #endregion
 

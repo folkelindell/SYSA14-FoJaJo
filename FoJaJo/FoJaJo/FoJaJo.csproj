@@ -152,13 +152,49 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.AddCompanyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.Company.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Absence.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Portal_Setup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Qualification.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Relative.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.EmployeeRelative.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.FindFileResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.Game1.datasource">
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.Game.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetAllEmployeeAbsenceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetAllEmployeePortalSetupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetAllEmployeeQualificationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetAllEmployeeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetAllGamesResponse.datasource">
@@ -167,7 +203,13 @@
     <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetAllPlayersResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetEmployeeAbsenceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetEmployeeRelativeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetEmployeeRelativesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetMetaColumns1Response.datasource">
@@ -191,13 +233,10 @@
     <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetMetaTablesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetMostSickResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetPlayerResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetPlayersResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.InsertCompanyResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.MetaDataColumn.datasource">
@@ -221,7 +260,22 @@
     <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.MetaDataTableConstraint.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.Player1.datasource">
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.MostSick.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.Player.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.RemoveCompanyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.SelectAllCompanyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.SelectCompanyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.UpdateCompanyResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\FoJaJoWebService\FoJaJoWebService.wsdl" />

@@ -15,7 +15,7 @@ namespace FoJaJo.FoJaJoWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Player", Namespace="http://tempuri.org")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Player", Namespace="http://fojajo.ics.lu.se")]
     [System.SerializableAttribute()]
     public partial class Player : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -122,7 +122,7 @@ namespace FoJaJo.FoJaJoWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Game", Namespace="http://tempuri.org")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Game", Namespace="http://fojajo.ics.lu.se")]
     [System.SerializableAttribute()]
     public partial class Game : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -260,7 +260,7 @@ namespace FoJaJo.FoJaJoWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Result", Namespace="http://tempuri.org")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Result", Namespace="http://fojajo.ics.lu.se")]
     [System.SerializableAttribute()]
     public partial class Result : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -320,7 +320,1718 @@ namespace FoJaJo.FoJaJoWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MetaDataColumn", Namespace="http://tempuri.org")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Company", Namespace="http://fojajo.ics.lu.se")]
+    [System.SerializableAttribute()]
+    public partial class Company : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] timestampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public byte[] timestamp {
+            get {
+                return this.timestampField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.timestampField, value) != true)) {
+                    this.timestampField = value;
+                    this.RaisePropertyChanged("timestamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CRONUS_Sverige_AB_Employee", Namespace="http://fojajo.ics.lu.se")]
+    [System.SerializableAttribute()]
+    public partial class CRONUS_Sverige_AB_Employee : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] timestampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string No_Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string First_NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Middle_NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Last_NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string InitialsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Job_TitleField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Search_NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AddressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Address_2Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Post_CodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CountyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Phone_No_Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Mobile_Phone_No_Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string E_MailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Alt__Address_CodeField;
+        
+        private System.DateTime Alt__Address_Start_DateField;
+        
+        private System.DateTime Alt__Address_End_DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] PictureField;
+        
+        private System.DateTime Birth_DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Social_Security_No_Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Union_CodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Union_Membership_No_Field;
+        
+        private int SexField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Country_Region_CodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Manager_No_Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Emplymt__Contract_CodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Statistics_Group_CodeField;
+        
+        private System.DateTime Employment_DateField;
+        
+        private int StatusField;
+        
+        private System.DateTime Inactive_DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Cause_of_Inactivity_CodeField;
+        
+        private System.DateTime Termination_DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Grounds_for_Term__CodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Global_Dimension_1_CodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Global_Dimension_2_CodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Resource_No_Field;
+        
+        private System.DateTime Last_Date_ModifiedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ExtensionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PagerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Fax_No_Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Company_E_MailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TitleField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Salespers__Purch__CodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string No__SeriesField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public byte[] timestamp {
+            get {
+                return this.timestampField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.timestampField, value) != true)) {
+                    this.timestampField = value;
+                    this.RaisePropertyChanged("timestamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string No_ {
+            get {
+                return this.No_Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.No_Field, value) != true)) {
+                    this.No_Field = value;
+                    this.RaisePropertyChanged("No_");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string First_Name {
+            get {
+                return this.First_NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.First_NameField, value) != true)) {
+                    this.First_NameField = value;
+                    this.RaisePropertyChanged("First_Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string Middle_Name {
+            get {
+                return this.Middle_NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Middle_NameField, value) != true)) {
+                    this.Middle_NameField = value;
+                    this.RaisePropertyChanged("Middle_Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string Last_Name {
+            get {
+                return this.Last_NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Last_NameField, value) != true)) {
+                    this.Last_NameField = value;
+                    this.RaisePropertyChanged("Last_Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public string Initials {
+            get {
+                return this.InitialsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InitialsField, value) != true)) {
+                    this.InitialsField = value;
+                    this.RaisePropertyChanged("Initials");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+        public string Job_Title {
+            get {
+                return this.Job_TitleField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Job_TitleField, value) != true)) {
+                    this.Job_TitleField = value;
+                    this.RaisePropertyChanged("Job_Title");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
+        public string Search_Name {
+            get {
+                return this.Search_NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Search_NameField, value) != true)) {
+                    this.Search_NameField = value;
+                    this.RaisePropertyChanged("Search_Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=8)]
+        public string Address {
+            get {
+                return this.AddressField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AddressField, value) != true)) {
+                    this.AddressField = value;
+                    this.RaisePropertyChanged("Address");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=9)]
+        public string Address_2 {
+            get {
+                return this.Address_2Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Address_2Field, value) != true)) {
+                    this.Address_2Field = value;
+                    this.RaisePropertyChanged("Address_2");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=10)]
+        public string City {
+            get {
+                return this.CityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CityField, value) != true)) {
+                    this.CityField = value;
+                    this.RaisePropertyChanged("City");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=11)]
+        public string Post_Code {
+            get {
+                return this.Post_CodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Post_CodeField, value) != true)) {
+                    this.Post_CodeField = value;
+                    this.RaisePropertyChanged("Post_Code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=12)]
+        public string County {
+            get {
+                return this.CountyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CountyField, value) != true)) {
+                    this.CountyField = value;
+                    this.RaisePropertyChanged("County");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=13)]
+        public string Phone_No_ {
+            get {
+                return this.Phone_No_Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Phone_No_Field, value) != true)) {
+                    this.Phone_No_Field = value;
+                    this.RaisePropertyChanged("Phone_No_");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=14)]
+        public string Mobile_Phone_No_ {
+            get {
+                return this.Mobile_Phone_No_Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Mobile_Phone_No_Field, value) != true)) {
+                    this.Mobile_Phone_No_Field = value;
+                    this.RaisePropertyChanged("Mobile_Phone_No_");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=15)]
+        public string E_Mail {
+            get {
+                return this.E_MailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.E_MailField, value) != true)) {
+                    this.E_MailField = value;
+                    this.RaisePropertyChanged("E_Mail");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=16)]
+        public string Alt__Address_Code {
+            get {
+                return this.Alt__Address_CodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Alt__Address_CodeField, value) != true)) {
+                    this.Alt__Address_CodeField = value;
+                    this.RaisePropertyChanged("Alt__Address_Code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=17)]
+        public System.DateTime Alt__Address_Start_Date {
+            get {
+                return this.Alt__Address_Start_DateField;
+            }
+            set {
+                if ((this.Alt__Address_Start_DateField.Equals(value) != true)) {
+                    this.Alt__Address_Start_DateField = value;
+                    this.RaisePropertyChanged("Alt__Address_Start_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=18)]
+        public System.DateTime Alt__Address_End_Date {
+            get {
+                return this.Alt__Address_End_DateField;
+            }
+            set {
+                if ((this.Alt__Address_End_DateField.Equals(value) != true)) {
+                    this.Alt__Address_End_DateField = value;
+                    this.RaisePropertyChanged("Alt__Address_End_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=19)]
+        public byte[] Picture {
+            get {
+                return this.PictureField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PictureField, value) != true)) {
+                    this.PictureField = value;
+                    this.RaisePropertyChanged("Picture");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=20)]
+        public System.DateTime Birth_Date {
+            get {
+                return this.Birth_DateField;
+            }
+            set {
+                if ((this.Birth_DateField.Equals(value) != true)) {
+                    this.Birth_DateField = value;
+                    this.RaisePropertyChanged("Birth_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=21)]
+        public string Social_Security_No_ {
+            get {
+                return this.Social_Security_No_Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Social_Security_No_Field, value) != true)) {
+                    this.Social_Security_No_Field = value;
+                    this.RaisePropertyChanged("Social_Security_No_");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=22)]
+        public string Union_Code {
+            get {
+                return this.Union_CodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Union_CodeField, value) != true)) {
+                    this.Union_CodeField = value;
+                    this.RaisePropertyChanged("Union_Code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=23)]
+        public string Union_Membership_No_ {
+            get {
+                return this.Union_Membership_No_Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Union_Membership_No_Field, value) != true)) {
+                    this.Union_Membership_No_Field = value;
+                    this.RaisePropertyChanged("Union_Membership_No_");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=24)]
+        public int Sex {
+            get {
+                return this.SexField;
+            }
+            set {
+                if ((this.SexField.Equals(value) != true)) {
+                    this.SexField = value;
+                    this.RaisePropertyChanged("Sex");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=25)]
+        public string Country_Region_Code {
+            get {
+                return this.Country_Region_CodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Country_Region_CodeField, value) != true)) {
+                    this.Country_Region_CodeField = value;
+                    this.RaisePropertyChanged("Country_Region_Code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=26)]
+        public string Manager_No_ {
+            get {
+                return this.Manager_No_Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Manager_No_Field, value) != true)) {
+                    this.Manager_No_Field = value;
+                    this.RaisePropertyChanged("Manager_No_");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=27)]
+        public string Emplymt__Contract_Code {
+            get {
+                return this.Emplymt__Contract_CodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Emplymt__Contract_CodeField, value) != true)) {
+                    this.Emplymt__Contract_CodeField = value;
+                    this.RaisePropertyChanged("Emplymt__Contract_Code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=28)]
+        public string Statistics_Group_Code {
+            get {
+                return this.Statistics_Group_CodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Statistics_Group_CodeField, value) != true)) {
+                    this.Statistics_Group_CodeField = value;
+                    this.RaisePropertyChanged("Statistics_Group_Code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=29)]
+        public System.DateTime Employment_Date {
+            get {
+                return this.Employment_DateField;
+            }
+            set {
+                if ((this.Employment_DateField.Equals(value) != true)) {
+                    this.Employment_DateField = value;
+                    this.RaisePropertyChanged("Employment_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=30)]
+        public int Status {
+            get {
+                return this.StatusField;
+            }
+            set {
+                if ((this.StatusField.Equals(value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=31)]
+        public System.DateTime Inactive_Date {
+            get {
+                return this.Inactive_DateField;
+            }
+            set {
+                if ((this.Inactive_DateField.Equals(value) != true)) {
+                    this.Inactive_DateField = value;
+                    this.RaisePropertyChanged("Inactive_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=32)]
+        public string Cause_of_Inactivity_Code {
+            get {
+                return this.Cause_of_Inactivity_CodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Cause_of_Inactivity_CodeField, value) != true)) {
+                    this.Cause_of_Inactivity_CodeField = value;
+                    this.RaisePropertyChanged("Cause_of_Inactivity_Code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=33)]
+        public System.DateTime Termination_Date {
+            get {
+                return this.Termination_DateField;
+            }
+            set {
+                if ((this.Termination_DateField.Equals(value) != true)) {
+                    this.Termination_DateField = value;
+                    this.RaisePropertyChanged("Termination_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=34)]
+        public string Grounds_for_Term__Code {
+            get {
+                return this.Grounds_for_Term__CodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Grounds_for_Term__CodeField, value) != true)) {
+                    this.Grounds_for_Term__CodeField = value;
+                    this.RaisePropertyChanged("Grounds_for_Term__Code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=35)]
+        public string Global_Dimension_1_Code {
+            get {
+                return this.Global_Dimension_1_CodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Global_Dimension_1_CodeField, value) != true)) {
+                    this.Global_Dimension_1_CodeField = value;
+                    this.RaisePropertyChanged("Global_Dimension_1_Code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=36)]
+        public string Global_Dimension_2_Code {
+            get {
+                return this.Global_Dimension_2_CodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Global_Dimension_2_CodeField, value) != true)) {
+                    this.Global_Dimension_2_CodeField = value;
+                    this.RaisePropertyChanged("Global_Dimension_2_Code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=37)]
+        public string Resource_No_ {
+            get {
+                return this.Resource_No_Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Resource_No_Field, value) != true)) {
+                    this.Resource_No_Field = value;
+                    this.RaisePropertyChanged("Resource_No_");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=38)]
+        public System.DateTime Last_Date_Modified {
+            get {
+                return this.Last_Date_ModifiedField;
+            }
+            set {
+                if ((this.Last_Date_ModifiedField.Equals(value) != true)) {
+                    this.Last_Date_ModifiedField = value;
+                    this.RaisePropertyChanged("Last_Date_Modified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=39)]
+        public string Extension {
+            get {
+                return this.ExtensionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ExtensionField, value) != true)) {
+                    this.ExtensionField = value;
+                    this.RaisePropertyChanged("Extension");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=40)]
+        public string Pager {
+            get {
+                return this.PagerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PagerField, value) != true)) {
+                    this.PagerField = value;
+                    this.RaisePropertyChanged("Pager");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=41)]
+        public string Fax_No_ {
+            get {
+                return this.Fax_No_Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Fax_No_Field, value) != true)) {
+                    this.Fax_No_Field = value;
+                    this.RaisePropertyChanged("Fax_No_");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=42)]
+        public string Company_E_Mail {
+            get {
+                return this.Company_E_MailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Company_E_MailField, value) != true)) {
+                    this.Company_E_MailField = value;
+                    this.RaisePropertyChanged("Company_E_Mail");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=43)]
+        public string Title {
+            get {
+                return this.TitleField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TitleField, value) != true)) {
+                    this.TitleField = value;
+                    this.RaisePropertyChanged("Title");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=44)]
+        public string Salespers__Purch__Code {
+            get {
+                return this.Salespers__Purch__CodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Salespers__Purch__CodeField, value) != true)) {
+                    this.Salespers__Purch__CodeField = value;
+                    this.RaisePropertyChanged("Salespers__Purch__Code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=45)]
+        public string No__Series {
+            get {
+                return this.No__SeriesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.No__SeriesField, value) != true)) {
+                    this.No__SeriesField = value;
+                    this.RaisePropertyChanged("No__Series");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CRONUS_Sverige_AB_Employee_Absence", Namespace="http://fojajo.ics.lu.se")]
+    [System.SerializableAttribute()]
+    public partial class CRONUS_Sverige_AB_Employee_Absence : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] timestampField;
+        
+        private int Entry_No_Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Employee_No_Field;
+        
+        private System.DateTime From_DateField;
+        
+        private System.DateTime To_DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Cause_of_Absence_CodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        private decimal QuantityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Unit_of_Measure_CodeField;
+        
+        private decimal Quantity__Base_Field;
+        
+        private decimal Qty__per_Unit_of_MeasureField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public byte[] timestamp {
+            get {
+                return this.timestampField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.timestampField, value) != true)) {
+                    this.timestampField = value;
+                    this.RaisePropertyChanged("timestamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
+        public int Entry_No_ {
+            get {
+                return this.Entry_No_Field;
+            }
+            set {
+                if ((this.Entry_No_Field.Equals(value) != true)) {
+                    this.Entry_No_Field = value;
+                    this.RaisePropertyChanged("Entry_No_");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string Employee_No_ {
+            get {
+                return this.Employee_No_Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Employee_No_Field, value) != true)) {
+                    this.Employee_No_Field = value;
+                    this.RaisePropertyChanged("Employee_No_");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
+        public System.DateTime From_Date {
+            get {
+                return this.From_DateField;
+            }
+            set {
+                if ((this.From_DateField.Equals(value) != true)) {
+                    this.From_DateField = value;
+                    this.RaisePropertyChanged("From_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
+        public System.DateTime To_Date {
+            get {
+                return this.To_DateField;
+            }
+            set {
+                if ((this.To_DateField.Equals(value) != true)) {
+                    this.To_DateField = value;
+                    this.RaisePropertyChanged("To_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public string Cause_of_Absence_Code {
+            get {
+                return this.Cause_of_Absence_CodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Cause_of_Absence_CodeField, value) != true)) {
+                    this.Cause_of_Absence_CodeField = value;
+                    this.RaisePropertyChanged("Cause_of_Absence_Code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=7)]
+        public decimal Quantity {
+            get {
+                return this.QuantityField;
+            }
+            set {
+                if ((this.QuantityField.Equals(value) != true)) {
+                    this.QuantityField = value;
+                    this.RaisePropertyChanged("Quantity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=8)]
+        public string Unit_of_Measure_Code {
+            get {
+                return this.Unit_of_Measure_CodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Unit_of_Measure_CodeField, value) != true)) {
+                    this.Unit_of_Measure_CodeField = value;
+                    this.RaisePropertyChanged("Unit_of_Measure_Code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=9)]
+        public decimal Quantity__Base_ {
+            get {
+                return this.Quantity__Base_Field;
+            }
+            set {
+                if ((this.Quantity__Base_Field.Equals(value) != true)) {
+                    this.Quantity__Base_Field = value;
+                    this.RaisePropertyChanged("Quantity__Base_");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=10)]
+        public decimal Qty__per_Unit_of_Measure {
+            get {
+                return this.Qty__per_Unit_of_MeasureField;
+            }
+            set {
+                if ((this.Qty__per_Unit_of_MeasureField.Equals(value) != true)) {
+                    this.Qty__per_Unit_of_MeasureField = value;
+                    this.RaisePropertyChanged("Qty__per_Unit_of_Measure");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CRONUS_Sverige_AB_Employee_Portal_Setup", Namespace="http://fojajo.ics.lu.se")]
+    [System.SerializableAttribute()]
+    public partial class CRONUS_Sverige_AB_Employee_Portal_Setup : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] timestampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Primary_KeyField;
+        
+        private int Search_LimitField;
+        
+        private int Temp__Key_IndexField;
+        
+        private int Temp__Table_No_Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Temp__Key_StringField;
+        
+        private int Temp__Option_ValueField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Temp__Option_CaptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Temp__SharePoint_Site_NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] Back_End_Public_KeyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] Back_End_Private_KeyField;
+        
+        private byte Write_Debugging_Info_Field;
+        
+        private int Config_Tool_Pane_Caption_IDField;
+        
+        private int Config_TP_WP_Request_Capt_IDField;
+        
+        private int Config_TP_Initial_Req__Capt_IDField;
+        
+        private int Config_TP_Group_Capt_IDField;
+        
+        private int Search_Tool_Pane_Caption_IDField;
+        
+        private int Search_Config_Table_IDField;
+        
+        private int Search_TP_All_Tables_Capt_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Config_Tool_Pane_CaptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Config_TP_WP_Request_CaptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Config_TP_Initial_Req__CaptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Config_TP_Group_CaptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Search_Tool_Pane_CaptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Search_Config_Table_CaptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Search_TP_All_Tables_CaptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Debugging_PathField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public byte[] timestamp {
+            get {
+                return this.timestampField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.timestampField, value) != true)) {
+                    this.timestampField = value;
+                    this.RaisePropertyChanged("timestamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string Primary_Key {
+            get {
+                return this.Primary_KeyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Primary_KeyField, value) != true)) {
+                    this.Primary_KeyField = value;
+                    this.RaisePropertyChanged("Primary_Key");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+        public int Search_Limit {
+            get {
+                return this.Search_LimitField;
+            }
+            set {
+                if ((this.Search_LimitField.Equals(value) != true)) {
+                    this.Search_LimitField = value;
+                    this.RaisePropertyChanged("Search_Limit");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
+        public int Temp__Key_Index {
+            get {
+                return this.Temp__Key_IndexField;
+            }
+            set {
+                if ((this.Temp__Key_IndexField.Equals(value) != true)) {
+                    this.Temp__Key_IndexField = value;
+                    this.RaisePropertyChanged("Temp__Key_Index");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
+        public int Temp__Table_No_ {
+            get {
+                return this.Temp__Table_No_Field;
+            }
+            set {
+                if ((this.Temp__Table_No_Field.Equals(value) != true)) {
+                    this.Temp__Table_No_Field = value;
+                    this.RaisePropertyChanged("Temp__Table_No_");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public string Temp__Key_String {
+            get {
+                return this.Temp__Key_StringField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Temp__Key_StringField, value) != true)) {
+                    this.Temp__Key_StringField = value;
+                    this.RaisePropertyChanged("Temp__Key_String");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=6)]
+        public int Temp__Option_Value {
+            get {
+                return this.Temp__Option_ValueField;
+            }
+            set {
+                if ((this.Temp__Option_ValueField.Equals(value) != true)) {
+                    this.Temp__Option_ValueField = value;
+                    this.RaisePropertyChanged("Temp__Option_Value");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
+        public string Temp__Option_Caption {
+            get {
+                return this.Temp__Option_CaptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Temp__Option_CaptionField, value) != true)) {
+                    this.Temp__Option_CaptionField = value;
+                    this.RaisePropertyChanged("Temp__Option_Caption");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=8)]
+        public string Temp__SharePoint_Site_Name {
+            get {
+                return this.Temp__SharePoint_Site_NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Temp__SharePoint_Site_NameField, value) != true)) {
+                    this.Temp__SharePoint_Site_NameField = value;
+                    this.RaisePropertyChanged("Temp__SharePoint_Site_Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=9)]
+        public byte[] Back_End_Public_Key {
+            get {
+                return this.Back_End_Public_KeyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Back_End_Public_KeyField, value) != true)) {
+                    this.Back_End_Public_KeyField = value;
+                    this.RaisePropertyChanged("Back_End_Public_Key");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=10)]
+        public byte[] Back_End_Private_Key {
+            get {
+                return this.Back_End_Private_KeyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Back_End_Private_KeyField, value) != true)) {
+                    this.Back_End_Private_KeyField = value;
+                    this.RaisePropertyChanged("Back_End_Private_Key");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=11)]
+        public byte Write_Debugging_Info_ {
+            get {
+                return this.Write_Debugging_Info_Field;
+            }
+            set {
+                if ((this.Write_Debugging_Info_Field.Equals(value) != true)) {
+                    this.Write_Debugging_Info_Field = value;
+                    this.RaisePropertyChanged("Write_Debugging_Info_");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=12)]
+        public int Config_Tool_Pane_Caption_ID {
+            get {
+                return this.Config_Tool_Pane_Caption_IDField;
+            }
+            set {
+                if ((this.Config_Tool_Pane_Caption_IDField.Equals(value) != true)) {
+                    this.Config_Tool_Pane_Caption_IDField = value;
+                    this.RaisePropertyChanged("Config_Tool_Pane_Caption_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=13)]
+        public int Config_TP_WP_Request_Capt_ID {
+            get {
+                return this.Config_TP_WP_Request_Capt_IDField;
+            }
+            set {
+                if ((this.Config_TP_WP_Request_Capt_IDField.Equals(value) != true)) {
+                    this.Config_TP_WP_Request_Capt_IDField = value;
+                    this.RaisePropertyChanged("Config_TP_WP_Request_Capt_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=14)]
+        public int Config_TP_Initial_Req__Capt_ID {
+            get {
+                return this.Config_TP_Initial_Req__Capt_IDField;
+            }
+            set {
+                if ((this.Config_TP_Initial_Req__Capt_IDField.Equals(value) != true)) {
+                    this.Config_TP_Initial_Req__Capt_IDField = value;
+                    this.RaisePropertyChanged("Config_TP_Initial_Req__Capt_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=15)]
+        public int Config_TP_Group_Capt_ID {
+            get {
+                return this.Config_TP_Group_Capt_IDField;
+            }
+            set {
+                if ((this.Config_TP_Group_Capt_IDField.Equals(value) != true)) {
+                    this.Config_TP_Group_Capt_IDField = value;
+                    this.RaisePropertyChanged("Config_TP_Group_Capt_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=16)]
+        public int Search_Tool_Pane_Caption_ID {
+            get {
+                return this.Search_Tool_Pane_Caption_IDField;
+            }
+            set {
+                if ((this.Search_Tool_Pane_Caption_IDField.Equals(value) != true)) {
+                    this.Search_Tool_Pane_Caption_IDField = value;
+                    this.RaisePropertyChanged("Search_Tool_Pane_Caption_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=17)]
+        public int Search_Config_Table_ID {
+            get {
+                return this.Search_Config_Table_IDField;
+            }
+            set {
+                if ((this.Search_Config_Table_IDField.Equals(value) != true)) {
+                    this.Search_Config_Table_IDField = value;
+                    this.RaisePropertyChanged("Search_Config_Table_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=18)]
+        public int Search_TP_All_Tables_Capt_ID {
+            get {
+                return this.Search_TP_All_Tables_Capt_IDField;
+            }
+            set {
+                if ((this.Search_TP_All_Tables_Capt_IDField.Equals(value) != true)) {
+                    this.Search_TP_All_Tables_Capt_IDField = value;
+                    this.RaisePropertyChanged("Search_TP_All_Tables_Capt_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=19)]
+        public string Config_Tool_Pane_Caption {
+            get {
+                return this.Config_Tool_Pane_CaptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Config_Tool_Pane_CaptionField, value) != true)) {
+                    this.Config_Tool_Pane_CaptionField = value;
+                    this.RaisePropertyChanged("Config_Tool_Pane_Caption");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=20)]
+        public string Config_TP_WP_Request_Caption {
+            get {
+                return this.Config_TP_WP_Request_CaptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Config_TP_WP_Request_CaptionField, value) != true)) {
+                    this.Config_TP_WP_Request_CaptionField = value;
+                    this.RaisePropertyChanged("Config_TP_WP_Request_Caption");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=21)]
+        public string Config_TP_Initial_Req__Caption {
+            get {
+                return this.Config_TP_Initial_Req__CaptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Config_TP_Initial_Req__CaptionField, value) != true)) {
+                    this.Config_TP_Initial_Req__CaptionField = value;
+                    this.RaisePropertyChanged("Config_TP_Initial_Req__Caption");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=22)]
+        public string Config_TP_Group_Caption {
+            get {
+                return this.Config_TP_Group_CaptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Config_TP_Group_CaptionField, value) != true)) {
+                    this.Config_TP_Group_CaptionField = value;
+                    this.RaisePropertyChanged("Config_TP_Group_Caption");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=23)]
+        public string Search_Tool_Pane_Caption {
+            get {
+                return this.Search_Tool_Pane_CaptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Search_Tool_Pane_CaptionField, value) != true)) {
+                    this.Search_Tool_Pane_CaptionField = value;
+                    this.RaisePropertyChanged("Search_Tool_Pane_Caption");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=24)]
+        public string Search_Config_Table_Caption {
+            get {
+                return this.Search_Config_Table_CaptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Search_Config_Table_CaptionField, value) != true)) {
+                    this.Search_Config_Table_CaptionField = value;
+                    this.RaisePropertyChanged("Search_Config_Table_Caption");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=25)]
+        public string Search_TP_All_Tables_Caption {
+            get {
+                return this.Search_TP_All_Tables_CaptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Search_TP_All_Tables_CaptionField, value) != true)) {
+                    this.Search_TP_All_Tables_CaptionField = value;
+                    this.RaisePropertyChanged("Search_TP_All_Tables_Caption");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=26)]
+        public string Debugging_Path {
+            get {
+                return this.Debugging_PathField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Debugging_PathField, value) != true)) {
+                    this.Debugging_PathField = value;
+                    this.RaisePropertyChanged("Debugging_Path");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CRONUS_Sverige_AB_Employee_Qualification", Namespace="http://fojajo.ics.lu.se")]
+    [System.SerializableAttribute()]
+    public partial class CRONUS_Sverige_AB_Employee_Qualification : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] timestampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Employee_No_Field;
+        
+        private int Line_No_Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Qualification_CodeField;
+        
+        private System.DateTime From_DateField;
+        
+        private System.DateTime To_DateField;
+        
+        private int TypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Institution_CompanyField;
+        
+        private decimal CostField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Course_GradeField;
+        
+        private int Employee_StatusField;
+        
+        private System.DateTime Expiration_DateField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public byte[] timestamp {
+            get {
+                return this.timestampField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.timestampField, value) != true)) {
+                    this.timestampField = value;
+                    this.RaisePropertyChanged("timestamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string Employee_No_ {
+            get {
+                return this.Employee_No_Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Employee_No_Field, value) != true)) {
+                    this.Employee_No_Field = value;
+                    this.RaisePropertyChanged("Employee_No_");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+        public int Line_No_ {
+            get {
+                return this.Line_No_Field;
+            }
+            set {
+                if ((this.Line_No_Field.Equals(value) != true)) {
+                    this.Line_No_Field = value;
+                    this.RaisePropertyChanged("Line_No_");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string Qualification_Code {
+            get {
+                return this.Qualification_CodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Qualification_CodeField, value) != true)) {
+                    this.Qualification_CodeField = value;
+                    this.RaisePropertyChanged("Qualification_Code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
+        public System.DateTime From_Date {
+            get {
+                return this.From_DateField;
+            }
+            set {
+                if ((this.From_DateField.Equals(value) != true)) {
+                    this.From_DateField = value;
+                    this.RaisePropertyChanged("From_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=5)]
+        public System.DateTime To_Date {
+            get {
+                return this.To_DateField;
+            }
+            set {
+                if ((this.To_DateField.Equals(value) != true)) {
+                    this.To_DateField = value;
+                    this.RaisePropertyChanged("To_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=6)]
+        public int Type {
+            get {
+                return this.TypeField;
+            }
+            set {
+                if ((this.TypeField.Equals(value) != true)) {
+                    this.TypeField = value;
+                    this.RaisePropertyChanged("Type");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=8)]
+        public string Institution_Company {
+            get {
+                return this.Institution_CompanyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Institution_CompanyField, value) != true)) {
+                    this.Institution_CompanyField = value;
+                    this.RaisePropertyChanged("Institution_Company");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=9)]
+        public decimal Cost {
+            get {
+                return this.CostField;
+            }
+            set {
+                if ((this.CostField.Equals(value) != true)) {
+                    this.CostField = value;
+                    this.RaisePropertyChanged("Cost");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=10)]
+        public string Course_Grade {
+            get {
+                return this.Course_GradeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Course_GradeField, value) != true)) {
+                    this.Course_GradeField = value;
+                    this.RaisePropertyChanged("Course_Grade");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=11)]
+        public int Employee_Status {
+            get {
+                return this.Employee_StatusField;
+            }
+            set {
+                if ((this.Employee_StatusField.Equals(value) != true)) {
+                    this.Employee_StatusField = value;
+                    this.RaisePropertyChanged("Employee_Status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=12)]
+        public System.DateTime Expiration_Date {
+            get {
+                return this.Expiration_DateField;
+            }
+            set {
+                if ((this.Expiration_DateField.Equals(value) != true)) {
+                    this.Expiration_DateField = value;
+                    this.RaisePropertyChanged("Expiration_Date");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MetaDataColumn", Namespace="http://fojajo.ics.lu.se")]
     [System.SerializableAttribute()]
     public partial class MetaDataColumn : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -397,7 +2108,7 @@ namespace FoJaJo.FoJaJoWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MetaDataColumn2", Namespace="http://tempuri.org")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MetaDataColumn2", Namespace="http://fojajo.ics.lu.se")]
     [System.SerializableAttribute()]
     public partial class MetaDataColumn2 : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -472,7 +2183,7 @@ namespace FoJaJo.FoJaJoWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MetaDataIndex", Namespace="http://tempuri.org")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MetaDataIndex", Namespace="http://fojajo.ics.lu.se")]
     [System.SerializableAttribute()]
     public partial class MetaDataIndex : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -548,7 +2259,7 @@ namespace FoJaJo.FoJaJoWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MetaDataTableConstraint", Namespace="http://tempuri.org")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MetaDataTableConstraint", Namespace="http://fojajo.ics.lu.se")]
     [System.SerializableAttribute()]
     public partial class MetaDataTableConstraint : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -625,7 +2336,7 @@ namespace FoJaJo.FoJaJoWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MetaDataKey", Namespace="http://tempuri.org")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MetaDataKey", Namespace="http://fojajo.ics.lu.se")]
     [System.SerializableAttribute()]
     public partial class MetaDataKey : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -701,7 +2412,194 @@ namespace FoJaJo.FoJaJoWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MetaDataTable", Namespace="http://tempuri.org")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CRONUS_Sverige_AB_Employee_Relative", Namespace="http://fojajo.ics.lu.se")]
+    [System.SerializableAttribute()]
+    public partial class CRONUS_Sverige_AB_Employee_Relative : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] timestampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Employee_No_Field;
+        
+        private int Line_No_Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Relative_CodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string First_NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Middle_NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Last_NameField;
+        
+        private System.DateTime Birth_DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Phone_No_Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Relative_s_Employee_No_Field;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public byte[] timestamp {
+            get {
+                return this.timestampField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.timestampField, value) != true)) {
+                    this.timestampField = value;
+                    this.RaisePropertyChanged("timestamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string Employee_No_ {
+            get {
+                return this.Employee_No_Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Employee_No_Field, value) != true)) {
+                    this.Employee_No_Field = value;
+                    this.RaisePropertyChanged("Employee_No_");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+        public int Line_No_ {
+            get {
+                return this.Line_No_Field;
+            }
+            set {
+                if ((this.Line_No_Field.Equals(value) != true)) {
+                    this.Line_No_Field = value;
+                    this.RaisePropertyChanged("Line_No_");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string Relative_Code {
+            get {
+                return this.Relative_CodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Relative_CodeField, value) != true)) {
+                    this.Relative_CodeField = value;
+                    this.RaisePropertyChanged("Relative_Code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string First_Name {
+            get {
+                return this.First_NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.First_NameField, value) != true)) {
+                    this.First_NameField = value;
+                    this.RaisePropertyChanged("First_Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public string Middle_Name {
+            get {
+                return this.Middle_NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Middle_NameField, value) != true)) {
+                    this.Middle_NameField = value;
+                    this.RaisePropertyChanged("Middle_Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+        public string Last_Name {
+            get {
+                return this.Last_NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Last_NameField, value) != true)) {
+                    this.Last_NameField = value;
+                    this.RaisePropertyChanged("Last_Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=7)]
+        public System.DateTime Birth_Date {
+            get {
+                return this.Birth_DateField;
+            }
+            set {
+                if ((this.Birth_DateField.Equals(value) != true)) {
+                    this.Birth_DateField = value;
+                    this.RaisePropertyChanged("Birth_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=8)]
+        public string Phone_No_ {
+            get {
+                return this.Phone_No_Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Phone_No_Field, value) != true)) {
+                    this.Phone_No_Field = value;
+                    this.RaisePropertyChanged("Phone_No_");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=9)]
+        public string Relative_s_Employee_No_ {
+            get {
+                return this.Relative_s_Employee_No_Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Relative_s_Employee_No_Field, value) != true)) {
+                    this.Relative_s_Employee_No_Field = value;
+                    this.RaisePropertyChanged("Relative_s_Employee_No_");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MetaDataTable", Namespace="http://fojajo.ics.lu.se")]
     [System.SerializableAttribute()]
     public partial class MetaDataTable : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -762,7 +2660,7 @@ namespace FoJaJo.FoJaJoWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MetaDataTable2", Namespace="http://tempuri.org")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MetaDataTable2", Namespace="http://fojajo.ics.lu.se")]
     [System.SerializableAttribute()]
     public partial class MetaDataTable2 : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -822,7 +2720,52 @@ namespace FoJaJo.FoJaJoWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EmployeeRelative", Namespace="http://tempuri.org")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MostSick", Namespace="http://fojajo.ics.lu.se")]
+    [System.SerializableAttribute()]
+    public partial class MostSick : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EmployeeRelative", Namespace="http://fojajo.ics.lu.se")]
     [System.SerializableAttribute()]
     public partial class EmployeeRelative : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -930,106 +2873,251 @@ namespace FoJaJo.FoJaJoWebService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="FoJaJoWebService.FoJaJoWebServiceSoap")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://fojajo.ics.lu.se", ConfigurationName="FoJaJoWebService.FoJaJoWebServiceSoap")]
     public interface FoJaJoWebServiceSoap {
         
-        // CODEGEN: Generating message contract since element name username from namespace http://tempuri.org is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetPlayer", ReplyAction="*")]
-        FoJaJo.FoJaJoWebService.GetPlayerResponse GetPlayer(FoJaJo.FoJaJoWebService.GetPlayerRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetPlayer", ReplyAction="*")]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetPlayerResponse> GetPlayerAsync(FoJaJo.FoJaJoWebService.GetPlayerRequest request);
-        
-        // CODEGEN: Generating message contract since element name GetAllPlayersResult from namespace http://tempuri.org is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAllPlayers", ReplyAction="*")]
-        FoJaJo.FoJaJoWebService.GetAllPlayersResponse GetAllPlayers(FoJaJo.FoJaJoWebService.GetAllPlayersRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAllPlayers", ReplyAction="*")]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllPlayersResponse> GetAllPlayersAsync(FoJaJo.FoJaJoWebService.GetAllPlayersRequest request);
-        
-        // CODEGEN: Generating message contract since element name GetAllGamesResult from namespace http://tempuri.org is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAllGames", ReplyAction="*")]
-        FoJaJo.FoJaJoWebService.GetAllGamesResponse GetAllGames(FoJaJo.FoJaJoWebService.GetAllGamesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAllGames", ReplyAction="*")]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllGamesResponse> GetAllGamesAsync(FoJaJo.FoJaJoWebService.GetAllGamesRequest request);
-        
-        // CODEGEN: Generating message contract since element name GetPlayersResult from namespace http://tempuri.org is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetPlayers", ReplyAction="*")]
-        FoJaJo.FoJaJoWebService.GetPlayersResponse GetPlayers(FoJaJo.FoJaJoWebService.GetPlayersRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetPlayers", ReplyAction="*")]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetPlayersResponse> GetPlayersAsync(FoJaJo.FoJaJoWebService.GetPlayersRequest request);
-        
-        // CODEGEN: Generating message contract since element name GetMetaColumns1Result from namespace http://tempuri.org is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetMetaColumns1", ReplyAction="*")]
-        FoJaJo.FoJaJoWebService.GetMetaColumns1Response GetMetaColumns1(FoJaJo.FoJaJoWebService.GetMetaColumns1Request request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetMetaColumns1", ReplyAction="*")]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetMetaColumns1Response> GetMetaColumns1Async(FoJaJo.FoJaJoWebService.GetMetaColumns1Request request);
-        
-        // CODEGEN: Generating message contract since element name GetMetaColumns2Result from namespace http://tempuri.org is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetMetaColumns2", ReplyAction="*")]
-        FoJaJo.FoJaJoWebService.GetMetaColumns2Response GetMetaColumns2(FoJaJo.FoJaJoWebService.GetMetaColumns2Request request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetMetaColumns2", ReplyAction="*")]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetMetaColumns2Response> GetMetaColumns2Async(FoJaJo.FoJaJoWebService.GetMetaColumns2Request request);
-        
-        // CODEGEN: Generating message contract since element name GetMetaIndexesResult from namespace http://tempuri.org is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetMetaIndexes", ReplyAction="*")]
-        FoJaJo.FoJaJoWebService.GetMetaIndexesResponse GetMetaIndexes(FoJaJo.FoJaJoWebService.GetMetaIndexesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetMetaIndexes", ReplyAction="*")]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetMetaIndexesResponse> GetMetaIndexesAsync(FoJaJo.FoJaJoWebService.GetMetaIndexesRequest request);
-        
-        // CODEGEN: Generating message contract since element name GetMetaConstraintsResult from namespace http://tempuri.org is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetMetaConstraints", ReplyAction="*")]
-        FoJaJo.FoJaJoWebService.GetMetaConstraintsResponse GetMetaConstraints(FoJaJo.FoJaJoWebService.GetMetaConstraintsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetMetaConstraints", ReplyAction="*")]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetMetaConstraintsResponse> GetMetaConstraintsAsync(FoJaJo.FoJaJoWebService.GetMetaConstraintsRequest request);
-        
-        // CODEGEN: Generating message contract since element name GetMetaKeysResult from namespace http://tempuri.org is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetMetaKeys", ReplyAction="*")]
-        FoJaJo.FoJaJoWebService.GetMetaKeysResponse GetMetaKeys(FoJaJo.FoJaJoWebService.GetMetaKeysRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetMetaKeys", ReplyAction="*")]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetMetaKeysResponse> GetMetaKeysAsync(FoJaJo.FoJaJoWebService.GetMetaKeysRequest request);
-        
-        // CODEGEN: Generating message contract since element name GetMetaTablesResult from namespace http://tempuri.org is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetMetaTables", ReplyAction="*")]
-        FoJaJo.FoJaJoWebService.GetMetaTablesResponse GetMetaTables(FoJaJo.FoJaJoWebService.GetMetaTablesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetMetaTables", ReplyAction="*")]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetMetaTablesResponse> GetMetaTablesAsync(FoJaJo.FoJaJoWebService.GetMetaTablesRequest request);
-        
-        // CODEGEN: Generating message contract since element name GetMetaTables2Result from namespace http://tempuri.org is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetMetaTables2", ReplyAction="*")]
-        FoJaJo.FoJaJoWebService.GetMetaTables2Response GetMetaTables2(FoJaJo.FoJaJoWebService.GetMetaTables2Request request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetMetaTables2", ReplyAction="*")]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetMetaTables2Response> GetMetaTables2Async(FoJaJo.FoJaJoWebService.GetMetaTables2Request request);
-        
-        // CODEGEN: Generating message contract since element name name from namespace http://tempuri.org is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InsertCompany", ReplyAction="*")]
-        FoJaJo.FoJaJoWebService.InsertCompanyResponse InsertCompany(FoJaJo.FoJaJoWebService.InsertCompanyRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InsertCompany", ReplyAction="*")]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.InsertCompanyResponse> InsertCompanyAsync(FoJaJo.FoJaJoWebService.InsertCompanyRequest request);
-        
-        // CODEGEN: Generating message contract since element name GetEmployeeRelativeResult from namespace http://tempuri.org is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetEmployeeRelative", ReplyAction="*")]
-        FoJaJo.FoJaJoWebService.GetEmployeeRelativeResponse GetEmployeeRelative(FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetEmployeeRelative", ReplyAction="*")]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeRelativeResponse> GetEmployeeRelativeAsync(FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequest request);
-        
-        // CODEGEN: Generating message contract since element name filePath from namespace http://tempuri.org is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/FindFile", ReplyAction="*")]
+        // CODEGEN: Generating message contract since element name filePath from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/FindFile", ReplyAction="*")]
         FoJaJo.FoJaJoWebService.FindFileResponse FindFile(FoJaJo.FoJaJoWebService.FindFileRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/FindFile", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/FindFile", ReplyAction="*")]
         System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.FindFileResponse> FindFileAsync(FoJaJo.FoJaJoWebService.FindFileRequest request);
+        
+        // CODEGEN: Generating message contract since element name username from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetPlayer", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.GetPlayerResponse GetPlayer(FoJaJo.FoJaJoWebService.GetPlayerRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetPlayer", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetPlayerResponse> GetPlayerAsync(FoJaJo.FoJaJoWebService.GetPlayerRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetAllPlayersResult from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetAllPlayers", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.GetAllPlayersResponse GetAllPlayers(FoJaJo.FoJaJoWebService.GetAllPlayersRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetAllPlayers", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllPlayersResponse> GetAllPlayersAsync(FoJaJo.FoJaJoWebService.GetAllPlayersRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetAllGamesResult from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetAllGames", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.GetAllGamesResponse GetAllGames(FoJaJo.FoJaJoWebService.GetAllGamesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetAllGames", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllGamesResponse> GetAllGamesAsync(FoJaJo.FoJaJoWebService.GetAllGamesRequest request);
+        
+        // CODEGEN: Generating message contract since element name companyName from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/SelectCompany", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.SelectCompanyResponse SelectCompany(FoJaJo.FoJaJoWebService.SelectCompanyRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/SelectCompany", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.SelectCompanyResponse> SelectCompanyAsync(FoJaJo.FoJaJoWebService.SelectCompanyRequest request);
+        
+        // CODEGEN: Generating message contract since element name SelectAllCompanyResult from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/SelectAllCompany", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.SelectAllCompanyResponse SelectAllCompany(FoJaJo.FoJaJoWebService.SelectAllCompanyRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/SelectAllCompany", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.SelectAllCompanyResponse> SelectAllCompanyAsync(FoJaJo.FoJaJoWebService.SelectAllCompanyRequest request);
+        
+        // CODEGEN: Generating message contract since element name companyName from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/AddCompany", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.AddCompanyResponse AddCompany(FoJaJo.FoJaJoWebService.AddCompanyRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/AddCompany", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.AddCompanyResponse> AddCompanyAsync(FoJaJo.FoJaJoWebService.AddCompanyRequest request);
+        
+        // CODEGEN: Generating message contract since element name companyName from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/RemoveCompany", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.RemoveCompanyResponse RemoveCompany(FoJaJo.FoJaJoWebService.RemoveCompanyRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/RemoveCompany", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.RemoveCompanyResponse> RemoveCompanyAsync(FoJaJo.FoJaJoWebService.RemoveCompanyRequest request);
+        
+        // CODEGEN: Generating message contract since element name oldCompanyName from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/UpdateCompany", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.UpdateCompanyResponse UpdateCompany(FoJaJo.FoJaJoWebService.UpdateCompanyRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/UpdateCompany", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.UpdateCompanyResponse> UpdateCompanyAsync(FoJaJo.FoJaJoWebService.UpdateCompanyRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetAllEmployeeResult from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetAllEmployee", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.GetAllEmployeeResponse GetAllEmployee(FoJaJo.FoJaJoWebService.GetAllEmployeeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetAllEmployee", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllEmployeeResponse> GetAllEmployeeAsync(FoJaJo.FoJaJoWebService.GetAllEmployeeRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetAllEmployeeAbsenceResult from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetAllEmployeeAbsence", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.GetAllEmployeeAbsenceResponse GetAllEmployeeAbsence(FoJaJo.FoJaJoWebService.GetAllEmployeeAbsenceRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetAllEmployeeAbsence", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllEmployeeAbsenceResponse> GetAllEmployeeAbsenceAsync(FoJaJo.FoJaJoWebService.GetAllEmployeeAbsenceRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetAllEmployeePortalSetupResult from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetAllEmployeePortalSetup", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.GetAllEmployeePortalSetupResponse GetAllEmployeePortalSetup(FoJaJo.FoJaJoWebService.GetAllEmployeePortalSetupRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetAllEmployeePortalSetup", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllEmployeePortalSetupResponse> GetAllEmployeePortalSetupAsync(FoJaJo.FoJaJoWebService.GetAllEmployeePortalSetupRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetAllEmployeeQualificationResult from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetAllEmployeeQualification", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.GetAllEmployeeQualificationResponse GetAllEmployeeQualification(FoJaJo.FoJaJoWebService.GetAllEmployeeQualificationRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetAllEmployeeQualification", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllEmployeeQualificationResponse> GetAllEmployeeQualificationAsync(FoJaJo.FoJaJoWebService.GetAllEmployeeQualificationRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetMetaColumns1Result from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetMetaColumns1", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.GetMetaColumns1Response GetMetaColumns1(FoJaJo.FoJaJoWebService.GetMetaColumns1Request request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetMetaColumns1", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetMetaColumns1Response> GetMetaColumns1Async(FoJaJo.FoJaJoWebService.GetMetaColumns1Request request);
+        
+        // CODEGEN: Generating message contract since element name GetMetaColumns2Result from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetMetaColumns2", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.GetMetaColumns2Response GetMetaColumns2(FoJaJo.FoJaJoWebService.GetMetaColumns2Request request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetMetaColumns2", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetMetaColumns2Response> GetMetaColumns2Async(FoJaJo.FoJaJoWebService.GetMetaColumns2Request request);
+        
+        // CODEGEN: Generating message contract since element name GetMetaIndexesResult from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetMetaIndexes", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.GetMetaIndexesResponse GetMetaIndexes(FoJaJo.FoJaJoWebService.GetMetaIndexesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetMetaIndexes", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetMetaIndexesResponse> GetMetaIndexesAsync(FoJaJo.FoJaJoWebService.GetMetaIndexesRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetMetaConstraintsResult from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetMetaConstraints", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.GetMetaConstraintsResponse GetMetaConstraints(FoJaJo.FoJaJoWebService.GetMetaConstraintsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetMetaConstraints", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetMetaConstraintsResponse> GetMetaConstraintsAsync(FoJaJo.FoJaJoWebService.GetMetaConstraintsRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetMetaKeysResult from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetMetaKeys", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.GetMetaKeysResponse GetMetaKeys(FoJaJo.FoJaJoWebService.GetMetaKeysRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetMetaKeys", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetMetaKeysResponse> GetMetaKeysAsync(FoJaJo.FoJaJoWebService.GetMetaKeysRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetAllEmployeeRelativeResult from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetAllEmployeeRelative", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeResponse GetAllEmployeeRelative(FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetAllEmployeeRelative", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeResponse> GetAllEmployeeRelativeAsync(FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetMetaTablesResult from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetMetaTables", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.GetMetaTablesResponse GetMetaTables(FoJaJo.FoJaJoWebService.GetMetaTablesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetMetaTables", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetMetaTablesResponse> GetMetaTablesAsync(FoJaJo.FoJaJoWebService.GetMetaTablesRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetMetaTables2Result from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetMetaTables2", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.GetMetaTables2Response GetMetaTables2(FoJaJo.FoJaJoWebService.GetMetaTables2Request request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetMetaTables2", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetMetaTables2Response> GetMetaTables2Async(FoJaJo.FoJaJoWebService.GetMetaTables2Request request);
+        
+        // CODEGEN: Generating message contract since element name GetMostSickResult from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetMostSick", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.GetMostSickResponse GetMostSick(FoJaJo.FoJaJoWebService.GetMostSickRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetMostSick", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetMostSickResponse> GetMostSickAsync(FoJaJo.FoJaJoWebService.GetMostSickRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetEmployeeRelativeResult from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetEmployeeRelative", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.GetEmployeeRelativeResponse GetEmployeeRelative(FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetEmployeeRelative", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeRelativeResponse> GetEmployeeRelativeAsync(FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequest request);
+        
+        // CODEGEN: Generating message contract since element name employeeNr from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetEmployeeRelatives", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.GetEmployeeRelativesResponse GetEmployeeRelatives(FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetEmployeeRelatives", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeRelativesResponse> GetEmployeeRelativesAsync(FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetEmployeeAbsenceResult from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetEmployeeAbsence", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.GetEmployeeAbsenceResponse GetEmployeeAbsence(FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetEmployeeAbsence", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeAbsenceResponse> GetEmployeeAbsenceAsync(FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class FindFileRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="FindFile", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.FindFileRequestBody Body;
+        
+        public FindFileRequest() {
+        }
+        
+        public FindFileRequest(FoJaJo.FoJaJoWebService.FindFileRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
+    public partial class FindFileRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string filePath;
+        
+        public FindFileRequestBody() {
+        }
+        
+        public FindFileRequestBody(string filePath) {
+            this.filePath = filePath;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class FindFileResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="FindFileResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.FindFileResponseBody Body;
+        
+        public FindFileResponse() {
+        }
+        
+        public FindFileResponse(FoJaJo.FoJaJoWebService.FindFileResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
+    public partial class FindFileResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string FindFileResult;
+        
+        public FindFileResponseBody() {
+        }
+        
+        public FindFileResponseBody(string FindFileResult) {
+            this.FindFileResult = FindFileResult;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1038,7 +3126,7 @@ namespace FoJaJo.FoJaJoWebService {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetPlayerRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetPlayer", Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetPlayer", Namespace="http://fojajo.ics.lu.se", Order=0)]
         public FoJaJo.FoJaJoWebService.GetPlayerRequestBody Body;
         
         public GetPlayerRequest() {
@@ -1052,7 +3140,7 @@ namespace FoJaJo.FoJaJoWebService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
     public partial class GetPlayerRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
@@ -1072,7 +3160,7 @@ namespace FoJaJo.FoJaJoWebService {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetPlayerResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetPlayerResponse", Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetPlayerResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
         public FoJaJo.FoJaJoWebService.GetPlayerResponseBody Body;
         
         public GetPlayerResponse() {
@@ -1086,7 +3174,7 @@ namespace FoJaJo.FoJaJoWebService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
     public partial class GetPlayerResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
@@ -1106,7 +3194,7 @@ namespace FoJaJo.FoJaJoWebService {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetAllPlayersRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllPlayers", Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllPlayers", Namespace="http://fojajo.ics.lu.se", Order=0)]
         public FoJaJo.FoJaJoWebService.GetAllPlayersRequestBody Body;
         
         public GetAllPlayersRequest() {
@@ -1133,7 +3221,7 @@ namespace FoJaJo.FoJaJoWebService {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetAllPlayersResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllPlayersResponse", Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllPlayersResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
         public FoJaJo.FoJaJoWebService.GetAllPlayersResponseBody Body;
         
         public GetAllPlayersResponse() {
@@ -1147,16 +3235,16 @@ namespace FoJaJo.FoJaJoWebService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
     public partial class GetAllPlayersResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<FoJaJo.FoJaJoWebService.Player> GetAllPlayersResult;
+        public FoJaJo.FoJaJoWebService.Player[] GetAllPlayersResult;
         
         public GetAllPlayersResponseBody() {
         }
         
-        public GetAllPlayersResponseBody(System.Collections.Generic.List<FoJaJo.FoJaJoWebService.Player> GetAllPlayersResult) {
+        public GetAllPlayersResponseBody(FoJaJo.FoJaJoWebService.Player[] GetAllPlayersResult) {
             this.GetAllPlayersResult = GetAllPlayersResult;
         }
     }
@@ -1167,7 +3255,7 @@ namespace FoJaJo.FoJaJoWebService {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetAllGamesRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllGames", Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllGames", Namespace="http://fojajo.ics.lu.se", Order=0)]
         public FoJaJo.FoJaJoWebService.GetAllGamesRequestBody Body;
         
         public GetAllGamesRequest() {
@@ -1194,7 +3282,7 @@ namespace FoJaJo.FoJaJoWebService {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetAllGamesResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllGamesResponse", Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllGamesResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
         public FoJaJo.FoJaJoWebService.GetAllGamesResponseBody Body;
         
         public GetAllGamesResponse() {
@@ -1208,16 +3296,16 @@ namespace FoJaJo.FoJaJoWebService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
     public partial class GetAllGamesResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<FoJaJo.FoJaJoWebService.Game> GetAllGamesResult;
+        public FoJaJo.FoJaJoWebService.Game[] GetAllGamesResult;
         
         public GetAllGamesResponseBody() {
         }
         
-        public GetAllGamesResponseBody(System.Collections.Generic.List<FoJaJo.FoJaJoWebService.Game> GetAllGamesResult) {
+        public GetAllGamesResponseBody(FoJaJo.FoJaJoWebService.Game[] GetAllGamesResult) {
             this.GetAllGamesResult = GetAllGamesResult;
         }
     }
@@ -1226,15 +3314,83 @@ namespace FoJaJo.FoJaJoWebService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetPlayersRequest {
+    public partial class SelectCompanyRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetPlayers", Namespace="http://tempuri.org", Order=0)]
-        public FoJaJo.FoJaJoWebService.GetPlayersRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="SelectCompany", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.SelectCompanyRequestBody Body;
         
-        public GetPlayersRequest() {
+        public SelectCompanyRequest() {
         }
         
-        public GetPlayersRequest(FoJaJo.FoJaJoWebService.GetPlayersRequestBody Body) {
+        public SelectCompanyRequest(FoJaJo.FoJaJoWebService.SelectCompanyRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
+    public partial class SelectCompanyRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string companyName;
+        
+        public SelectCompanyRequestBody() {
+        }
+        
+        public SelectCompanyRequestBody(string companyName) {
+            this.companyName = companyName;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class SelectCompanyResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="SelectCompanyResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.SelectCompanyResponseBody Body;
+        
+        public SelectCompanyResponse() {
+        }
+        
+        public SelectCompanyResponse(FoJaJo.FoJaJoWebService.SelectCompanyResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
+    public partial class SelectCompanyResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public FoJaJo.FoJaJoWebService.Company SelectCompanyResult;
+        
+        public SelectCompanyResponseBody() {
+        }
+        
+        public SelectCompanyResponseBody(FoJaJo.FoJaJoWebService.Company SelectCompanyResult) {
+            this.SelectCompanyResult = SelectCompanyResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class SelectAllCompanyRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="SelectAllCompany", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.SelectAllCompanyRequestBody Body;
+        
+        public SelectAllCompanyRequest() {
+        }
+        
+        public SelectAllCompanyRequest(FoJaJo.FoJaJoWebService.SelectAllCompanyRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -1243,9 +3399,9 @@ namespace FoJaJo.FoJaJoWebService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class GetPlayersRequestBody {
+    public partial class SelectAllCompanyRequestBody {
         
-        public GetPlayersRequestBody() {
+        public SelectAllCompanyRequestBody() {
         }
     }
     
@@ -1253,15 +3409,15 @@ namespace FoJaJo.FoJaJoWebService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetPlayersResponse {
+    public partial class SelectAllCompanyResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetPlayersResponse", Namespace="http://tempuri.org", Order=0)]
-        public FoJaJo.FoJaJoWebService.GetPlayersResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="SelectAllCompanyResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.SelectAllCompanyResponseBody Body;
         
-        public GetPlayersResponse() {
+        public SelectAllCompanyResponse() {
         }
         
-        public GetPlayersResponse(FoJaJo.FoJaJoWebService.GetPlayersResponseBody Body) {
+        public SelectAllCompanyResponse(FoJaJo.FoJaJoWebService.SelectAllCompanyResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -1269,17 +3425,452 @@ namespace FoJaJo.FoJaJoWebService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
-    public partial class GetPlayersResponseBody {
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
+    public partial class SelectAllCompanyResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<FoJaJo.FoJaJoWebService.Player> GetPlayersResult;
+        public FoJaJo.FoJaJoWebService.Company[] SelectAllCompanyResult;
         
-        public GetPlayersResponseBody() {
+        public SelectAllCompanyResponseBody() {
         }
         
-        public GetPlayersResponseBody(System.Collections.Generic.List<FoJaJo.FoJaJoWebService.Player> GetPlayersResult) {
-            this.GetPlayersResult = GetPlayersResult;
+        public SelectAllCompanyResponseBody(FoJaJo.FoJaJoWebService.Company[] SelectAllCompanyResult) {
+            this.SelectAllCompanyResult = SelectAllCompanyResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddCompanyRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddCompany", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.AddCompanyRequestBody Body;
+        
+        public AddCompanyRequest() {
+        }
+        
+        public AddCompanyRequest(FoJaJo.FoJaJoWebService.AddCompanyRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
+    public partial class AddCompanyRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string companyName;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string description;
+        
+        public AddCompanyRequestBody() {
+        }
+        
+        public AddCompanyRequestBody(string companyName, string description) {
+            this.companyName = companyName;
+            this.description = description;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddCompanyResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddCompanyResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.AddCompanyResponseBody Body;
+        
+        public AddCompanyResponse() {
+        }
+        
+        public AddCompanyResponse(FoJaJo.FoJaJoWebService.AddCompanyResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class AddCompanyResponseBody {
+        
+        public AddCompanyResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class RemoveCompanyRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="RemoveCompany", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.RemoveCompanyRequestBody Body;
+        
+        public RemoveCompanyRequest() {
+        }
+        
+        public RemoveCompanyRequest(FoJaJo.FoJaJoWebService.RemoveCompanyRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
+    public partial class RemoveCompanyRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string companyName;
+        
+        public RemoveCompanyRequestBody() {
+        }
+        
+        public RemoveCompanyRequestBody(string companyName) {
+            this.companyName = companyName;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class RemoveCompanyResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="RemoveCompanyResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.RemoveCompanyResponseBody Body;
+        
+        public RemoveCompanyResponse() {
+        }
+        
+        public RemoveCompanyResponse(FoJaJo.FoJaJoWebService.RemoveCompanyResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class RemoveCompanyResponseBody {
+        
+        public RemoveCompanyResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class UpdateCompanyRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateCompany", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.UpdateCompanyRequestBody Body;
+        
+        public UpdateCompanyRequest() {
+        }
+        
+        public UpdateCompanyRequest(FoJaJo.FoJaJoWebService.UpdateCompanyRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
+    public partial class UpdateCompanyRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string oldCompanyName;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string description;
+        
+        public UpdateCompanyRequestBody() {
+        }
+        
+        public UpdateCompanyRequestBody(string oldCompanyName, string description) {
+            this.oldCompanyName = oldCompanyName;
+            this.description = description;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class UpdateCompanyResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateCompanyResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.UpdateCompanyResponseBody Body;
+        
+        public UpdateCompanyResponse() {
+        }
+        
+        public UpdateCompanyResponse(FoJaJo.FoJaJoWebService.UpdateCompanyResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class UpdateCompanyResponseBody {
+        
+        public UpdateCompanyResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllEmployeeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllEmployee", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetAllEmployeeRequestBody Body;
+        
+        public GetAllEmployeeRequest() {
+        }
+        
+        public GetAllEmployeeRequest(FoJaJo.FoJaJoWebService.GetAllEmployeeRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetAllEmployeeRequestBody {
+        
+        public GetAllEmployeeRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllEmployeeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllEmployeeResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetAllEmployeeResponseBody Body;
+        
+        public GetAllEmployeeResponse() {
+        }
+        
+        public GetAllEmployeeResponse(FoJaJo.FoJaJoWebService.GetAllEmployeeResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
+    public partial class GetAllEmployeeResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee[] GetAllEmployeeResult;
+        
+        public GetAllEmployeeResponseBody() {
+        }
+        
+        public GetAllEmployeeResponseBody(FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee[] GetAllEmployeeResult) {
+            this.GetAllEmployeeResult = GetAllEmployeeResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllEmployeeAbsenceRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllEmployeeAbsence", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetAllEmployeeAbsenceRequestBody Body;
+        
+        public GetAllEmployeeAbsenceRequest() {
+        }
+        
+        public GetAllEmployeeAbsenceRequest(FoJaJo.FoJaJoWebService.GetAllEmployeeAbsenceRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetAllEmployeeAbsenceRequestBody {
+        
+        public GetAllEmployeeAbsenceRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllEmployeeAbsenceResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllEmployeeAbsenceResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetAllEmployeeAbsenceResponseBody Body;
+        
+        public GetAllEmployeeAbsenceResponse() {
+        }
+        
+        public GetAllEmployeeAbsenceResponse(FoJaJo.FoJaJoWebService.GetAllEmployeeAbsenceResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
+    public partial class GetAllEmployeeAbsenceResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Absence[] GetAllEmployeeAbsenceResult;
+        
+        public GetAllEmployeeAbsenceResponseBody() {
+        }
+        
+        public GetAllEmployeeAbsenceResponseBody(FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Absence[] GetAllEmployeeAbsenceResult) {
+            this.GetAllEmployeeAbsenceResult = GetAllEmployeeAbsenceResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllEmployeePortalSetupRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllEmployeePortalSetup", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetAllEmployeePortalSetupRequestBody Body;
+        
+        public GetAllEmployeePortalSetupRequest() {
+        }
+        
+        public GetAllEmployeePortalSetupRequest(FoJaJo.FoJaJoWebService.GetAllEmployeePortalSetupRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetAllEmployeePortalSetupRequestBody {
+        
+        public GetAllEmployeePortalSetupRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllEmployeePortalSetupResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllEmployeePortalSetupResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetAllEmployeePortalSetupResponseBody Body;
+        
+        public GetAllEmployeePortalSetupResponse() {
+        }
+        
+        public GetAllEmployeePortalSetupResponse(FoJaJo.FoJaJoWebService.GetAllEmployeePortalSetupResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
+    public partial class GetAllEmployeePortalSetupResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Portal_Setup[] GetAllEmployeePortalSetupResult;
+        
+        public GetAllEmployeePortalSetupResponseBody() {
+        }
+        
+        public GetAllEmployeePortalSetupResponseBody(FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Portal_Setup[] GetAllEmployeePortalSetupResult) {
+            this.GetAllEmployeePortalSetupResult = GetAllEmployeePortalSetupResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllEmployeeQualificationRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllEmployeeQualification", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetAllEmployeeQualificationRequestBody Body;
+        
+        public GetAllEmployeeQualificationRequest() {
+        }
+        
+        public GetAllEmployeeQualificationRequest(FoJaJo.FoJaJoWebService.GetAllEmployeeQualificationRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetAllEmployeeQualificationRequestBody {
+        
+        public GetAllEmployeeQualificationRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllEmployeeQualificationResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllEmployeeQualificationResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetAllEmployeeQualificationResponseBody Body;
+        
+        public GetAllEmployeeQualificationResponse() {
+        }
+        
+        public GetAllEmployeeQualificationResponse(FoJaJo.FoJaJoWebService.GetAllEmployeeQualificationResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
+    public partial class GetAllEmployeeQualificationResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Qualification[] GetAllEmployeeQualificationResult;
+        
+        public GetAllEmployeeQualificationResponseBody() {
+        }
+        
+        public GetAllEmployeeQualificationResponseBody(FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Qualification[] GetAllEmployeeQualificationResult) {
+            this.GetAllEmployeeQualificationResult = GetAllEmployeeQualificationResult;
         }
     }
     
@@ -1289,7 +3880,7 @@ namespace FoJaJo.FoJaJoWebService {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetMetaColumns1Request {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaColumns1", Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaColumns1", Namespace="http://fojajo.ics.lu.se", Order=0)]
         public FoJaJo.FoJaJoWebService.GetMetaColumns1RequestBody Body;
         
         public GetMetaColumns1Request() {
@@ -1316,7 +3907,7 @@ namespace FoJaJo.FoJaJoWebService {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetMetaColumns1Response {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaColumns1Response", Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaColumns1Response", Namespace="http://fojajo.ics.lu.se", Order=0)]
         public FoJaJo.FoJaJoWebService.GetMetaColumns1ResponseBody Body;
         
         public GetMetaColumns1Response() {
@@ -1330,16 +3921,16 @@ namespace FoJaJo.FoJaJoWebService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
     public partial class GetMetaColumns1ResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<FoJaJo.FoJaJoWebService.MetaDataColumn> GetMetaColumns1Result;
+        public FoJaJo.FoJaJoWebService.MetaDataColumn[] GetMetaColumns1Result;
         
         public GetMetaColumns1ResponseBody() {
         }
         
-        public GetMetaColumns1ResponseBody(System.Collections.Generic.List<FoJaJo.FoJaJoWebService.MetaDataColumn> GetMetaColumns1Result) {
+        public GetMetaColumns1ResponseBody(FoJaJo.FoJaJoWebService.MetaDataColumn[] GetMetaColumns1Result) {
             this.GetMetaColumns1Result = GetMetaColumns1Result;
         }
     }
@@ -1350,7 +3941,7 @@ namespace FoJaJo.FoJaJoWebService {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetMetaColumns2Request {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaColumns2", Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaColumns2", Namespace="http://fojajo.ics.lu.se", Order=0)]
         public FoJaJo.FoJaJoWebService.GetMetaColumns2RequestBody Body;
         
         public GetMetaColumns2Request() {
@@ -1377,7 +3968,7 @@ namespace FoJaJo.FoJaJoWebService {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetMetaColumns2Response {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaColumns2Response", Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaColumns2Response", Namespace="http://fojajo.ics.lu.se", Order=0)]
         public FoJaJo.FoJaJoWebService.GetMetaColumns2ResponseBody Body;
         
         public GetMetaColumns2Response() {
@@ -1391,16 +3982,16 @@ namespace FoJaJo.FoJaJoWebService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
     public partial class GetMetaColumns2ResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<FoJaJo.FoJaJoWebService.MetaDataColumn2> GetMetaColumns2Result;
+        public FoJaJo.FoJaJoWebService.MetaDataColumn2[] GetMetaColumns2Result;
         
         public GetMetaColumns2ResponseBody() {
         }
         
-        public GetMetaColumns2ResponseBody(System.Collections.Generic.List<FoJaJo.FoJaJoWebService.MetaDataColumn2> GetMetaColumns2Result) {
+        public GetMetaColumns2ResponseBody(FoJaJo.FoJaJoWebService.MetaDataColumn2[] GetMetaColumns2Result) {
             this.GetMetaColumns2Result = GetMetaColumns2Result;
         }
     }
@@ -1411,7 +4002,7 @@ namespace FoJaJo.FoJaJoWebService {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetMetaIndexesRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaIndexes", Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaIndexes", Namespace="http://fojajo.ics.lu.se", Order=0)]
         public FoJaJo.FoJaJoWebService.GetMetaIndexesRequestBody Body;
         
         public GetMetaIndexesRequest() {
@@ -1438,7 +4029,7 @@ namespace FoJaJo.FoJaJoWebService {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetMetaIndexesResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaIndexesResponse", Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaIndexesResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
         public FoJaJo.FoJaJoWebService.GetMetaIndexesResponseBody Body;
         
         public GetMetaIndexesResponse() {
@@ -1452,16 +4043,16 @@ namespace FoJaJo.FoJaJoWebService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
     public partial class GetMetaIndexesResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<FoJaJo.FoJaJoWebService.MetaDataIndex> GetMetaIndexesResult;
+        public FoJaJo.FoJaJoWebService.MetaDataIndex[] GetMetaIndexesResult;
         
         public GetMetaIndexesResponseBody() {
         }
         
-        public GetMetaIndexesResponseBody(System.Collections.Generic.List<FoJaJo.FoJaJoWebService.MetaDataIndex> GetMetaIndexesResult) {
+        public GetMetaIndexesResponseBody(FoJaJo.FoJaJoWebService.MetaDataIndex[] GetMetaIndexesResult) {
             this.GetMetaIndexesResult = GetMetaIndexesResult;
         }
     }
@@ -1472,7 +4063,7 @@ namespace FoJaJo.FoJaJoWebService {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetMetaConstraintsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaConstraints", Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaConstraints", Namespace="http://fojajo.ics.lu.se", Order=0)]
         public FoJaJo.FoJaJoWebService.GetMetaConstraintsRequestBody Body;
         
         public GetMetaConstraintsRequest() {
@@ -1499,7 +4090,7 @@ namespace FoJaJo.FoJaJoWebService {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetMetaConstraintsResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaConstraintsResponse", Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaConstraintsResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
         public FoJaJo.FoJaJoWebService.GetMetaConstraintsResponseBody Body;
         
         public GetMetaConstraintsResponse() {
@@ -1513,16 +4104,16 @@ namespace FoJaJo.FoJaJoWebService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
     public partial class GetMetaConstraintsResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<FoJaJo.FoJaJoWebService.MetaDataTableConstraint> GetMetaConstraintsResult;
+        public FoJaJo.FoJaJoWebService.MetaDataTableConstraint[] GetMetaConstraintsResult;
         
         public GetMetaConstraintsResponseBody() {
         }
         
-        public GetMetaConstraintsResponseBody(System.Collections.Generic.List<FoJaJo.FoJaJoWebService.MetaDataTableConstraint> GetMetaConstraintsResult) {
+        public GetMetaConstraintsResponseBody(FoJaJo.FoJaJoWebService.MetaDataTableConstraint[] GetMetaConstraintsResult) {
             this.GetMetaConstraintsResult = GetMetaConstraintsResult;
         }
     }
@@ -1533,7 +4124,7 @@ namespace FoJaJo.FoJaJoWebService {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetMetaKeysRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaKeys", Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaKeys", Namespace="http://fojajo.ics.lu.se", Order=0)]
         public FoJaJo.FoJaJoWebService.GetMetaKeysRequestBody Body;
         
         public GetMetaKeysRequest() {
@@ -1560,7 +4151,7 @@ namespace FoJaJo.FoJaJoWebService {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetMetaKeysResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaKeysResponse", Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaKeysResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
         public FoJaJo.FoJaJoWebService.GetMetaKeysResponseBody Body;
         
         public GetMetaKeysResponse() {
@@ -1574,17 +4165,78 @@ namespace FoJaJo.FoJaJoWebService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
     public partial class GetMetaKeysResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<FoJaJo.FoJaJoWebService.MetaDataKey> GetMetaKeysResult;
+        public FoJaJo.FoJaJoWebService.MetaDataKey[] GetMetaKeysResult;
         
         public GetMetaKeysResponseBody() {
         }
         
-        public GetMetaKeysResponseBody(System.Collections.Generic.List<FoJaJo.FoJaJoWebService.MetaDataKey> GetMetaKeysResult) {
+        public GetMetaKeysResponseBody(FoJaJo.FoJaJoWebService.MetaDataKey[] GetMetaKeysResult) {
             this.GetMetaKeysResult = GetMetaKeysResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllEmployeeRelativeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllEmployeeRelative", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequestBody Body;
+        
+        public GetAllEmployeeRelativeRequest() {
+        }
+        
+        public GetAllEmployeeRelativeRequest(FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetAllEmployeeRelativeRequestBody {
+        
+        public GetAllEmployeeRelativeRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllEmployeeRelativeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllEmployeeRelativeResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeResponseBody Body;
+        
+        public GetAllEmployeeRelativeResponse() {
+        }
+        
+        public GetAllEmployeeRelativeResponse(FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
+    public partial class GetAllEmployeeRelativeResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Relative[] GetAllEmployeeRelativeResult;
+        
+        public GetAllEmployeeRelativeResponseBody() {
+        }
+        
+        public GetAllEmployeeRelativeResponseBody(FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Relative[] GetAllEmployeeRelativeResult) {
+            this.GetAllEmployeeRelativeResult = GetAllEmployeeRelativeResult;
         }
     }
     
@@ -1594,7 +4246,7 @@ namespace FoJaJo.FoJaJoWebService {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetMetaTablesRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaTables", Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaTables", Namespace="http://fojajo.ics.lu.se", Order=0)]
         public FoJaJo.FoJaJoWebService.GetMetaTablesRequestBody Body;
         
         public GetMetaTablesRequest() {
@@ -1621,7 +4273,7 @@ namespace FoJaJo.FoJaJoWebService {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetMetaTablesResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaTablesResponse", Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaTablesResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
         public FoJaJo.FoJaJoWebService.GetMetaTablesResponseBody Body;
         
         public GetMetaTablesResponse() {
@@ -1635,16 +4287,16 @@ namespace FoJaJo.FoJaJoWebService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
     public partial class GetMetaTablesResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<FoJaJo.FoJaJoWebService.MetaDataTable> GetMetaTablesResult;
+        public FoJaJo.FoJaJoWebService.MetaDataTable[] GetMetaTablesResult;
         
         public GetMetaTablesResponseBody() {
         }
         
-        public GetMetaTablesResponseBody(System.Collections.Generic.List<FoJaJo.FoJaJoWebService.MetaDataTable> GetMetaTablesResult) {
+        public GetMetaTablesResponseBody(FoJaJo.FoJaJoWebService.MetaDataTable[] GetMetaTablesResult) {
             this.GetMetaTablesResult = GetMetaTablesResult;
         }
     }
@@ -1655,7 +4307,7 @@ namespace FoJaJo.FoJaJoWebService {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetMetaTables2Request {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaTables2", Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaTables2", Namespace="http://fojajo.ics.lu.se", Order=0)]
         public FoJaJo.FoJaJoWebService.GetMetaTables2RequestBody Body;
         
         public GetMetaTables2Request() {
@@ -1682,7 +4334,7 @@ namespace FoJaJo.FoJaJoWebService {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetMetaTables2Response {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaTables2Response", Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaTables2Response", Namespace="http://fojajo.ics.lu.se", Order=0)]
         public FoJaJo.FoJaJoWebService.GetMetaTables2ResponseBody Body;
         
         public GetMetaTables2Response() {
@@ -1696,16 +4348,16 @@ namespace FoJaJo.FoJaJoWebService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
     public partial class GetMetaTables2ResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<FoJaJo.FoJaJoWebService.MetaDataTable2> GetMetaTables2Result;
+        public FoJaJo.FoJaJoWebService.MetaDataTable2[] GetMetaTables2Result;
         
         public GetMetaTables2ResponseBody() {
         }
         
-        public GetMetaTables2ResponseBody(System.Collections.Generic.List<FoJaJo.FoJaJoWebService.MetaDataTable2> GetMetaTables2Result) {
+        public GetMetaTables2ResponseBody(FoJaJo.FoJaJoWebService.MetaDataTable2[] GetMetaTables2Result) {
             this.GetMetaTables2Result = GetMetaTables2Result;
         }
     }
@@ -1714,49 +4366,15 @@ namespace FoJaJo.FoJaJoWebService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class InsertCompanyRequest {
+    public partial class GetMostSickRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="InsertCompany", Namespace="http://tempuri.org", Order=0)]
-        public FoJaJo.FoJaJoWebService.InsertCompanyRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMostSick", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetMostSickRequestBody Body;
         
-        public InsertCompanyRequest() {
+        public GetMostSickRequest() {
         }
         
-        public InsertCompanyRequest(FoJaJo.FoJaJoWebService.InsertCompanyRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
-    public partial class InsertCompanyRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string name;
-        
-        public InsertCompanyRequestBody() {
-        }
-        
-        public InsertCompanyRequestBody(string name) {
-            this.name = name;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class InsertCompanyResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="InsertCompanyResponse", Namespace="http://tempuri.org", Order=0)]
-        public FoJaJo.FoJaJoWebService.InsertCompanyResponseBody Body;
-        
-        public InsertCompanyResponse() {
-        }
-        
-        public InsertCompanyResponse(FoJaJo.FoJaJoWebService.InsertCompanyResponseBody Body) {
+        public GetMostSickRequest(FoJaJo.FoJaJoWebService.GetMostSickRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -1765,9 +4383,43 @@ namespace FoJaJo.FoJaJoWebService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class InsertCompanyResponseBody {
+    public partial class GetMostSickRequestBody {
         
-        public InsertCompanyResponseBody() {
+        public GetMostSickRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetMostSickResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMostSickResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetMostSickResponseBody Body;
+        
+        public GetMostSickResponse() {
+        }
+        
+        public GetMostSickResponse(FoJaJo.FoJaJoWebService.GetMostSickResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
+    public partial class GetMostSickResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public FoJaJo.FoJaJoWebService.MostSick[] GetMostSickResult;
+        
+        public GetMostSickResponseBody() {
+        }
+        
+        public GetMostSickResponseBody(FoJaJo.FoJaJoWebService.MostSick[] GetMostSickResult) {
+            this.GetMostSickResult = GetMostSickResult;
         }
     }
     
@@ -1777,7 +4429,7 @@ namespace FoJaJo.FoJaJoWebService {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetEmployeeRelativeRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmployeeRelative", Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmployeeRelative", Namespace="http://fojajo.ics.lu.se", Order=0)]
         public FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequestBody Body;
         
         public GetEmployeeRelativeRequest() {
@@ -1804,7 +4456,7 @@ namespace FoJaJo.FoJaJoWebService {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetEmployeeRelativeResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmployeeRelativeResponse", Namespace="http://tempuri.org", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmployeeRelativeResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
         public FoJaJo.FoJaJoWebService.GetEmployeeRelativeResponseBody Body;
         
         public GetEmployeeRelativeResponse() {
@@ -1818,16 +4470,16 @@ namespace FoJaJo.FoJaJoWebService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
     public partial class GetEmployeeRelativeResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<FoJaJo.FoJaJoWebService.EmployeeRelative> GetEmployeeRelativeResult;
+        public FoJaJo.FoJaJoWebService.EmployeeRelative[] GetEmployeeRelativeResult;
         
         public GetEmployeeRelativeResponseBody() {
         }
         
-        public GetEmployeeRelativeResponseBody(System.Collections.Generic.List<FoJaJo.FoJaJoWebService.EmployeeRelative> GetEmployeeRelativeResult) {
+        public GetEmployeeRelativeResponseBody(FoJaJo.FoJaJoWebService.EmployeeRelative[] GetEmployeeRelativeResult) {
             this.GetEmployeeRelativeResult = GetEmployeeRelativeResult;
         }
     }
@@ -1836,15 +4488,15 @@ namespace FoJaJo.FoJaJoWebService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FindFileRequest {
+    public partial class GetEmployeeRelativesRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FindFile", Namespace="http://tempuri.org", Order=0)]
-        public FoJaJo.FoJaJoWebService.FindFileRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmployeeRelatives", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequestBody Body;
         
-        public FindFileRequest() {
+        public GetEmployeeRelativesRequest() {
         }
         
-        public FindFileRequest(FoJaJo.FoJaJoWebService.FindFileRequestBody Body) {
+        public GetEmployeeRelativesRequest(FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -1852,17 +4504,17 @@ namespace FoJaJo.FoJaJoWebService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
-    public partial class FindFileRequestBody {
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
+    public partial class GetEmployeeRelativesRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string filePath;
+        public string employeeNr;
         
-        public FindFileRequestBody() {
+        public GetEmployeeRelativesRequestBody() {
         }
         
-        public FindFileRequestBody(string filePath) {
-            this.filePath = filePath;
+        public GetEmployeeRelativesRequestBody(string employeeNr) {
+            this.employeeNr = employeeNr;
         }
     }
     
@@ -1870,15 +4522,15 @@ namespace FoJaJo.FoJaJoWebService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FindFileResponse {
+    public partial class GetEmployeeRelativesResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FindFileResponse", Namespace="http://tempuri.org", Order=0)]
-        public FoJaJo.FoJaJoWebService.FindFileResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmployeeRelativesResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetEmployeeRelativesResponseBody Body;
         
-        public FindFileResponse() {
+        public GetEmployeeRelativesResponse() {
         }
         
-        public FindFileResponse(FoJaJo.FoJaJoWebService.FindFileResponseBody Body) {
+        public GetEmployeeRelativesResponse(FoJaJo.FoJaJoWebService.GetEmployeeRelativesResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -1886,17 +4538,78 @@ namespace FoJaJo.FoJaJoWebService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org")]
-    public partial class FindFileResponseBody {
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
+    public partial class GetEmployeeRelativesResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string FindFileResult;
+        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Relative[] GetEmployeeRelativesResult;
         
-        public FindFileResponseBody() {
+        public GetEmployeeRelativesResponseBody() {
         }
         
-        public FindFileResponseBody(string FindFileResult) {
-            this.FindFileResult = FindFileResult;
+        public GetEmployeeRelativesResponseBody(FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Relative[] GetEmployeeRelativesResult) {
+            this.GetEmployeeRelativesResult = GetEmployeeRelativesResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetEmployeeAbsenceRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmployeeAbsence", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequestBody Body;
+        
+        public GetEmployeeAbsenceRequest() {
+        }
+        
+        public GetEmployeeAbsenceRequest(FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetEmployeeAbsenceRequestBody {
+        
+        public GetEmployeeAbsenceRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetEmployeeAbsenceResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmployeeAbsenceResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetEmployeeAbsenceResponseBody Body;
+        
+        public GetEmployeeAbsenceResponse() {
+        }
+        
+        public GetEmployeeAbsenceResponse(FoJaJo.FoJaJoWebService.GetEmployeeAbsenceResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
+    public partial class GetEmployeeAbsenceResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Absence[] GetEmployeeAbsenceResult;
+        
+        public GetEmployeeAbsenceResponseBody() {
+        }
+        
+        public GetEmployeeAbsenceResponseBody(FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Absence[] GetEmployeeAbsenceResult) {
+            this.GetEmployeeAbsenceResult = GetEmployeeAbsenceResult;
         }
     }
     
@@ -1925,6 +4638,31 @@ namespace FoJaJo.FoJaJoWebService {
         
         public FoJaJoWebServiceSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FoJaJo.FoJaJoWebService.FindFileResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.FindFile(FoJaJo.FoJaJoWebService.FindFileRequest request) {
+            return base.Channel.FindFile(request);
+        }
+        
+        public string FindFile(string filePath) {
+            FoJaJo.FoJaJoWebService.FindFileRequest inValue = new FoJaJo.FoJaJoWebService.FindFileRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.FindFileRequestBody();
+            inValue.Body.filePath = filePath;
+            FoJaJo.FoJaJoWebService.FindFileResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).FindFile(inValue);
+            return retVal.Body.FindFileResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.FindFileResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.FindFileAsync(FoJaJo.FoJaJoWebService.FindFileRequest request) {
+            return base.Channel.FindFileAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.FindFileResponse> FindFileAsync(string filePath) {
+            FoJaJo.FoJaJoWebService.FindFileRequest inValue = new FoJaJo.FoJaJoWebService.FindFileRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.FindFileRequestBody();
+            inValue.Body.filePath = filePath;
+            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).FindFileAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1957,7 +4695,7 @@ namespace FoJaJo.FoJaJoWebService {
             return base.Channel.GetAllPlayers(request);
         }
         
-        public System.Collections.Generic.List<FoJaJo.FoJaJoWebService.Player> GetAllPlayers() {
+        public FoJaJo.FoJaJoWebService.Player[] GetAllPlayers() {
             FoJaJo.FoJaJoWebService.GetAllPlayersRequest inValue = new FoJaJo.FoJaJoWebService.GetAllPlayersRequest();
             inValue.Body = new FoJaJo.FoJaJoWebService.GetAllPlayersRequestBody();
             FoJaJo.FoJaJoWebService.GetAllPlayersResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetAllPlayers(inValue);
@@ -1980,7 +4718,7 @@ namespace FoJaJo.FoJaJoWebService {
             return base.Channel.GetAllGames(request);
         }
         
-        public System.Collections.Generic.List<FoJaJo.FoJaJoWebService.Game> GetAllGames() {
+        public FoJaJo.FoJaJoWebService.Game[] GetAllGames() {
             FoJaJo.FoJaJoWebService.GetAllGamesRequest inValue = new FoJaJo.FoJaJoWebService.GetAllGamesRequest();
             inValue.Body = new FoJaJo.FoJaJoWebService.GetAllGamesRequestBody();
             FoJaJo.FoJaJoWebService.GetAllGamesResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetAllGames(inValue);
@@ -1999,26 +4737,219 @@ namespace FoJaJo.FoJaJoWebService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FoJaJo.FoJaJoWebService.GetPlayersResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetPlayers(FoJaJo.FoJaJoWebService.GetPlayersRequest request) {
-            return base.Channel.GetPlayers(request);
+        FoJaJo.FoJaJoWebService.SelectCompanyResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.SelectCompany(FoJaJo.FoJaJoWebService.SelectCompanyRequest request) {
+            return base.Channel.SelectCompany(request);
         }
         
-        public System.Collections.Generic.List<FoJaJo.FoJaJoWebService.Player> GetPlayers() {
-            FoJaJo.FoJaJoWebService.GetPlayersRequest inValue = new FoJaJo.FoJaJoWebService.GetPlayersRequest();
-            inValue.Body = new FoJaJo.FoJaJoWebService.GetPlayersRequestBody();
-            FoJaJo.FoJaJoWebService.GetPlayersResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetPlayers(inValue);
-            return retVal.Body.GetPlayersResult;
+        public FoJaJo.FoJaJoWebService.Company SelectCompany(string companyName) {
+            FoJaJo.FoJaJoWebService.SelectCompanyRequest inValue = new FoJaJo.FoJaJoWebService.SelectCompanyRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.SelectCompanyRequestBody();
+            inValue.Body.companyName = companyName;
+            FoJaJo.FoJaJoWebService.SelectCompanyResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).SelectCompany(inValue);
+            return retVal.Body.SelectCompanyResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetPlayersResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetPlayersAsync(FoJaJo.FoJaJoWebService.GetPlayersRequest request) {
-            return base.Channel.GetPlayersAsync(request);
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.SelectCompanyResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.SelectCompanyAsync(FoJaJo.FoJaJoWebService.SelectCompanyRequest request) {
+            return base.Channel.SelectCompanyAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetPlayersResponse> GetPlayersAsync() {
-            FoJaJo.FoJaJoWebService.GetPlayersRequest inValue = new FoJaJo.FoJaJoWebService.GetPlayersRequest();
-            inValue.Body = new FoJaJo.FoJaJoWebService.GetPlayersRequestBody();
-            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetPlayersAsync(inValue);
+        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.SelectCompanyResponse> SelectCompanyAsync(string companyName) {
+            FoJaJo.FoJaJoWebService.SelectCompanyRequest inValue = new FoJaJo.FoJaJoWebService.SelectCompanyRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.SelectCompanyRequestBody();
+            inValue.Body.companyName = companyName;
+            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).SelectCompanyAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FoJaJo.FoJaJoWebService.SelectAllCompanyResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.SelectAllCompany(FoJaJo.FoJaJoWebService.SelectAllCompanyRequest request) {
+            return base.Channel.SelectAllCompany(request);
+        }
+        
+        public FoJaJo.FoJaJoWebService.Company[] SelectAllCompany() {
+            FoJaJo.FoJaJoWebService.SelectAllCompanyRequest inValue = new FoJaJo.FoJaJoWebService.SelectAllCompanyRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.SelectAllCompanyRequestBody();
+            FoJaJo.FoJaJoWebService.SelectAllCompanyResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).SelectAllCompany(inValue);
+            return retVal.Body.SelectAllCompanyResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.SelectAllCompanyResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.SelectAllCompanyAsync(FoJaJo.FoJaJoWebService.SelectAllCompanyRequest request) {
+            return base.Channel.SelectAllCompanyAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.SelectAllCompanyResponse> SelectAllCompanyAsync() {
+            FoJaJo.FoJaJoWebService.SelectAllCompanyRequest inValue = new FoJaJo.FoJaJoWebService.SelectAllCompanyRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.SelectAllCompanyRequestBody();
+            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).SelectAllCompanyAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FoJaJo.FoJaJoWebService.AddCompanyResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.AddCompany(FoJaJo.FoJaJoWebService.AddCompanyRequest request) {
+            return base.Channel.AddCompany(request);
+        }
+        
+        public void AddCompany(string companyName, string description) {
+            FoJaJo.FoJaJoWebService.AddCompanyRequest inValue = new FoJaJo.FoJaJoWebService.AddCompanyRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.AddCompanyRequestBody();
+            inValue.Body.companyName = companyName;
+            inValue.Body.description = description;
+            FoJaJo.FoJaJoWebService.AddCompanyResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).AddCompany(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.AddCompanyResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.AddCompanyAsync(FoJaJo.FoJaJoWebService.AddCompanyRequest request) {
+            return base.Channel.AddCompanyAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.AddCompanyResponse> AddCompanyAsync(string companyName, string description) {
+            FoJaJo.FoJaJoWebService.AddCompanyRequest inValue = new FoJaJo.FoJaJoWebService.AddCompanyRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.AddCompanyRequestBody();
+            inValue.Body.companyName = companyName;
+            inValue.Body.description = description;
+            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).AddCompanyAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FoJaJo.FoJaJoWebService.RemoveCompanyResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.RemoveCompany(FoJaJo.FoJaJoWebService.RemoveCompanyRequest request) {
+            return base.Channel.RemoveCompany(request);
+        }
+        
+        public void RemoveCompany(string companyName) {
+            FoJaJo.FoJaJoWebService.RemoveCompanyRequest inValue = new FoJaJo.FoJaJoWebService.RemoveCompanyRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.RemoveCompanyRequestBody();
+            inValue.Body.companyName = companyName;
+            FoJaJo.FoJaJoWebService.RemoveCompanyResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).RemoveCompany(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.RemoveCompanyResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.RemoveCompanyAsync(FoJaJo.FoJaJoWebService.RemoveCompanyRequest request) {
+            return base.Channel.RemoveCompanyAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.RemoveCompanyResponse> RemoveCompanyAsync(string companyName) {
+            FoJaJo.FoJaJoWebService.RemoveCompanyRequest inValue = new FoJaJo.FoJaJoWebService.RemoveCompanyRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.RemoveCompanyRequestBody();
+            inValue.Body.companyName = companyName;
+            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).RemoveCompanyAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FoJaJo.FoJaJoWebService.UpdateCompanyResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.UpdateCompany(FoJaJo.FoJaJoWebService.UpdateCompanyRequest request) {
+            return base.Channel.UpdateCompany(request);
+        }
+        
+        public void UpdateCompany(string oldCompanyName, string description) {
+            FoJaJo.FoJaJoWebService.UpdateCompanyRequest inValue = new FoJaJo.FoJaJoWebService.UpdateCompanyRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.UpdateCompanyRequestBody();
+            inValue.Body.oldCompanyName = oldCompanyName;
+            inValue.Body.description = description;
+            FoJaJo.FoJaJoWebService.UpdateCompanyResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).UpdateCompany(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.UpdateCompanyResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.UpdateCompanyAsync(FoJaJo.FoJaJoWebService.UpdateCompanyRequest request) {
+            return base.Channel.UpdateCompanyAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.UpdateCompanyResponse> UpdateCompanyAsync(string oldCompanyName, string description) {
+            FoJaJo.FoJaJoWebService.UpdateCompanyRequest inValue = new FoJaJo.FoJaJoWebService.UpdateCompanyRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.UpdateCompanyRequestBody();
+            inValue.Body.oldCompanyName = oldCompanyName;
+            inValue.Body.description = description;
+            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).UpdateCompanyAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FoJaJo.FoJaJoWebService.GetAllEmployeeResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetAllEmployee(FoJaJo.FoJaJoWebService.GetAllEmployeeRequest request) {
+            return base.Channel.GetAllEmployee(request);
+        }
+        
+        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee[] GetAllEmployee() {
+            FoJaJo.FoJaJoWebService.GetAllEmployeeRequest inValue = new FoJaJo.FoJaJoWebService.GetAllEmployeeRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetAllEmployeeRequestBody();
+            FoJaJo.FoJaJoWebService.GetAllEmployeeResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetAllEmployee(inValue);
+            return retVal.Body.GetAllEmployeeResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllEmployeeResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetAllEmployeeAsync(FoJaJo.FoJaJoWebService.GetAllEmployeeRequest request) {
+            return base.Channel.GetAllEmployeeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllEmployeeResponse> GetAllEmployeeAsync() {
+            FoJaJo.FoJaJoWebService.GetAllEmployeeRequest inValue = new FoJaJo.FoJaJoWebService.GetAllEmployeeRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetAllEmployeeRequestBody();
+            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetAllEmployeeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FoJaJo.FoJaJoWebService.GetAllEmployeeAbsenceResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetAllEmployeeAbsence(FoJaJo.FoJaJoWebService.GetAllEmployeeAbsenceRequest request) {
+            return base.Channel.GetAllEmployeeAbsence(request);
+        }
+        
+        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Absence[] GetAllEmployeeAbsence() {
+            FoJaJo.FoJaJoWebService.GetAllEmployeeAbsenceRequest inValue = new FoJaJo.FoJaJoWebService.GetAllEmployeeAbsenceRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetAllEmployeeAbsenceRequestBody();
+            FoJaJo.FoJaJoWebService.GetAllEmployeeAbsenceResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetAllEmployeeAbsence(inValue);
+            return retVal.Body.GetAllEmployeeAbsenceResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllEmployeeAbsenceResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetAllEmployeeAbsenceAsync(FoJaJo.FoJaJoWebService.GetAllEmployeeAbsenceRequest request) {
+            return base.Channel.GetAllEmployeeAbsenceAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllEmployeeAbsenceResponse> GetAllEmployeeAbsenceAsync() {
+            FoJaJo.FoJaJoWebService.GetAllEmployeeAbsenceRequest inValue = new FoJaJo.FoJaJoWebService.GetAllEmployeeAbsenceRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetAllEmployeeAbsenceRequestBody();
+            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetAllEmployeeAbsenceAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FoJaJo.FoJaJoWebService.GetAllEmployeePortalSetupResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetAllEmployeePortalSetup(FoJaJo.FoJaJoWebService.GetAllEmployeePortalSetupRequest request) {
+            return base.Channel.GetAllEmployeePortalSetup(request);
+        }
+        
+        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Portal_Setup[] GetAllEmployeePortalSetup() {
+            FoJaJo.FoJaJoWebService.GetAllEmployeePortalSetupRequest inValue = new FoJaJo.FoJaJoWebService.GetAllEmployeePortalSetupRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetAllEmployeePortalSetupRequestBody();
+            FoJaJo.FoJaJoWebService.GetAllEmployeePortalSetupResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetAllEmployeePortalSetup(inValue);
+            return retVal.Body.GetAllEmployeePortalSetupResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllEmployeePortalSetupResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetAllEmployeePortalSetupAsync(FoJaJo.FoJaJoWebService.GetAllEmployeePortalSetupRequest request) {
+            return base.Channel.GetAllEmployeePortalSetupAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllEmployeePortalSetupResponse> GetAllEmployeePortalSetupAsync() {
+            FoJaJo.FoJaJoWebService.GetAllEmployeePortalSetupRequest inValue = new FoJaJo.FoJaJoWebService.GetAllEmployeePortalSetupRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetAllEmployeePortalSetupRequestBody();
+            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetAllEmployeePortalSetupAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FoJaJo.FoJaJoWebService.GetAllEmployeeQualificationResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetAllEmployeeQualification(FoJaJo.FoJaJoWebService.GetAllEmployeeQualificationRequest request) {
+            return base.Channel.GetAllEmployeeQualification(request);
+        }
+        
+        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Qualification[] GetAllEmployeeQualification() {
+            FoJaJo.FoJaJoWebService.GetAllEmployeeQualificationRequest inValue = new FoJaJo.FoJaJoWebService.GetAllEmployeeQualificationRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetAllEmployeeQualificationRequestBody();
+            FoJaJo.FoJaJoWebService.GetAllEmployeeQualificationResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetAllEmployeeQualification(inValue);
+            return retVal.Body.GetAllEmployeeQualificationResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllEmployeeQualificationResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetAllEmployeeQualificationAsync(FoJaJo.FoJaJoWebService.GetAllEmployeeQualificationRequest request) {
+            return base.Channel.GetAllEmployeeQualificationAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllEmployeeQualificationResponse> GetAllEmployeeQualificationAsync() {
+            FoJaJo.FoJaJoWebService.GetAllEmployeeQualificationRequest inValue = new FoJaJo.FoJaJoWebService.GetAllEmployeeQualificationRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetAllEmployeeQualificationRequestBody();
+            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetAllEmployeeQualificationAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2026,7 +4957,7 @@ namespace FoJaJo.FoJaJoWebService {
             return base.Channel.GetMetaColumns1(request);
         }
         
-        public System.Collections.Generic.List<FoJaJo.FoJaJoWebService.MetaDataColumn> GetMetaColumns1() {
+        public FoJaJo.FoJaJoWebService.MetaDataColumn[] GetMetaColumns1() {
             FoJaJo.FoJaJoWebService.GetMetaColumns1Request inValue = new FoJaJo.FoJaJoWebService.GetMetaColumns1Request();
             inValue.Body = new FoJaJo.FoJaJoWebService.GetMetaColumns1RequestBody();
             FoJaJo.FoJaJoWebService.GetMetaColumns1Response retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetMetaColumns1(inValue);
@@ -2049,7 +4980,7 @@ namespace FoJaJo.FoJaJoWebService {
             return base.Channel.GetMetaColumns2(request);
         }
         
-        public System.Collections.Generic.List<FoJaJo.FoJaJoWebService.MetaDataColumn2> GetMetaColumns2() {
+        public FoJaJo.FoJaJoWebService.MetaDataColumn2[] GetMetaColumns2() {
             FoJaJo.FoJaJoWebService.GetMetaColumns2Request inValue = new FoJaJo.FoJaJoWebService.GetMetaColumns2Request();
             inValue.Body = new FoJaJo.FoJaJoWebService.GetMetaColumns2RequestBody();
             FoJaJo.FoJaJoWebService.GetMetaColumns2Response retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetMetaColumns2(inValue);
@@ -2072,7 +5003,7 @@ namespace FoJaJo.FoJaJoWebService {
             return base.Channel.GetMetaIndexes(request);
         }
         
-        public System.Collections.Generic.List<FoJaJo.FoJaJoWebService.MetaDataIndex> GetMetaIndexes() {
+        public FoJaJo.FoJaJoWebService.MetaDataIndex[] GetMetaIndexes() {
             FoJaJo.FoJaJoWebService.GetMetaIndexesRequest inValue = new FoJaJo.FoJaJoWebService.GetMetaIndexesRequest();
             inValue.Body = new FoJaJo.FoJaJoWebService.GetMetaIndexesRequestBody();
             FoJaJo.FoJaJoWebService.GetMetaIndexesResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetMetaIndexes(inValue);
@@ -2095,7 +5026,7 @@ namespace FoJaJo.FoJaJoWebService {
             return base.Channel.GetMetaConstraints(request);
         }
         
-        public System.Collections.Generic.List<FoJaJo.FoJaJoWebService.MetaDataTableConstraint> GetMetaConstraints() {
+        public FoJaJo.FoJaJoWebService.MetaDataTableConstraint[] GetMetaConstraints() {
             FoJaJo.FoJaJoWebService.GetMetaConstraintsRequest inValue = new FoJaJo.FoJaJoWebService.GetMetaConstraintsRequest();
             inValue.Body = new FoJaJo.FoJaJoWebService.GetMetaConstraintsRequestBody();
             FoJaJo.FoJaJoWebService.GetMetaConstraintsResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetMetaConstraints(inValue);
@@ -2118,7 +5049,7 @@ namespace FoJaJo.FoJaJoWebService {
             return base.Channel.GetMetaKeys(request);
         }
         
-        public System.Collections.Generic.List<FoJaJo.FoJaJoWebService.MetaDataKey> GetMetaKeys() {
+        public FoJaJo.FoJaJoWebService.MetaDataKey[] GetMetaKeys() {
             FoJaJo.FoJaJoWebService.GetMetaKeysRequest inValue = new FoJaJo.FoJaJoWebService.GetMetaKeysRequest();
             inValue.Body = new FoJaJo.FoJaJoWebService.GetMetaKeysRequestBody();
             FoJaJo.FoJaJoWebService.GetMetaKeysResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetMetaKeys(inValue);
@@ -2137,11 +5068,34 @@ namespace FoJaJo.FoJaJoWebService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetAllEmployeeRelative(FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequest request) {
+            return base.Channel.GetAllEmployeeRelative(request);
+        }
+        
+        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Relative[] GetAllEmployeeRelative() {
+            FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequest inValue = new FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequestBody();
+            FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetAllEmployeeRelative(inValue);
+            return retVal.Body.GetAllEmployeeRelativeResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetAllEmployeeRelativeAsync(FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequest request) {
+            return base.Channel.GetAllEmployeeRelativeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeResponse> GetAllEmployeeRelativeAsync() {
+            FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequest inValue = new FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequestBody();
+            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetAllEmployeeRelativeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         FoJaJo.FoJaJoWebService.GetMetaTablesResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetMetaTables(FoJaJo.FoJaJoWebService.GetMetaTablesRequest request) {
             return base.Channel.GetMetaTables(request);
         }
         
-        public System.Collections.Generic.List<FoJaJo.FoJaJoWebService.MetaDataTable> GetMetaTables() {
+        public FoJaJo.FoJaJoWebService.MetaDataTable[] GetMetaTables() {
             FoJaJo.FoJaJoWebService.GetMetaTablesRequest inValue = new FoJaJo.FoJaJoWebService.GetMetaTablesRequest();
             inValue.Body = new FoJaJo.FoJaJoWebService.GetMetaTablesRequestBody();
             FoJaJo.FoJaJoWebService.GetMetaTablesResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetMetaTables(inValue);
@@ -2164,7 +5118,7 @@ namespace FoJaJo.FoJaJoWebService {
             return base.Channel.GetMetaTables2(request);
         }
         
-        public System.Collections.Generic.List<FoJaJo.FoJaJoWebService.MetaDataTable2> GetMetaTables2() {
+        public FoJaJo.FoJaJoWebService.MetaDataTable2[] GetMetaTables2() {
             FoJaJo.FoJaJoWebService.GetMetaTables2Request inValue = new FoJaJo.FoJaJoWebService.GetMetaTables2Request();
             inValue.Body = new FoJaJo.FoJaJoWebService.GetMetaTables2RequestBody();
             FoJaJo.FoJaJoWebService.GetMetaTables2Response retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetMetaTables2(inValue);
@@ -2183,27 +5137,26 @@ namespace FoJaJo.FoJaJoWebService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FoJaJo.FoJaJoWebService.InsertCompanyResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.InsertCompany(FoJaJo.FoJaJoWebService.InsertCompanyRequest request) {
-            return base.Channel.InsertCompany(request);
+        FoJaJo.FoJaJoWebService.GetMostSickResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetMostSick(FoJaJo.FoJaJoWebService.GetMostSickRequest request) {
+            return base.Channel.GetMostSick(request);
         }
         
-        public void InsertCompany(string name) {
-            FoJaJo.FoJaJoWebService.InsertCompanyRequest inValue = new FoJaJo.FoJaJoWebService.InsertCompanyRequest();
-            inValue.Body = new FoJaJo.FoJaJoWebService.InsertCompanyRequestBody();
-            inValue.Body.name = name;
-            FoJaJo.FoJaJoWebService.InsertCompanyResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).InsertCompany(inValue);
+        public FoJaJo.FoJaJoWebService.MostSick[] GetMostSick() {
+            FoJaJo.FoJaJoWebService.GetMostSickRequest inValue = new FoJaJo.FoJaJoWebService.GetMostSickRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetMostSickRequestBody();
+            FoJaJo.FoJaJoWebService.GetMostSickResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetMostSick(inValue);
+            return retVal.Body.GetMostSickResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.InsertCompanyResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.InsertCompanyAsync(FoJaJo.FoJaJoWebService.InsertCompanyRequest request) {
-            return base.Channel.InsertCompanyAsync(request);
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetMostSickResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetMostSickAsync(FoJaJo.FoJaJoWebService.GetMostSickRequest request) {
+            return base.Channel.GetMostSickAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.InsertCompanyResponse> InsertCompanyAsync(string name) {
-            FoJaJo.FoJaJoWebService.InsertCompanyRequest inValue = new FoJaJo.FoJaJoWebService.InsertCompanyRequest();
-            inValue.Body = new FoJaJo.FoJaJoWebService.InsertCompanyRequestBody();
-            inValue.Body.name = name;
-            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).InsertCompanyAsync(inValue);
+        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetMostSickResponse> GetMostSickAsync() {
+            FoJaJo.FoJaJoWebService.GetMostSickRequest inValue = new FoJaJo.FoJaJoWebService.GetMostSickRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetMostSickRequestBody();
+            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetMostSickAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2211,7 +5164,7 @@ namespace FoJaJo.FoJaJoWebService {
             return base.Channel.GetEmployeeRelative(request);
         }
         
-        public System.Collections.Generic.List<FoJaJo.FoJaJoWebService.EmployeeRelative> GetEmployeeRelative() {
+        public FoJaJo.FoJaJoWebService.EmployeeRelative[] GetEmployeeRelative() {
             FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequest inValue = new FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequest();
             inValue.Body = new FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequestBody();
             FoJaJo.FoJaJoWebService.GetEmployeeRelativeResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetEmployeeRelative(inValue);
@@ -2230,28 +5183,51 @@ namespace FoJaJo.FoJaJoWebService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FoJaJo.FoJaJoWebService.FindFileResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.FindFile(FoJaJo.FoJaJoWebService.FindFileRequest request) {
-            return base.Channel.FindFile(request);
+        FoJaJo.FoJaJoWebService.GetEmployeeRelativesResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetEmployeeRelatives(FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequest request) {
+            return base.Channel.GetEmployeeRelatives(request);
         }
         
-        public string FindFile(string filePath) {
-            FoJaJo.FoJaJoWebService.FindFileRequest inValue = new FoJaJo.FoJaJoWebService.FindFileRequest();
-            inValue.Body = new FoJaJo.FoJaJoWebService.FindFileRequestBody();
-            inValue.Body.filePath = filePath;
-            FoJaJo.FoJaJoWebService.FindFileResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).FindFile(inValue);
-            return retVal.Body.FindFileResult;
+        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Relative[] GetEmployeeRelatives(string employeeNr) {
+            FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequest inValue = new FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequestBody();
+            inValue.Body.employeeNr = employeeNr;
+            FoJaJo.FoJaJoWebService.GetEmployeeRelativesResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetEmployeeRelatives(inValue);
+            return retVal.Body.GetEmployeeRelativesResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.FindFileResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.FindFileAsync(FoJaJo.FoJaJoWebService.FindFileRequest request) {
-            return base.Channel.FindFileAsync(request);
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeRelativesResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetEmployeeRelativesAsync(FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequest request) {
+            return base.Channel.GetEmployeeRelativesAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.FindFileResponse> FindFileAsync(string filePath) {
-            FoJaJo.FoJaJoWebService.FindFileRequest inValue = new FoJaJo.FoJaJoWebService.FindFileRequest();
-            inValue.Body = new FoJaJo.FoJaJoWebService.FindFileRequestBody();
-            inValue.Body.filePath = filePath;
-            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).FindFileAsync(inValue);
+        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeRelativesResponse> GetEmployeeRelativesAsync(string employeeNr) {
+            FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequest inValue = new FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequestBody();
+            inValue.Body.employeeNr = employeeNr;
+            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetEmployeeRelativesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FoJaJo.FoJaJoWebService.GetEmployeeAbsenceResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetEmployeeAbsence(FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequest request) {
+            return base.Channel.GetEmployeeAbsence(request);
+        }
+        
+        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Absence[] GetEmployeeAbsence() {
+            FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequest inValue = new FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequestBody();
+            FoJaJo.FoJaJoWebService.GetEmployeeAbsenceResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetEmployeeAbsence(inValue);
+            return retVal.Body.GetEmployeeAbsenceResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeAbsenceResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetEmployeeAbsenceAsync(FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequest request) {
+            return base.Channel.GetEmployeeAbsenceAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeAbsenceResponse> GetEmployeeAbsenceAsync() {
+            FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequest inValue = new FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequestBody();
+            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetEmployeeAbsenceAsync(inValue);
         }
     }
 }
