@@ -385,6 +385,7 @@ namespace WebService
 
         }
 
+        [WebMethod]
         public List<MostSick> GetMostSick()
         {
             try
