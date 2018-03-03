@@ -26,9 +26,6 @@ namespace FoJaJo
             wc.UpdateCompany("Mahara","wwewe");
             */
 
-
-            Console.Read();
-
         }
     }
 }

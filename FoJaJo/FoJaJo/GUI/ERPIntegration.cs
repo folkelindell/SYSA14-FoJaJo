@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FoJaJo.Controller;
+using System.Data.Entity.Infrastructure;
+using System.Data.SqlClient;
 
 namespace FoJaJo.GUI
 {
@@ -18,6 +20,8 @@ namespace FoJaJo.GUI
         {
             InitializeComponent();
         }
+
+        public StatusLabel StatusLbl { get; set; }
 
         private void ERPIntegration_Load(object sender, EventArgs e)
         {
@@ -106,12 +110,17 @@ namespace FoJaJo.GUI
                         dGVERP.DataSource = null;
                         txtBoxCompany.Text = "";
                         txtBoxCompanyDescription.Text = "";
+                        StatusLbl.Text = "Företaget borttaget!";
                     }
                     catch
                     {
 
                     }
-                    
+
+                }
+                else
+                {
+                    StatusLbl.Text = "Delete avbruten";
                 }
             }
         }
@@ -131,9 +140,18 @@ namespace FoJaJo.GUI
                 }
                 
             }
-            catch (Exception)
+            catch (DbUpdateException sp)
             {
                 MessageBox.Show("PK VIOLATION");
+                Console.WriteLine("FELET ÄR:  " + sp.Message + "\n CODE: "+sp.HResult);
+            }
+            catch (SqlException mj)
+            {
+                MessageBox.Show("PK VIOLATION");
+                Console.WriteLine("FELET ÄR:  " + mj.Message + "\n CODE: " + mj.HResult);
+            }catch(Exception p)
+            {
+                Console.WriteLine("asd");
             }
         }
 
@@ -170,9 +188,9 @@ namespace FoJaJo.GUI
             string name = txtBoxCompany.Text;
             string desc = txtBoxCompanyDescription.Text;
             wc = new WebServiceController1();
-            if (string.IsNullOrWhiteSpace(txtBoxCompanyDescription.Text) && string.IsNullOrWhiteSpace(txtBoxCompany.Text))
+            if (string.IsNullOrWhiteSpace(txtBoxCompanyDescription.Text) || string.IsNullOrWhiteSpace(txtBoxCompany.Text))
             {
-                //STATUSLABLE UPPDATERAS
+                StatusLbl.Text = "Du måste fylla både Företag och description";
             }
             else
             {

@@ -20,6 +20,7 @@ namespace FoJaJo.GUI
             Controller = new RootController(this);
             luffarRootControl1.Controller = new GameController(luffarRootControl1);
             luffarRootControl1.Status = this.statusLabel1;
+            erpIntegration1.StatusLbl = this.statusLabel1;
         }
     }
 }

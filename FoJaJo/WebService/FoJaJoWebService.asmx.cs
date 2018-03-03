@@ -12,6 +12,7 @@ using WebService.Model;
 using System.Data.Entity.Migrations;
 using System.Data.Entity.Core;
 using System.Web.Services.Protocols;
+using System.Data.Entity.Infrastructure;
 
 namespace WebService
 {
@@ -155,7 +156,7 @@ namespace WebService
                     }
                 }
             }
-            catch (Exception)
+            catch (DbUpdateException)
             {
                 throw;
             }
@@ -295,7 +296,7 @@ namespace WebService
         }
 
         [WebMethod]
-        public List<CRONUS_Sverige_AB_Employee_Absence> GetEmployeeAbsence2004()
+        public List<CRONUS_Sverige_AB_Employee_Absence> GetEmployeeAbsence()
         {
             try
             {
@@ -677,15 +678,7 @@ namespace WebService
         }
         #endregion
 
-        [WebMethod]
-        public List<CRONUS_Sverige_AB_Employee_Absence> GetEmployeeAbsence()
-        {
-            using (CronusContext cc = new CronusContext())
-            {
-                List<CRONUS_Sverige_AB_Employee_Absence> list = cc.CRONUS_Sverige_AB_Employee_Absence.Where(e => e.From_Date.Year == 2004 && e.Cause_of_Absence_Code == "SJUK").ToList();
-                return list;
-            }
-        }
+        
         #endregion
     }
 }
