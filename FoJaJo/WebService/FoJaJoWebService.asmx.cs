@@ -22,7 +22,7 @@ namespace WebService
 
     public class FoJaJoWebService : System.Web.Services.WebService
     {
-        SqlConnection navConnection = new SqlConnection("data source=DESKTOP-34D95N6;initial catalog=Demo Database NAV (5-0); user id=sa; password=12345;");
+        SqlConnection navConnection = new SqlConnection("data source=laptop-7hibdffa;initial catalog=Demo Database NAV (5-0); user id=sa; password=12345;");
 
         #region LUFFARSCHACK
         [WebMethod]
