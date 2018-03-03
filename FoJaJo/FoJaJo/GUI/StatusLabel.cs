@@ -23,5 +23,12 @@ namespace FoJaJo.GUI
             Text = "error";
             Refresh();
         }
+
+        public void ShowMessage(string message)
+        {
+            ForeColor = Color.Red;
+            Text = message;
+            Refresh();
+        }
     }
 }

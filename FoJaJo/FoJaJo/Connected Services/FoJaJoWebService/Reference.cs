@@ -2031,6 +2031,424 @@ namespace FoJaJo.FoJaJoWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CRONUS_Sverige_AB_Employee_Relative", Namespace="http://fojajo.ics.lu.se")]
+    [System.SerializableAttribute()]
+    public partial class CRONUS_Sverige_AB_Employee_Relative : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] timestampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Employee_No_Field;
+        
+        private int Line_No_Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Relative_CodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string First_NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Middle_NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Last_NameField;
+        
+        private System.DateTime Birth_DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Phone_No_Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Relative_s_Employee_No_Field;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public byte[] timestamp {
+            get {
+                return this.timestampField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.timestampField, value) != true)) {
+                    this.timestampField = value;
+                    this.RaisePropertyChanged("timestamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string Employee_No_ {
+            get {
+                return this.Employee_No_Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Employee_No_Field, value) != true)) {
+                    this.Employee_No_Field = value;
+                    this.RaisePropertyChanged("Employee_No_");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+        public int Line_No_ {
+            get {
+                return this.Line_No_Field;
+            }
+            set {
+                if ((this.Line_No_Field.Equals(value) != true)) {
+                    this.Line_No_Field = value;
+                    this.RaisePropertyChanged("Line_No_");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string Relative_Code {
+            get {
+                return this.Relative_CodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Relative_CodeField, value) != true)) {
+                    this.Relative_CodeField = value;
+                    this.RaisePropertyChanged("Relative_Code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string First_Name {
+            get {
+                return this.First_NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.First_NameField, value) != true)) {
+                    this.First_NameField = value;
+                    this.RaisePropertyChanged("First_Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public string Middle_Name {
+            get {
+                return this.Middle_NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Middle_NameField, value) != true)) {
+                    this.Middle_NameField = value;
+                    this.RaisePropertyChanged("Middle_Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+        public string Last_Name {
+            get {
+                return this.Last_NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Last_NameField, value) != true)) {
+                    this.Last_NameField = value;
+                    this.RaisePropertyChanged("Last_Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=7)]
+        public System.DateTime Birth_Date {
+            get {
+                return this.Birth_DateField;
+            }
+            set {
+                if ((this.Birth_DateField.Equals(value) != true)) {
+                    this.Birth_DateField = value;
+                    this.RaisePropertyChanged("Birth_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=8)]
+        public string Phone_No_ {
+            get {
+                return this.Phone_No_Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Phone_No_Field, value) != true)) {
+                    this.Phone_No_Field = value;
+                    this.RaisePropertyChanged("Phone_No_");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=9)]
+        public string Relative_s_Employee_No_ {
+            get {
+                return this.Relative_s_Employee_No_Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Relative_s_Employee_No_Field, value) != true)) {
+                    this.Relative_s_Employee_No_Field = value;
+                    this.RaisePropertyChanged("Relative_s_Employee_No_");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CRONUS_Sverige_AB_Employee_Statistics_Group", Namespace="http://fojajo.ics.lu.se")]
+    [System.SerializableAttribute()]
+    public partial class CRONUS_Sverige_AB_Employee_Statistics_Group : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] timestampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public byte[] timestamp {
+            get {
+                return this.timestampField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.timestampField, value) != true)) {
+                    this.timestampField = value;
+                    this.RaisePropertyChanged("timestamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string Code {
+            get {
+                return this.CodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodeField, value) != true)) {
+                    this.CodeField = value;
+                    this.RaisePropertyChanged("Code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EmployeeRelative", Namespace="http://fojajo.ics.lu.se")]
+    [System.SerializableAttribute()]
+    public partial class EmployeeRelative : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmpFirstNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmpLastNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmpJobTitleField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RelativeFirstNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RelativeCodeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string EmpFirstName {
+            get {
+                return this.EmpFirstNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmpFirstNameField, value) != true)) {
+                    this.EmpFirstNameField = value;
+                    this.RaisePropertyChanged("EmpFirstName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string EmpLastName {
+            get {
+                return this.EmpLastNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmpLastNameField, value) != true)) {
+                    this.EmpLastNameField = value;
+                    this.RaisePropertyChanged("EmpLastName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string EmpJobTitle {
+            get {
+                return this.EmpJobTitleField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmpJobTitleField, value) != true)) {
+                    this.EmpJobTitleField = value;
+                    this.RaisePropertyChanged("EmpJobTitle");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string RelativeFirstName {
+            get {
+                return this.RelativeFirstNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RelativeFirstNameField, value) != true)) {
+                    this.RelativeFirstNameField = value;
+                    this.RaisePropertyChanged("RelativeFirstName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string RelativeCode {
+            get {
+                return this.RelativeCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RelativeCodeField, value) != true)) {
+                    this.RelativeCodeField = value;
+                    this.RaisePropertyChanged("RelativeCode");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MostSick", Namespace="http://fojajo.ics.lu.se")]
+    [System.SerializableAttribute()]
+    public partial class MostSick : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="MetaDataColumn", Namespace="http://fojajo.ics.lu.se")]
     [System.SerializableAttribute()]
     public partial class MetaDataColumn : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -2412,193 +2830,6 @@ namespace FoJaJo.FoJaJoWebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CRONUS_Sverige_AB_Employee_Relative", Namespace="http://fojajo.ics.lu.se")]
-    [System.SerializableAttribute()]
-    public partial class CRONUS_Sverige_AB_Employee_Relative : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private byte[] timestampField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Employee_No_Field;
-        
-        private int Line_No_Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Relative_CodeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string First_NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Middle_NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Last_NameField;
-        
-        private System.DateTime Birth_DateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Phone_No_Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Relative_s_Employee_No_Field;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public byte[] timestamp {
-            get {
-                return this.timestampField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.timestampField, value) != true)) {
-                    this.timestampField = value;
-                    this.RaisePropertyChanged("timestamp");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string Employee_No_ {
-            get {
-                return this.Employee_No_Field;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Employee_No_Field, value) != true)) {
-                    this.Employee_No_Field = value;
-                    this.RaisePropertyChanged("Employee_No_");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public int Line_No_ {
-            get {
-                return this.Line_No_Field;
-            }
-            set {
-                if ((this.Line_No_Field.Equals(value) != true)) {
-                    this.Line_No_Field = value;
-                    this.RaisePropertyChanged("Line_No_");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string Relative_Code {
-            get {
-                return this.Relative_CodeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Relative_CodeField, value) != true)) {
-                    this.Relative_CodeField = value;
-                    this.RaisePropertyChanged("Relative_Code");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public string First_Name {
-            get {
-                return this.First_NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.First_NameField, value) != true)) {
-                    this.First_NameField = value;
-                    this.RaisePropertyChanged("First_Name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public string Middle_Name {
-            get {
-                return this.Middle_NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Middle_NameField, value) != true)) {
-                    this.Middle_NameField = value;
-                    this.RaisePropertyChanged("Middle_Name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
-        public string Last_Name {
-            get {
-                return this.Last_NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Last_NameField, value) != true)) {
-                    this.Last_NameField = value;
-                    this.RaisePropertyChanged("Last_Name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=7)]
-        public System.DateTime Birth_Date {
-            get {
-                return this.Birth_DateField;
-            }
-            set {
-                if ((this.Birth_DateField.Equals(value) != true)) {
-                    this.Birth_DateField = value;
-                    this.RaisePropertyChanged("Birth_Date");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=8)]
-        public string Phone_No_ {
-            get {
-                return this.Phone_No_Field;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Phone_No_Field, value) != true)) {
-                    this.Phone_No_Field = value;
-                    this.RaisePropertyChanged("Phone_No_");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=9)]
-        public string Relative_s_Employee_No_ {
-            get {
-                return this.Relative_s_Employee_No_Field;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Relative_s_Employee_No_Field, value) != true)) {
-                    this.Relative_s_Employee_No_Field = value;
-                    this.RaisePropertyChanged("Relative_s_Employee_No_");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="MetaDataTable", Namespace="http://fojajo.ics.lu.se")]
     [System.SerializableAttribute()]
     public partial class MetaDataTable : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -2718,160 +2949,6 @@ namespace FoJaJo.FoJaJoWebService {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MostSick", Namespace="http://fojajo.ics.lu.se")]
-    [System.SerializableAttribute()]
-    public partial class MostSick : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EmployeeRelative", Namespace="http://fojajo.ics.lu.se")]
-    [System.SerializableAttribute()]
-    public partial class EmployeeRelative : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EmpFirstNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EmpLastNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EmpJobTitleField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string RelativeFirstNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string RelativeCodeField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string EmpFirstName {
-            get {
-                return this.EmpFirstNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EmpFirstNameField, value) != true)) {
-                    this.EmpFirstNameField = value;
-                    this.RaisePropertyChanged("EmpFirstName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string EmpLastName {
-            get {
-                return this.EmpLastNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EmpLastNameField, value) != true)) {
-                    this.EmpLastNameField = value;
-                    this.RaisePropertyChanged("EmpLastName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string EmpJobTitle {
-            get {
-                return this.EmpJobTitleField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EmpJobTitleField, value) != true)) {
-                    this.EmpJobTitleField = value;
-                    this.RaisePropertyChanged("EmpJobTitle");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string RelativeFirstName {
-            get {
-                return this.RelativeFirstNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.RelativeFirstNameField, value) != true)) {
-                    this.RelativeFirstNameField = value;
-                    this.RaisePropertyChanged("RelativeFirstName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public string RelativeCode {
-            get {
-                return this.RelativeCodeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.RelativeCodeField, value) != true)) {
-                    this.RelativeCodeField = value;
-                    this.RaisePropertyChanged("RelativeCode");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://fojajo.ics.lu.se", ConfigurationName="FoJaJoWebService.FoJaJoWebServiceSoap")]
     public interface FoJaJoWebServiceSoap {
@@ -2967,6 +3044,48 @@ namespace FoJaJo.FoJaJoWebService {
         [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetAllEmployeeQualification", ReplyAction="*")]
         System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllEmployeeQualificationResponse> GetAllEmployeeQualificationAsync(FoJaJo.FoJaJoWebService.GetAllEmployeeQualificationRequest request);
         
+        // CODEGEN: Generating message contract since element name employeeNr from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetEmployeeRelatives", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.GetEmployeeRelativesResponse GetEmployeeRelatives(FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetEmployeeRelatives", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeRelativesResponse> GetEmployeeRelativesAsync(FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetEmployeeAbsenceResult from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetEmployeeAbsence", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.GetEmployeeAbsenceResponse GetEmployeeAbsence(FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetEmployeeAbsence", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeAbsenceResponse> GetEmployeeAbsenceAsync(FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetAllEmployeeRelativeResult from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetAllEmployeeRelative", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeResponse GetAllEmployeeRelative(FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetAllEmployeeRelative", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeResponse> GetAllEmployeeRelativeAsync(FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetAllEmployeeStatisticsGroupResult from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetAllEmployeeStatisticsGroup", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.GetAllEmployeeStatisticsGroupResponse GetAllEmployeeStatisticsGroup(FoJaJo.FoJaJoWebService.GetAllEmployeeStatisticsGroupRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetAllEmployeeStatisticsGroup", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllEmployeeStatisticsGroupResponse> GetAllEmployeeStatisticsGroupAsync(FoJaJo.FoJaJoWebService.GetAllEmployeeStatisticsGroupRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetEmployeeRelativeResult from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetEmployeeRelative", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.GetEmployeeRelativeResponse GetEmployeeRelative(FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetEmployeeRelative", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeRelativeResponse> GetEmployeeRelativeAsync(FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetMostSickResult from namespace http://fojajo.ics.lu.se is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetMostSick", ReplyAction="*")]
+        FoJaJo.FoJaJoWebService.GetMostSickResponse GetMostSick(FoJaJo.FoJaJoWebService.GetMostSickRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetMostSick", ReplyAction="*")]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetMostSickResponse> GetMostSickAsync(FoJaJo.FoJaJoWebService.GetMostSickRequest request);
+        
         // CODEGEN: Generating message contract since element name GetMetaColumns1Result from namespace http://fojajo.ics.lu.se is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetMetaColumns1", ReplyAction="*")]
         FoJaJo.FoJaJoWebService.GetMetaColumns1Response GetMetaColumns1(FoJaJo.FoJaJoWebService.GetMetaColumns1Request request);
@@ -3002,13 +3121,6 @@ namespace FoJaJo.FoJaJoWebService {
         [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetMetaKeys", ReplyAction="*")]
         System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetMetaKeysResponse> GetMetaKeysAsync(FoJaJo.FoJaJoWebService.GetMetaKeysRequest request);
         
-        // CODEGEN: Generating message contract since element name GetAllEmployeeRelativeResult from namespace http://fojajo.ics.lu.se is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetAllEmployeeRelative", ReplyAction="*")]
-        FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeResponse GetAllEmployeeRelative(FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetAllEmployeeRelative", ReplyAction="*")]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeResponse> GetAllEmployeeRelativeAsync(FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequest request);
-        
         // CODEGEN: Generating message contract since element name GetMetaTablesResult from namespace http://fojajo.ics.lu.se is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetMetaTables", ReplyAction="*")]
         FoJaJo.FoJaJoWebService.GetMetaTablesResponse GetMetaTables(FoJaJo.FoJaJoWebService.GetMetaTablesRequest request);
@@ -3022,34 +3134,6 @@ namespace FoJaJo.FoJaJoWebService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetMetaTables2", ReplyAction="*")]
         System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetMetaTables2Response> GetMetaTables2Async(FoJaJo.FoJaJoWebService.GetMetaTables2Request request);
-        
-        // CODEGEN: Generating message contract since element name GetMostSickResult from namespace http://fojajo.ics.lu.se is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetMostSick", ReplyAction="*")]
-        FoJaJo.FoJaJoWebService.GetMostSickResponse GetMostSick(FoJaJo.FoJaJoWebService.GetMostSickRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetMostSick", ReplyAction="*")]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetMostSickResponse> GetMostSickAsync(FoJaJo.FoJaJoWebService.GetMostSickRequest request);
-        
-        // CODEGEN: Generating message contract since element name GetEmployeeRelativeResult from namespace http://fojajo.ics.lu.se is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetEmployeeRelative", ReplyAction="*")]
-        FoJaJo.FoJaJoWebService.GetEmployeeRelativeResponse GetEmployeeRelative(FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetEmployeeRelative", ReplyAction="*")]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeRelativeResponse> GetEmployeeRelativeAsync(FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequest request);
-        
-        // CODEGEN: Generating message contract since element name employeeNr from namespace http://fojajo.ics.lu.se is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetEmployeeRelatives", ReplyAction="*")]
-        FoJaJo.FoJaJoWebService.GetEmployeeRelativesResponse GetEmployeeRelatives(FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetEmployeeRelatives", ReplyAction="*")]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeRelativesResponse> GetEmployeeRelativesAsync(FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequest request);
-        
-        // CODEGEN: Generating message contract since element name GetEmployeeAbsenceResult from namespace http://fojajo.ics.lu.se is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetEmployeeAbsence", ReplyAction="*")]
-        FoJaJo.FoJaJoWebService.GetEmployeeAbsenceResponse GetEmployeeAbsence(FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://fojajo.ics.lu.se/GetEmployeeAbsence", ReplyAction="*")]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeAbsenceResponse> GetEmployeeAbsenceAsync(FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3878,6 +3962,379 @@ namespace FoJaJo.FoJaJoWebService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetEmployeeRelativesRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmployeeRelatives", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequestBody Body;
+        
+        public GetEmployeeRelativesRequest() {
+        }
+        
+        public GetEmployeeRelativesRequest(FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
+    public partial class GetEmployeeRelativesRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string employeeNr;
+        
+        public GetEmployeeRelativesRequestBody() {
+        }
+        
+        public GetEmployeeRelativesRequestBody(string employeeNr) {
+            this.employeeNr = employeeNr;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetEmployeeRelativesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmployeeRelativesResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetEmployeeRelativesResponseBody Body;
+        
+        public GetEmployeeRelativesResponse() {
+        }
+        
+        public GetEmployeeRelativesResponse(FoJaJo.FoJaJoWebService.GetEmployeeRelativesResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
+    public partial class GetEmployeeRelativesResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Relative[] GetEmployeeRelativesResult;
+        
+        public GetEmployeeRelativesResponseBody() {
+        }
+        
+        public GetEmployeeRelativesResponseBody(FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Relative[] GetEmployeeRelativesResult) {
+            this.GetEmployeeRelativesResult = GetEmployeeRelativesResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetEmployeeAbsenceRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmployeeAbsence", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequestBody Body;
+        
+        public GetEmployeeAbsenceRequest() {
+        }
+        
+        public GetEmployeeAbsenceRequest(FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetEmployeeAbsenceRequestBody {
+        
+        public GetEmployeeAbsenceRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetEmployeeAbsenceResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmployeeAbsenceResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetEmployeeAbsenceResponseBody Body;
+        
+        public GetEmployeeAbsenceResponse() {
+        }
+        
+        public GetEmployeeAbsenceResponse(FoJaJo.FoJaJoWebService.GetEmployeeAbsenceResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
+    public partial class GetEmployeeAbsenceResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Absence[] GetEmployeeAbsenceResult;
+        
+        public GetEmployeeAbsenceResponseBody() {
+        }
+        
+        public GetEmployeeAbsenceResponseBody(FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Absence[] GetEmployeeAbsenceResult) {
+            this.GetEmployeeAbsenceResult = GetEmployeeAbsenceResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllEmployeeRelativeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllEmployeeRelative", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequestBody Body;
+        
+        public GetAllEmployeeRelativeRequest() {
+        }
+        
+        public GetAllEmployeeRelativeRequest(FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetAllEmployeeRelativeRequestBody {
+        
+        public GetAllEmployeeRelativeRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllEmployeeRelativeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllEmployeeRelativeResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeResponseBody Body;
+        
+        public GetAllEmployeeRelativeResponse() {
+        }
+        
+        public GetAllEmployeeRelativeResponse(FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
+    public partial class GetAllEmployeeRelativeResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Relative[] GetAllEmployeeRelativeResult;
+        
+        public GetAllEmployeeRelativeResponseBody() {
+        }
+        
+        public GetAllEmployeeRelativeResponseBody(FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Relative[] GetAllEmployeeRelativeResult) {
+            this.GetAllEmployeeRelativeResult = GetAllEmployeeRelativeResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllEmployeeStatisticsGroupRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllEmployeeStatisticsGroup", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetAllEmployeeStatisticsGroupRequestBody Body;
+        
+        public GetAllEmployeeStatisticsGroupRequest() {
+        }
+        
+        public GetAllEmployeeStatisticsGroupRequest(FoJaJo.FoJaJoWebService.GetAllEmployeeStatisticsGroupRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetAllEmployeeStatisticsGroupRequestBody {
+        
+        public GetAllEmployeeStatisticsGroupRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllEmployeeStatisticsGroupResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllEmployeeStatisticsGroupResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetAllEmployeeStatisticsGroupResponseBody Body;
+        
+        public GetAllEmployeeStatisticsGroupResponse() {
+        }
+        
+        public GetAllEmployeeStatisticsGroupResponse(FoJaJo.FoJaJoWebService.GetAllEmployeeStatisticsGroupResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
+    public partial class GetAllEmployeeStatisticsGroupResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Statistics_Group[] GetAllEmployeeStatisticsGroupResult;
+        
+        public GetAllEmployeeStatisticsGroupResponseBody() {
+        }
+        
+        public GetAllEmployeeStatisticsGroupResponseBody(FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Statistics_Group[] GetAllEmployeeStatisticsGroupResult) {
+            this.GetAllEmployeeStatisticsGroupResult = GetAllEmployeeStatisticsGroupResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetEmployeeRelativeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmployeeRelative", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequestBody Body;
+        
+        public GetEmployeeRelativeRequest() {
+        }
+        
+        public GetEmployeeRelativeRequest(FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetEmployeeRelativeRequestBody {
+        
+        public GetEmployeeRelativeRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetEmployeeRelativeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmployeeRelativeResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetEmployeeRelativeResponseBody Body;
+        
+        public GetEmployeeRelativeResponse() {
+        }
+        
+        public GetEmployeeRelativeResponse(FoJaJo.FoJaJoWebService.GetEmployeeRelativeResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
+    public partial class GetEmployeeRelativeResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public FoJaJo.FoJaJoWebService.EmployeeRelative[] GetEmployeeRelativeResult;
+        
+        public GetEmployeeRelativeResponseBody() {
+        }
+        
+        public GetEmployeeRelativeResponseBody(FoJaJo.FoJaJoWebService.EmployeeRelative[] GetEmployeeRelativeResult) {
+            this.GetEmployeeRelativeResult = GetEmployeeRelativeResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetMostSickRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMostSick", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetMostSickRequestBody Body;
+        
+        public GetMostSickRequest() {
+        }
+        
+        public GetMostSickRequest(FoJaJo.FoJaJoWebService.GetMostSickRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetMostSickRequestBody {
+        
+        public GetMostSickRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetMostSickResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMostSickResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
+        public FoJaJo.FoJaJoWebService.GetMostSickResponseBody Body;
+        
+        public GetMostSickResponse() {
+        }
+        
+        public GetMostSickResponse(FoJaJo.FoJaJoWebService.GetMostSickResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
+    public partial class GetMostSickResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public FoJaJo.FoJaJoWebService.MostSick[] GetMostSickResult;
+        
+        public GetMostSickResponseBody() {
+        }
+        
+        public GetMostSickResponseBody(FoJaJo.FoJaJoWebService.MostSick[] GetMostSickResult) {
+            this.GetMostSickResult = GetMostSickResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetMetaColumns1Request {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaColumns1", Namespace="http://fojajo.ics.lu.se", Order=0)]
@@ -4183,67 +4640,6 @@ namespace FoJaJo.FoJaJoWebService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetAllEmployeeRelativeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllEmployeeRelative", Namespace="http://fojajo.ics.lu.se", Order=0)]
-        public FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequestBody Body;
-        
-        public GetAllEmployeeRelativeRequest() {
-        }
-        
-        public GetAllEmployeeRelativeRequest(FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class GetAllEmployeeRelativeRequestBody {
-        
-        public GetAllEmployeeRelativeRequestBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetAllEmployeeRelativeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllEmployeeRelativeResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
-        public FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeResponseBody Body;
-        
-        public GetAllEmployeeRelativeResponse() {
-        }
-        
-        public GetAllEmployeeRelativeResponse(FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
-    public partial class GetAllEmployeeRelativeResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Relative[] GetAllEmployeeRelativeResult;
-        
-        public GetAllEmployeeRelativeResponseBody() {
-        }
-        
-        public GetAllEmployeeRelativeResponseBody(FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Relative[] GetAllEmployeeRelativeResult) {
-            this.GetAllEmployeeRelativeResult = GetAllEmployeeRelativeResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetMetaTablesRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMetaTables", Namespace="http://fojajo.ics.lu.se", Order=0)]
@@ -4359,257 +4755,6 @@ namespace FoJaJo.FoJaJoWebService {
         
         public GetMetaTables2ResponseBody(FoJaJo.FoJaJoWebService.MetaDataTable2[] GetMetaTables2Result) {
             this.GetMetaTables2Result = GetMetaTables2Result;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetMostSickRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMostSick", Namespace="http://fojajo.ics.lu.se", Order=0)]
-        public FoJaJo.FoJaJoWebService.GetMostSickRequestBody Body;
-        
-        public GetMostSickRequest() {
-        }
-        
-        public GetMostSickRequest(FoJaJo.FoJaJoWebService.GetMostSickRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class GetMostSickRequestBody {
-        
-        public GetMostSickRequestBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetMostSickResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMostSickResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
-        public FoJaJo.FoJaJoWebService.GetMostSickResponseBody Body;
-        
-        public GetMostSickResponse() {
-        }
-        
-        public GetMostSickResponse(FoJaJo.FoJaJoWebService.GetMostSickResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
-    public partial class GetMostSickResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public FoJaJo.FoJaJoWebService.MostSick[] GetMostSickResult;
-        
-        public GetMostSickResponseBody() {
-        }
-        
-        public GetMostSickResponseBody(FoJaJo.FoJaJoWebService.MostSick[] GetMostSickResult) {
-            this.GetMostSickResult = GetMostSickResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetEmployeeRelativeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmployeeRelative", Namespace="http://fojajo.ics.lu.se", Order=0)]
-        public FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequestBody Body;
-        
-        public GetEmployeeRelativeRequest() {
-        }
-        
-        public GetEmployeeRelativeRequest(FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class GetEmployeeRelativeRequestBody {
-        
-        public GetEmployeeRelativeRequestBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetEmployeeRelativeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmployeeRelativeResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
-        public FoJaJo.FoJaJoWebService.GetEmployeeRelativeResponseBody Body;
-        
-        public GetEmployeeRelativeResponse() {
-        }
-        
-        public GetEmployeeRelativeResponse(FoJaJo.FoJaJoWebService.GetEmployeeRelativeResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
-    public partial class GetEmployeeRelativeResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public FoJaJo.FoJaJoWebService.EmployeeRelative[] GetEmployeeRelativeResult;
-        
-        public GetEmployeeRelativeResponseBody() {
-        }
-        
-        public GetEmployeeRelativeResponseBody(FoJaJo.FoJaJoWebService.EmployeeRelative[] GetEmployeeRelativeResult) {
-            this.GetEmployeeRelativeResult = GetEmployeeRelativeResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetEmployeeRelativesRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmployeeRelatives", Namespace="http://fojajo.ics.lu.se", Order=0)]
-        public FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequestBody Body;
-        
-        public GetEmployeeRelativesRequest() {
-        }
-        
-        public GetEmployeeRelativesRequest(FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
-    public partial class GetEmployeeRelativesRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string employeeNr;
-        
-        public GetEmployeeRelativesRequestBody() {
-        }
-        
-        public GetEmployeeRelativesRequestBody(string employeeNr) {
-            this.employeeNr = employeeNr;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetEmployeeRelativesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmployeeRelativesResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
-        public FoJaJo.FoJaJoWebService.GetEmployeeRelativesResponseBody Body;
-        
-        public GetEmployeeRelativesResponse() {
-        }
-        
-        public GetEmployeeRelativesResponse(FoJaJo.FoJaJoWebService.GetEmployeeRelativesResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
-    public partial class GetEmployeeRelativesResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Relative[] GetEmployeeRelativesResult;
-        
-        public GetEmployeeRelativesResponseBody() {
-        }
-        
-        public GetEmployeeRelativesResponseBody(FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Relative[] GetEmployeeRelativesResult) {
-            this.GetEmployeeRelativesResult = GetEmployeeRelativesResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetEmployeeAbsenceRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmployeeAbsence", Namespace="http://fojajo.ics.lu.se", Order=0)]
-        public FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequestBody Body;
-        
-        public GetEmployeeAbsenceRequest() {
-        }
-        
-        public GetEmployeeAbsenceRequest(FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class GetEmployeeAbsenceRequestBody {
-        
-        public GetEmployeeAbsenceRequestBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetEmployeeAbsenceResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmployeeAbsenceResponse", Namespace="http://fojajo.ics.lu.se", Order=0)]
-        public FoJaJo.FoJaJoWebService.GetEmployeeAbsenceResponseBody Body;
-        
-        public GetEmployeeAbsenceResponse() {
-        }
-        
-        public GetEmployeeAbsenceResponse(FoJaJo.FoJaJoWebService.GetEmployeeAbsenceResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://fojajo.ics.lu.se")]
-    public partial class GetEmployeeAbsenceResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Absence[] GetEmployeeAbsenceResult;
-        
-        public GetEmployeeAbsenceResponseBody() {
-        }
-        
-        public GetEmployeeAbsenceResponseBody(FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Absence[] GetEmployeeAbsenceResult) {
-            this.GetEmployeeAbsenceResult = GetEmployeeAbsenceResult;
         }
     }
     
@@ -4953,6 +5098,146 @@ namespace FoJaJo.FoJaJoWebService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FoJaJo.FoJaJoWebService.GetEmployeeRelativesResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetEmployeeRelatives(FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequest request) {
+            return base.Channel.GetEmployeeRelatives(request);
+        }
+        
+        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Relative[] GetEmployeeRelatives(string employeeNr) {
+            FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequest inValue = new FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequestBody();
+            inValue.Body.employeeNr = employeeNr;
+            FoJaJo.FoJaJoWebService.GetEmployeeRelativesResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetEmployeeRelatives(inValue);
+            return retVal.Body.GetEmployeeRelativesResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeRelativesResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetEmployeeRelativesAsync(FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequest request) {
+            return base.Channel.GetEmployeeRelativesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeRelativesResponse> GetEmployeeRelativesAsync(string employeeNr) {
+            FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequest inValue = new FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequestBody();
+            inValue.Body.employeeNr = employeeNr;
+            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetEmployeeRelativesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FoJaJo.FoJaJoWebService.GetEmployeeAbsenceResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetEmployeeAbsence(FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequest request) {
+            return base.Channel.GetEmployeeAbsence(request);
+        }
+        
+        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Absence[] GetEmployeeAbsence() {
+            FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequest inValue = new FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequestBody();
+            FoJaJo.FoJaJoWebService.GetEmployeeAbsenceResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetEmployeeAbsence(inValue);
+            return retVal.Body.GetEmployeeAbsenceResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeAbsenceResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetEmployeeAbsenceAsync(FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequest request) {
+            return base.Channel.GetEmployeeAbsenceAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeAbsenceResponse> GetEmployeeAbsenceAsync() {
+            FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequest inValue = new FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequestBody();
+            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetEmployeeAbsenceAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetAllEmployeeRelative(FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequest request) {
+            return base.Channel.GetAllEmployeeRelative(request);
+        }
+        
+        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Relative[] GetAllEmployeeRelative() {
+            FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequest inValue = new FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequestBody();
+            FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetAllEmployeeRelative(inValue);
+            return retVal.Body.GetAllEmployeeRelativeResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetAllEmployeeRelativeAsync(FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequest request) {
+            return base.Channel.GetAllEmployeeRelativeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeResponse> GetAllEmployeeRelativeAsync() {
+            FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequest inValue = new FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequestBody();
+            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetAllEmployeeRelativeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FoJaJo.FoJaJoWebService.GetAllEmployeeStatisticsGroupResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetAllEmployeeStatisticsGroup(FoJaJo.FoJaJoWebService.GetAllEmployeeStatisticsGroupRequest request) {
+            return base.Channel.GetAllEmployeeStatisticsGroup(request);
+        }
+        
+        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Statistics_Group[] GetAllEmployeeStatisticsGroup() {
+            FoJaJo.FoJaJoWebService.GetAllEmployeeStatisticsGroupRequest inValue = new FoJaJo.FoJaJoWebService.GetAllEmployeeStatisticsGroupRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetAllEmployeeStatisticsGroupRequestBody();
+            FoJaJo.FoJaJoWebService.GetAllEmployeeStatisticsGroupResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetAllEmployeeStatisticsGroup(inValue);
+            return retVal.Body.GetAllEmployeeStatisticsGroupResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllEmployeeStatisticsGroupResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetAllEmployeeStatisticsGroupAsync(FoJaJo.FoJaJoWebService.GetAllEmployeeStatisticsGroupRequest request) {
+            return base.Channel.GetAllEmployeeStatisticsGroupAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllEmployeeStatisticsGroupResponse> GetAllEmployeeStatisticsGroupAsync() {
+            FoJaJo.FoJaJoWebService.GetAllEmployeeStatisticsGroupRequest inValue = new FoJaJo.FoJaJoWebService.GetAllEmployeeStatisticsGroupRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetAllEmployeeStatisticsGroupRequestBody();
+            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetAllEmployeeStatisticsGroupAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FoJaJo.FoJaJoWebService.GetEmployeeRelativeResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetEmployeeRelative(FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequest request) {
+            return base.Channel.GetEmployeeRelative(request);
+        }
+        
+        public FoJaJo.FoJaJoWebService.EmployeeRelative[] GetEmployeeRelative() {
+            FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequest inValue = new FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequestBody();
+            FoJaJo.FoJaJoWebService.GetEmployeeRelativeResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetEmployeeRelative(inValue);
+            return retVal.Body.GetEmployeeRelativeResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeRelativeResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetEmployeeRelativeAsync(FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequest request) {
+            return base.Channel.GetEmployeeRelativeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeRelativeResponse> GetEmployeeRelativeAsync() {
+            FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequest inValue = new FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequestBody();
+            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetEmployeeRelativeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FoJaJo.FoJaJoWebService.GetMostSickResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetMostSick(FoJaJo.FoJaJoWebService.GetMostSickRequest request) {
+            return base.Channel.GetMostSick(request);
+        }
+        
+        public FoJaJo.FoJaJoWebService.MostSick[] GetMostSick() {
+            FoJaJo.FoJaJoWebService.GetMostSickRequest inValue = new FoJaJo.FoJaJoWebService.GetMostSickRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetMostSickRequestBody();
+            FoJaJo.FoJaJoWebService.GetMostSickResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetMostSick(inValue);
+            return retVal.Body.GetMostSickResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetMostSickResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetMostSickAsync(FoJaJo.FoJaJoWebService.GetMostSickRequest request) {
+            return base.Channel.GetMostSickAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetMostSickResponse> GetMostSickAsync() {
+            FoJaJo.FoJaJoWebService.GetMostSickRequest inValue = new FoJaJo.FoJaJoWebService.GetMostSickRequest();
+            inValue.Body = new FoJaJo.FoJaJoWebService.GetMostSickRequestBody();
+            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetMostSickAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         FoJaJo.FoJaJoWebService.GetMetaColumns1Response FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetMetaColumns1(FoJaJo.FoJaJoWebService.GetMetaColumns1Request request) {
             return base.Channel.GetMetaColumns1(request);
         }
@@ -5068,29 +5353,6 @@ namespace FoJaJo.FoJaJoWebService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetAllEmployeeRelative(FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequest request) {
-            return base.Channel.GetAllEmployeeRelative(request);
-        }
-        
-        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Relative[] GetAllEmployeeRelative() {
-            FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequest inValue = new FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequest();
-            inValue.Body = new FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequestBody();
-            FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetAllEmployeeRelative(inValue);
-            return retVal.Body.GetAllEmployeeRelativeResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetAllEmployeeRelativeAsync(FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequest request) {
-            return base.Channel.GetAllEmployeeRelativeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeResponse> GetAllEmployeeRelativeAsync() {
-            FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequest inValue = new FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequest();
-            inValue.Body = new FoJaJo.FoJaJoWebService.GetAllEmployeeRelativeRequestBody();
-            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetAllEmployeeRelativeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         FoJaJo.FoJaJoWebService.GetMetaTablesResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetMetaTables(FoJaJo.FoJaJoWebService.GetMetaTablesRequest request) {
             return base.Channel.GetMetaTables(request);
         }
@@ -5134,100 +5396,6 @@ namespace FoJaJo.FoJaJoWebService {
             FoJaJo.FoJaJoWebService.GetMetaTables2Request inValue = new FoJaJo.FoJaJoWebService.GetMetaTables2Request();
             inValue.Body = new FoJaJo.FoJaJoWebService.GetMetaTables2RequestBody();
             return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetMetaTables2Async(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FoJaJo.FoJaJoWebService.GetMostSickResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetMostSick(FoJaJo.FoJaJoWebService.GetMostSickRequest request) {
-            return base.Channel.GetMostSick(request);
-        }
-        
-        public FoJaJo.FoJaJoWebService.MostSick[] GetMostSick() {
-            FoJaJo.FoJaJoWebService.GetMostSickRequest inValue = new FoJaJo.FoJaJoWebService.GetMostSickRequest();
-            inValue.Body = new FoJaJo.FoJaJoWebService.GetMostSickRequestBody();
-            FoJaJo.FoJaJoWebService.GetMostSickResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetMostSick(inValue);
-            return retVal.Body.GetMostSickResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetMostSickResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetMostSickAsync(FoJaJo.FoJaJoWebService.GetMostSickRequest request) {
-            return base.Channel.GetMostSickAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetMostSickResponse> GetMostSickAsync() {
-            FoJaJo.FoJaJoWebService.GetMostSickRequest inValue = new FoJaJo.FoJaJoWebService.GetMostSickRequest();
-            inValue.Body = new FoJaJo.FoJaJoWebService.GetMostSickRequestBody();
-            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetMostSickAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FoJaJo.FoJaJoWebService.GetEmployeeRelativeResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetEmployeeRelative(FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequest request) {
-            return base.Channel.GetEmployeeRelative(request);
-        }
-        
-        public FoJaJo.FoJaJoWebService.EmployeeRelative[] GetEmployeeRelative() {
-            FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequest inValue = new FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequest();
-            inValue.Body = new FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequestBody();
-            FoJaJo.FoJaJoWebService.GetEmployeeRelativeResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetEmployeeRelative(inValue);
-            return retVal.Body.GetEmployeeRelativeResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeRelativeResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetEmployeeRelativeAsync(FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequest request) {
-            return base.Channel.GetEmployeeRelativeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeRelativeResponse> GetEmployeeRelativeAsync() {
-            FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequest inValue = new FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequest();
-            inValue.Body = new FoJaJo.FoJaJoWebService.GetEmployeeRelativeRequestBody();
-            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetEmployeeRelativeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FoJaJo.FoJaJoWebService.GetEmployeeRelativesResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetEmployeeRelatives(FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequest request) {
-            return base.Channel.GetEmployeeRelatives(request);
-        }
-        
-        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Relative[] GetEmployeeRelatives(string employeeNr) {
-            FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequest inValue = new FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequest();
-            inValue.Body = new FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequestBody();
-            inValue.Body.employeeNr = employeeNr;
-            FoJaJo.FoJaJoWebService.GetEmployeeRelativesResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetEmployeeRelatives(inValue);
-            return retVal.Body.GetEmployeeRelativesResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeRelativesResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetEmployeeRelativesAsync(FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequest request) {
-            return base.Channel.GetEmployeeRelativesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeRelativesResponse> GetEmployeeRelativesAsync(string employeeNr) {
-            FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequest inValue = new FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequest();
-            inValue.Body = new FoJaJo.FoJaJoWebService.GetEmployeeRelativesRequestBody();
-            inValue.Body.employeeNr = employeeNr;
-            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetEmployeeRelativesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FoJaJo.FoJaJoWebService.GetEmployeeAbsenceResponse FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetEmployeeAbsence(FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequest request) {
-            return base.Channel.GetEmployeeAbsence(request);
-        }
-        
-        public FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Absence[] GetEmployeeAbsence() {
-            FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequest inValue = new FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequest();
-            inValue.Body = new FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequestBody();
-            FoJaJo.FoJaJoWebService.GetEmployeeAbsenceResponse retVal = ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetEmployeeAbsence(inValue);
-            return retVal.Body.GetEmployeeAbsenceResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeAbsenceResponse> FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap.GetEmployeeAbsenceAsync(FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequest request) {
-            return base.Channel.GetEmployeeAbsenceAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FoJaJo.FoJaJoWebService.GetEmployeeAbsenceResponse> GetEmployeeAbsenceAsync() {
-            FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequest inValue = new FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequest();
-            inValue.Body = new FoJaJo.FoJaJoWebService.GetEmployeeAbsenceRequestBody();
-            return ((FoJaJo.FoJaJoWebService.FoJaJoWebServiceSoap)(this)).GetEmployeeAbsenceAsync(inValue);
         }
     }
 }

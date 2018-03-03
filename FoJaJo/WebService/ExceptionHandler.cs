@@ -31,14 +31,14 @@ namespace WebService
                             case 2601:  // Duplicated key row error
                                         // Constraint violation exception
                                         // A custom exception of yours for concurrency issues
-                                return new SoapException("SQL ", SoapException.ServerFaultCode);
+                                return new SoapException("Entity already exists: ", SoapException.ServerFaultCode);
                             default:
                                 // A custom exception of yours for other DB issues
-                                return new SoapException("SQL ", SoapException.ServerFaultCode);
+                                return new SoapException("SQL2 ", SoapException.ServerFaultCode);
                         }
                     }
 
-                    return new SoapException("SQL ", SoapException.ServerFaultCode);
+                    return new SoapException("SQL3 ", SoapException.ServerFaultCode);
                 }
                
             }
@@ -46,7 +46,7 @@ namespace WebService
             {
                 return new SoapException("Validation error", SoapException.ServerFaultCode);
             }
-            return new SoapException("Database error", SoapException.ServerFaultCode); 
+            return new SoapException("Something went wrong, contact IT support", SoapException.ServerFaultCode); 
         }
     }
 }

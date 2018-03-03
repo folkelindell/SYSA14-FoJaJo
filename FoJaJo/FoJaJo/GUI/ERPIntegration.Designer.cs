@@ -88,7 +88,7 @@ namespace FoJaJo.GUI
             this.btnDeleteCompany.Name = "btnDeleteCompany";
             this.btnDeleteCompany.Size = new System.Drawing.Size(96, 23);
             this.btnDeleteCompany.TabIndex = 18;
-            this.btnDeleteCompany.Text = "Ta Bort";
+            this.btnDeleteCompany.Text = "Delete";
             this.btnDeleteCompany.UseVisualStyleBackColor = true;
             this.btnDeleteCompany.Click += new System.EventHandler(this.BtnDeleteCompany_Click);
             // 
@@ -98,7 +98,7 @@ namespace FoJaJo.GUI
             this.btnUpdateCompany.Name = "btnUpdateCompany";
             this.btnUpdateCompany.Size = new System.Drawing.Size(92, 23);
             this.btnUpdateCompany.TabIndex = 19;
-            this.btnUpdateCompany.Text = "Uppdatera";
+            this.btnUpdateCompany.Text = "Update";
             this.btnUpdateCompany.UseVisualStyleBackColor = true;
             this.btnUpdateCompany.Click += new System.EventHandler(this.BtnUpdateCompany_Click);
             // 
@@ -108,7 +108,7 @@ namespace FoJaJo.GUI
             this.btnShowCompany.Name = "btnShowCompany";
             this.btnShowCompany.Size = new System.Drawing.Size(92, 23);
             this.btnShowCompany.TabIndex = 17;
-            this.btnShowCompany.Text = "Visa";
+            this.btnShowCompany.Text = "Show";
             this.btnShowCompany.UseVisualStyleBackColor = true;
             this.btnShowCompany.Click += new System.EventHandler(this.BtnShowCompany_Click);
             // 
@@ -118,7 +118,7 @@ namespace FoJaJo.GUI
             this.btnAddCompany.Name = "btnAddCompany";
             this.btnAddCompany.Size = new System.Drawing.Size(96, 23);
             this.btnAddCompany.TabIndex = 21;
-            this.btnAddCompany.Text = "Lägg till";
+            this.btnAddCompany.Text = "Add";
             this.btnAddCompany.UseVisualStyleBackColor = true;
             this.btnAddCompany.Click += new System.EventHandler(this.BtnAddCompany_Click);
             // 
@@ -143,9 +143,9 @@ namespace FoJaJo.GUI
             this.lblCompanyName.AutoSize = true;
             this.lblCompanyName.Location = new System.Drawing.Point(3, 423);
             this.lblCompanyName.Name = "lblCompanyName";
-            this.lblCompanyName.Size = new System.Drawing.Size(84, 13);
+            this.lblCompanyName.Size = new System.Drawing.Size(90, 13);
             this.lblCompanyName.TabIndex = 14;
-            this.lblCompanyName.Text = "Företagsnamn: *";
+            this.lblCompanyName.Text = "Company name: *";
             // 
             // txtBoxCompany
             // 
@@ -187,7 +187,7 @@ namespace FoJaJo.GUI
             this.btnSelectERP.Name = "btnSelectERP";
             this.btnSelectERP.Size = new System.Drawing.Size(75, 23);
             this.btnSelectERP.TabIndex = 12;
-            this.btnSelectERP.Text = "Visa";
+            this.btnSelectERP.Text = "Show";
             this.btnSelectERP.UseVisualStyleBackColor = true;
             this.btnSelectERP.Click += new System.EventHandler(this.BtnSelectERP_Click);
             // 

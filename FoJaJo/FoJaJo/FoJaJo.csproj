@@ -173,6 +173,9 @@
     <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Relative.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.CRONUS_Sverige_AB_Employee_Statistics_Group.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.EmployeeRelative.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -195,6 +198,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetAllEmployeeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetAllEmployeeStatisticsGroupResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\FoJaJoWebService\FoJaJo.FoJaJoWebService.GetAllGamesResponse.datasource">

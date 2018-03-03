@@ -15,7 +15,8 @@ namespace FoJaJo.GUI
 {
     public partial class OpenFileShowPlayers : UserControl
     {
-        WebServiceController1 wc; 
+        WebServiceController1 wc;
+        public StatusLabel StatusLbl { get; set; }
 
         public OpenFileShowPlayers()
         {
@@ -38,11 +39,19 @@ namespace FoJaJo.GUI
 
             if (openFile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-
                 txtBox.Text = "";
+
                 string strFilePath = openFile.InitialDirectory + openFile.FileName;
-                string fileText = wc.OpenFile(strFilePath);
-                txtBox.Text = fileText;
+                try
+                {
+                    string fileText = wc.OpenFile(strFilePath);
+                    txtBox.Text = fileText;
+                }
+                catch (Exception x)
+                {
+                    StatusLbl.ShowMessage(x.Message);
+                }
+                
 
             }
         }
@@ -60,9 +69,9 @@ namespace FoJaJo.GUI
             {
                 dataGridGetAllPlayers.DataSource = wc.GetAllPlayers();
             }
-            catch
+            catch (Exception x)
             {
-
+                StatusLbl.ShowMessage(x.Message);
             }
             
         }

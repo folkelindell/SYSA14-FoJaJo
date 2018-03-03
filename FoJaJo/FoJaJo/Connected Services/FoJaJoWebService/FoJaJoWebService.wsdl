@@ -327,6 +327,125 @@
           <s:element minOccurs="1" maxOccurs="1" name="Expiration_Date" type="s:dateTime" />
         </s:sequence>
       </s:complexType>
+      <s:element name="GetEmployeeRelatives">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="employeeNr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployeeRelativesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeeRelativesResult" type="tns:ArrayOfCRONUS_Sverige_AB_Employee_Relative" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCRONUS_Sverige_AB_Employee_Relative">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CRONUS_Sverige_AB_Employee_Relative" nillable="true" type="tns:CRONUS_Sverige_AB_Employee_Relative" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CRONUS_Sverige_AB_Employee_Relative">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="timestamp" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="Employee_No_" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Line_No_" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relative_Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="First_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Middle_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Last_Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Birth_Date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone_No_" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relative_s_Employee_No_" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetEmployeeAbsence">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEmployeeAbsenceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeeAbsenceResult" type="tns:ArrayOfCRONUS_Sverige_AB_Employee_Absence" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllEmployeeRelative">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllEmployeeRelativeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllEmployeeRelativeResult" type="tns:ArrayOfCRONUS_Sverige_AB_Employee_Relative" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllEmployeeStatisticsGroup">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllEmployeeStatisticsGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllEmployeeStatisticsGroupResult" type="tns:ArrayOfCRONUS_Sverige_AB_Employee_Statistics_Group" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCRONUS_Sverige_AB_Employee_Statistics_Group">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CRONUS_Sverige_AB_Employee_Statistics_Group" nillable="true" type="tns:CRONUS_Sverige_AB_Employee_Statistics_Group" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CRONUS_Sverige_AB_Employee_Statistics_Group">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="timestamp" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetEmployeeRelative">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEmployeeRelativeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeeRelativeResult" type="tns:ArrayOfEmployeeRelative" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEmployeeRelative">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EmployeeRelative" nillable="true" type="tns:EmployeeRelative" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EmployeeRelative">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EmpFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmpLastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmpJobTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RelativeFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RelativeCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMostSick">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMostSickResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMostSickResult" type="tns:ArrayOfMostSick" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMostSick">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MostSick" nillable="true" type="tns:MostSick" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MostSick">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+        </s:sequence>
+      </s:complexType>
       <s:element name="GetMetaColumns1">
         <s:complexType />
       </s:element>
@@ -437,35 +556,6 @@
           <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
         </s:sequence>
       </s:complexType>
-      <s:element name="GetAllEmployeeRelative">
-        <s:complexType />
-      </s:element>
-      <s:element name="GetAllEmployeeRelativeResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="GetAllEmployeeRelativeResult" type="tns:ArrayOfCRONUS_Sverige_AB_Employee_Relative" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="ArrayOfCRONUS_Sverige_AB_Employee_Relative">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="CRONUS_Sverige_AB_Employee_Relative" nillable="true" type="tns:CRONUS_Sverige_AB_Employee_Relative" />
-        </s:sequence>
-      </s:complexType>
-      <s:complexType name="CRONUS_Sverige_AB_Employee_Relative">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="timestamp" type="s:base64Binary" />
-          <s:element minOccurs="0" maxOccurs="1" name="Employee_No_" type="s:string" />
-          <s:element minOccurs="1" maxOccurs="1" name="Line_No_" type="s:int" />
-          <s:element minOccurs="0" maxOccurs="1" name="Relative_Code" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="First_Name" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="Middle_Name" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="Last_Name" type="s:string" />
-          <s:element minOccurs="1" maxOccurs="1" name="Birth_Date" type="s:dateTime" />
-          <s:element minOccurs="0" maxOccurs="1" name="Phone_No_" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="Relative_s_Employee_No_" type="s:string" />
-        </s:sequence>
-      </s:complexType>
       <s:element name="GetMetaTables">
         <s:complexType />
       </s:element>
@@ -508,74 +598,6 @@
           <s:element minOccurs="1" maxOccurs="1" name="Object_Id" type="s:int" />
         </s:sequence>
       </s:complexType>
-      <s:element name="GetMostSick">
-        <s:complexType />
-      </s:element>
-      <s:element name="GetMostSickResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="GetMostSickResult" type="tns:ArrayOfMostSick" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="ArrayOfMostSick">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="MostSick" nillable="true" type="tns:MostSick" />
-        </s:sequence>
-      </s:complexType>
-      <s:complexType name="MostSick">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
-        </s:sequence>
-      </s:complexType>
-      <s:element name="GetEmployeeRelative">
-        <s:complexType />
-      </s:element>
-      <s:element name="GetEmployeeRelativeResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeeRelativeResult" type="tns:ArrayOfEmployeeRelative" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="ArrayOfEmployeeRelative">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="EmployeeRelative" nillable="true" type="tns:EmployeeRelative" />
-        </s:sequence>
-      </s:complexType>
-      <s:complexType name="EmployeeRelative">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="EmpFirstName" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="EmpLastName" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="EmpJobTitle" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="RelativeFirstName" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="RelativeCode" type="s:string" />
-        </s:sequence>
-      </s:complexType>
-      <s:element name="GetEmployeeRelatives">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="employeeNr" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="GetEmployeeRelativesResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeeRelativesResult" type="tns:ArrayOfCRONUS_Sverige_AB_Employee_Relative" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="GetEmployeeAbsence">
-        <s:complexType />
-      </s:element>
-      <s:element name="GetEmployeeAbsenceResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeeAbsenceResult" type="tns:ArrayOfCRONUS_Sverige_AB_Employee_Absence" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="FindFileSoapIn">
@@ -656,6 +678,42 @@
   <wsdl:message name="GetAllEmployeeQualificationSoapOut">
     <wsdl:part name="parameters" element="tns:GetAllEmployeeQualificationResponse" />
   </wsdl:message>
+  <wsdl:message name="GetEmployeeRelativesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployeeRelatives" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeRelativesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeeRelativesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeAbsenceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployeeAbsence" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeAbsenceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeeAbsenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllEmployeeRelativeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeeRelative" />
+  </wsdl:message>
+  <wsdl:message name="GetAllEmployeeRelativeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeeRelativeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllEmployeeStatisticsGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeeStatisticsGroup" />
+  </wsdl:message>
+  <wsdl:message name="GetAllEmployeeStatisticsGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeeStatisticsGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeRelativeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployeeRelative" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeRelativeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeeRelativeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMostSickSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMostSick" />
+  </wsdl:message>
+  <wsdl:message name="GetMostSickSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMostSickResponse" />
+  </wsdl:message>
   <wsdl:message name="GetMetaColumns1SoapIn">
     <wsdl:part name="parameters" element="tns:GetMetaColumns1" />
   </wsdl:message>
@@ -686,12 +744,6 @@
   <wsdl:message name="GetMetaKeysSoapOut">
     <wsdl:part name="parameters" element="tns:GetMetaKeysResponse" />
   </wsdl:message>
-  <wsdl:message name="GetAllEmployeeRelativeSoapIn">
-    <wsdl:part name="parameters" element="tns:GetAllEmployeeRelative" />
-  </wsdl:message>
-  <wsdl:message name="GetAllEmployeeRelativeSoapOut">
-    <wsdl:part name="parameters" element="tns:GetAllEmployeeRelativeResponse" />
-  </wsdl:message>
   <wsdl:message name="GetMetaTablesSoapIn">
     <wsdl:part name="parameters" element="tns:GetMetaTables" />
   </wsdl:message>
@@ -703,30 +755,6 @@
   </wsdl:message>
   <wsdl:message name="GetMetaTables2SoapOut">
     <wsdl:part name="parameters" element="tns:GetMetaTables2Response" />
-  </wsdl:message>
-  <wsdl:message name="GetMostSickSoapIn">
-    <wsdl:part name="parameters" element="tns:GetMostSick" />
-  </wsdl:message>
-  <wsdl:message name="GetMostSickSoapOut">
-    <wsdl:part name="parameters" element="tns:GetMostSickResponse" />
-  </wsdl:message>
-  <wsdl:message name="GetEmployeeRelativeSoapIn">
-    <wsdl:part name="parameters" element="tns:GetEmployeeRelative" />
-  </wsdl:message>
-  <wsdl:message name="GetEmployeeRelativeSoapOut">
-    <wsdl:part name="parameters" element="tns:GetEmployeeRelativeResponse" />
-  </wsdl:message>
-  <wsdl:message name="GetEmployeeRelativesSoapIn">
-    <wsdl:part name="parameters" element="tns:GetEmployeeRelatives" />
-  </wsdl:message>
-  <wsdl:message name="GetEmployeeRelativesSoapOut">
-    <wsdl:part name="parameters" element="tns:GetEmployeeRelativesResponse" />
-  </wsdl:message>
-  <wsdl:message name="GetEmployeeAbsenceSoapIn">
-    <wsdl:part name="parameters" element="tns:GetEmployeeAbsence" />
-  </wsdl:message>
-  <wsdl:message name="GetEmployeeAbsenceSoapOut">
-    <wsdl:part name="parameters" element="tns:GetEmployeeAbsenceResponse" />
   </wsdl:message>
   <wsdl:portType name="FoJaJoWebServiceSoap">
     <wsdl:operation name="FindFile">
@@ -781,6 +809,30 @@
       <wsdl:input message="tns:GetAllEmployeeQualificationSoapIn" />
       <wsdl:output message="tns:GetAllEmployeeQualificationSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="GetEmployeeRelatives">
+      <wsdl:input message="tns:GetEmployeeRelativesSoapIn" />
+      <wsdl:output message="tns:GetEmployeeRelativesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeAbsence">
+      <wsdl:input message="tns:GetEmployeeAbsenceSoapIn" />
+      <wsdl:output message="tns:GetEmployeeAbsenceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeeRelative">
+      <wsdl:input message="tns:GetAllEmployeeRelativeSoapIn" />
+      <wsdl:output message="tns:GetAllEmployeeRelativeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeeStatisticsGroup">
+      <wsdl:input message="tns:GetAllEmployeeStatisticsGroupSoapIn" />
+      <wsdl:output message="tns:GetAllEmployeeStatisticsGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeRelative">
+      <wsdl:input message="tns:GetEmployeeRelativeSoapIn" />
+      <wsdl:output message="tns:GetEmployeeRelativeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMostSick">
+      <wsdl:input message="tns:GetMostSickSoapIn" />
+      <wsdl:output message="tns:GetMostSickSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="GetMetaColumns1">
       <wsdl:input message="tns:GetMetaColumns1SoapIn" />
       <wsdl:output message="tns:GetMetaColumns1SoapOut" />
@@ -801,10 +853,6 @@
       <wsdl:input message="tns:GetMetaKeysSoapIn" />
       <wsdl:output message="tns:GetMetaKeysSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="GetAllEmployeeRelative">
-      <wsdl:input message="tns:GetAllEmployeeRelativeSoapIn" />
-      <wsdl:output message="tns:GetAllEmployeeRelativeSoapOut" />
-    </wsdl:operation>
     <wsdl:operation name="GetMetaTables">
       <wsdl:input message="tns:GetMetaTablesSoapIn" />
       <wsdl:output message="tns:GetMetaTablesSoapOut" />
@@ -812,22 +860,6 @@
     <wsdl:operation name="GetMetaTables2">
       <wsdl:input message="tns:GetMetaTables2SoapIn" />
       <wsdl:output message="tns:GetMetaTables2SoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="GetMostSick">
-      <wsdl:input message="tns:GetMostSickSoapIn" />
-      <wsdl:output message="tns:GetMostSickSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="GetEmployeeRelative">
-      <wsdl:input message="tns:GetEmployeeRelativeSoapIn" />
-      <wsdl:output message="tns:GetEmployeeRelativeSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="GetEmployeeRelatives">
-      <wsdl:input message="tns:GetEmployeeRelativesSoapIn" />
-      <wsdl:output message="tns:GetEmployeeRelativesSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="GetEmployeeAbsence">
-      <wsdl:input message="tns:GetEmployeeAbsenceSoapIn" />
-      <wsdl:output message="tns:GetEmployeeAbsenceSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="FoJaJoWebServiceSoap" type="tns:FoJaJoWebServiceSoap">
@@ -949,6 +981,60 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetEmployeeRelatives">
+      <soap:operation soapAction="http://fojajo.ics.lu.se/GetEmployeeRelatives" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeAbsence">
+      <soap:operation soapAction="http://fojajo.ics.lu.se/GetEmployeeAbsence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeeRelative">
+      <soap:operation soapAction="http://fojajo.ics.lu.se/GetAllEmployeeRelative" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeeStatisticsGroup">
+      <soap:operation soapAction="http://fojajo.ics.lu.se/GetAllEmployeeStatisticsGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeRelative">
+      <soap:operation soapAction="http://fojajo.ics.lu.se/GetEmployeeRelative" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMostSick">
+      <soap:operation soapAction="http://fojajo.ics.lu.se/GetMostSick" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetMetaColumns1">
       <soap:operation soapAction="http://fojajo.ics.lu.se/GetMetaColumns1" style="document" />
       <wsdl:input>
@@ -994,15 +1080,6 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetAllEmployeeRelative">
-      <soap:operation soapAction="http://fojajo.ics.lu.se/GetAllEmployeeRelative" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="GetMetaTables">
       <soap:operation soapAction="http://fojajo.ics.lu.se/GetMetaTables" style="document" />
       <wsdl:input>
@@ -1014,42 +1091,6 @@
     </wsdl:operation>
     <wsdl:operation name="GetMetaTables2">
       <soap:operation soapAction="http://fojajo.ics.lu.se/GetMetaTables2" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetMostSick">
-      <soap:operation soapAction="http://fojajo.ics.lu.se/GetMostSick" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetEmployeeRelative">
-      <soap:operation soapAction="http://fojajo.ics.lu.se/GetEmployeeRelative" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetEmployeeRelatives">
-      <soap:operation soapAction="http://fojajo.ics.lu.se/GetEmployeeRelatives" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetEmployeeAbsence">
-      <soap:operation soapAction="http://fojajo.ics.lu.se/GetEmployeeAbsence" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1177,6 +1218,60 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetEmployeeRelatives">
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetEmployeeRelatives" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeAbsence">
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetEmployeeAbsence" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeeRelative">
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetAllEmployeeRelative" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeeStatisticsGroup">
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetAllEmployeeStatisticsGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeRelative">
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetEmployeeRelative" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMostSick">
+      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetMostSick" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetMetaColumns1">
       <soap12:operation soapAction="http://fojajo.ics.lu.se/GetMetaColumns1" style="document" />
       <wsdl:input>
@@ -1222,15 +1317,6 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetAllEmployeeRelative">
-      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetAllEmployeeRelative" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="GetMetaTables">
       <soap12:operation soapAction="http://fojajo.ics.lu.se/GetMetaTables" style="document" />
       <wsdl:input>
@@ -1242,42 +1328,6 @@
     </wsdl:operation>
     <wsdl:operation name="GetMetaTables2">
       <soap12:operation soapAction="http://fojajo.ics.lu.se/GetMetaTables2" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetMostSick">
-      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetMostSick" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetEmployeeRelative">
-      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetEmployeeRelative" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetEmployeeRelatives">
-      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetEmployeeRelatives" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetEmployeeAbsence">
-      <soap12:operation soapAction="http://fojajo.ics.lu.se/GetEmployeeAbsence" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

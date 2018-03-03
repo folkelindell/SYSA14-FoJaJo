@@ -156,17 +156,9 @@ namespace FoJaJo.Controller
             {
                 client.AddCompany(name, desc);
             }
-            catch (DbUpdateException)
+            catch(Exception)
             {
-                Console.WriteLine("DBUPDAte");
-            }
-            catch (SqlException)
-            {
-                Console.WriteLine("SQLEXC");
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine("GENERALEXC");
+               throw;
             }
             
         }
