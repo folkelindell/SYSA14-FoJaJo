@@ -15,7 +15,7 @@ namespace WebService
         {
             if (exception is DbUpdateConcurrencyException concurrencyEx)
             {
-                return new SoapException("Database", SoapException.ServerFaultCode);
+                return new SoapException("Database error", SoapException.ServerFaultCode);
             }
             else if (exception is DbUpdateException dbUpdateEx)
             {

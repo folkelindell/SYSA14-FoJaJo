@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -23,7 +23,7 @@ namespace WebService
 
     public class FoJaJoWebService : System.Web.Services.WebService
     {
-        SqlConnection navConnection = new SqlConnection("data source=laptop-7hibdffa;initial catalog=Demo Database NAV (5-0); user id=sa; password=12345;");
+        SqlConnection navConnection = new SqlConnection("data source=DESKTOP-34D95N6;initial catalog=Demo Database NAV (5-0); user id=sa; password=12345;");
 
         #region LUFFARSCHACK
         [WebMethod]
@@ -33,9 +33,9 @@ namespace WebService
             {
                 return File.ReadAllText(filePath);
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
         }
 
@@ -50,11 +50,11 @@ namespace WebService
                     return player;
                 }
             }
-            catch (Exception)
+            catch(Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
-
+            
         }
 
         [WebMethod]
@@ -68,11 +68,11 @@ namespace WebService
                     return list;
                 }
             }
-            catch
+            catch(Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
-
+            
         }
 
         [WebMethod]
@@ -85,12 +85,11 @@ namespace WebService
                     List<Game> list = ec.Games.ToList();
                     return list;
                 }
-            }
-            catch (Exception)
+            }catch(Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
-
+            
         }
 
         #endregion
@@ -109,11 +108,11 @@ namespace WebService
                     return company;
                 }
             }
-            catch (Exception)
+            catch(Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
-
+            
         }
 
         [WebMethod]
@@ -127,11 +126,11 @@ namespace WebService
                     return list;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
-
+            
         }
 
         [WebMethod]
@@ -156,9 +155,9 @@ namespace WebService
                     }
                 }
             }
-            catch (DbUpdateException)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);;
             }
         }
 
@@ -175,30 +174,30 @@ namespace WebService
                     cc.SaveChanges();
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
-
+            
         }
 
         [WebMethod]
-        public void UpdateCompany(string companyName, string description)
+        public void UpdateCompany(string oldCompanyName, string description)
         {
             try
             {
                 using (CronusContext cc = new CronusContext())
                 {
-                    Company company = cc.Company.Find(companyName);
+                    Company company = cc.Company.Find(oldCompanyName);
                     company.Description = description;
                     cc.SaveChanges();
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
-
+            
         }
 
         #endregion
@@ -216,11 +215,11 @@ namespace WebService
                     return list;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
-
+            
         }
 
         [WebMethod]
@@ -234,11 +233,11 @@ namespace WebService
                     return list;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
-
+            
         }
 
         [WebMethod]
@@ -252,11 +251,11 @@ namespace WebService
                     return list;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
-
+            
         }
 
         [WebMethod]
@@ -270,11 +269,11 @@ namespace WebService
                     return list;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
-
+            
         }
 
         [WebMethod]
@@ -288,11 +287,11 @@ namespace WebService
                     return list;
                 }
             }
-            catch
+            catch(Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
-
+            
         }
 
         [WebMethod]
@@ -306,11 +305,11 @@ namespace WebService
                     return list;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
-
+            
         }
 
         [WebMethod]
@@ -324,9 +323,9 @@ namespace WebService
                     return list;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
         }
 
@@ -341,10 +340,11 @@ namespace WebService
                     return list;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
+            
         }
 
         [WebMethod]
@@ -375,9 +375,9 @@ namespace WebService
                 navConnection.Close();
                 return relatives;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             finally
             {
@@ -410,15 +410,15 @@ namespace WebService
                 navConnection.Close();
                 return list;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             finally
             {
                 navConnection.Close();
             }
-
+            
         }
         #endregion
 
@@ -449,9 +449,9 @@ namespace WebService
                 navConnection.Close();
                 return columns;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             finally
             {
@@ -485,9 +485,9 @@ namespace WebService
                 navConnection.Close();
                 return columns;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             finally
             {
@@ -522,15 +522,15 @@ namespace WebService
                 navConnection.Close();
                 return indexes;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             finally
             {
                 navConnection.Close();
             }
-
+  
         }
 
         [WebMethod]
@@ -559,9 +559,9 @@ namespace WebService
                 navConnection.Close();
                 return constraints;
             }
-            catch (Exception)
-            {
-                throw;
+            catch (Exception e)
+            { 
+                throw ExceptionHandler.HandleEFException(e);
             }
             finally
             {
@@ -595,16 +595,16 @@ namespace WebService
                 navConnection.Close();
                 return keys;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             finally
             {
                 navConnection.Close();
             }
         }
-
+        
 
         [WebMethod]
         public List<MetaDataTable> GetMetaTables()
@@ -631,16 +631,16 @@ namespace WebService
                 navConnection.Close();
                 return tables;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             finally
             {
                 navConnection.Close();
             }
         }
-
+        
 
         [WebMethod]
         public List<MetaDataTable2> GetMetaTables2()
@@ -667,19 +667,19 @@ namespace WebService
                 navConnection.Close();
                 return tables;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             finally
             {
                 navConnection.Close();
             }
+
         }
         #endregion
 
-        
         #endregion
+
     }
 }
-
