@@ -49,11 +49,11 @@ namespace WebService
                     return player;
                 }
             }
-            catch(Exception)
+            catch (Exception)
             {
                 throw;
             }
-            
+
         }
 
         [WebMethod]
@@ -71,7 +71,7 @@ namespace WebService
             {
                 throw;
             }
-            
+
         }
 
         [WebMethod]
@@ -84,11 +84,12 @@ namespace WebService
                     List<Game> list = ec.Games.ToList();
                     return list;
                 }
-            }catch(Exception)
+            }
+            catch (Exception)
             {
                 throw;
             }
-            
+
         }
 
         #endregion
@@ -107,11 +108,11 @@ namespace WebService
                     return company;
                 }
             }
-            catch(Exception)
+            catch (Exception)
             {
                 throw;
             }
-            
+
         }
 
         [WebMethod]
@@ -129,7 +130,7 @@ namespace WebService
             {
                 throw;
             }
-            
+
         }
 
         [WebMethod]
@@ -177,7 +178,7 @@ namespace WebService
             {
                 throw;
             }
-            
+
         }
 
         [WebMethod]
@@ -187,7 +188,7 @@ namespace WebService
             {
                 using (CronusContext cc = new CronusContext())
                 {
-                    Company company = cc.Company.Find(oldCompanyName);
+                    Company company = cc.Company.Find(companyName);
                     company.Description = description;
                     cc.SaveChanges();
                 }
@@ -196,7 +197,7 @@ namespace WebService
             {
                 throw;
             }
-            
+
         }
 
         #endregion
@@ -218,7 +219,7 @@ namespace WebService
             {
                 throw;
             }
-            
+
         }
 
         [WebMethod]
@@ -236,7 +237,7 @@ namespace WebService
             {
                 throw;
             }
-            
+
         }
 
         [WebMethod]
@@ -254,7 +255,7 @@ namespace WebService
             {
                 throw;
             }
-            
+
         }
 
         [WebMethod]
@@ -272,7 +273,7 @@ namespace WebService
             {
                 throw;
             }
-            
+
         }
 
         [WebMethod]
@@ -290,7 +291,7 @@ namespace WebService
             {
                 throw;
             }
-            
+
         }
 
         [WebMethod]
@@ -308,7 +309,7 @@ namespace WebService
             {
                 throw;
             }
-            
+
         }
 
         [WebMethod]
@@ -343,7 +344,6 @@ namespace WebService
             {
                 throw;
             }
-            
         }
 
         [WebMethod]
@@ -416,7 +416,7 @@ namespace WebService
             {
                 navConnection.Close();
             }
-            
+
         }
         #endregion
 
@@ -528,7 +528,7 @@ namespace WebService
             {
                 navConnection.Close();
             }
-  
+
         }
 
         [WebMethod]
@@ -558,7 +558,7 @@ namespace WebService
                 return constraints;
             }
             catch (Exception)
-            { 
+            {
                 throw;
             }
             finally
@@ -602,7 +602,7 @@ namespace WebService
                 navConnection.Close();
             }
         }
-        
+
 
         [WebMethod]
         public List<MetaDataTable> GetMetaTables()
@@ -638,7 +638,7 @@ namespace WebService
                 navConnection.Close();
             }
         }
-        
+
 
         [WebMethod]
         public List<MetaDataTable2> GetMetaTables2()
@@ -673,92 +673,19 @@ namespace WebService
             {
                 navConnection.Close();
             }
-            List<MetaDataTable2> tables = new List<MetaDataTable2>();
-            navConnection.Open();
-            using (SqlCommand command = new SqlCommand("select top 20 [name], [object_id] from sys.tables", navConnection))
-            {
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        MetaDataTable2 tmp = new MetaDataTable2
-                        {
-                            Name = reader.GetValue(0) as string,
-                            Object_Id = reader.GetInt32(1)
-                        };
-                        tables.Add(tmp);
-                    }
-                }
-            }
-            navConnection.Close();
-            return tables;
         }
         #endregion
 
         [WebMethod]
-        public List<MostSick> GetMostSick()
-        {
-            List<MostSick> sick = new List<MostSick>();
-            navConnection.Open();
-            using (SqlCommand command = new SqlCommand("select top 5 [First Name] from [CRONUS Sverige AB$Employee] where No_ in(select[Employee No_] from[CRONUS Sverige AB$Employee Absence] where[Cause of Absence Code] = 'SJUK' group by[Employee No_])", navConnection))
-            {
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        MostSick tmp = new MostSick
-                        {
-                            Name = reader.GetValue(0) as string,
-                        };
-                        sick.Add(tmp);
-                    }
-                }
-            }
-            navConnection.Close();
-            return sick;
-        }
-
-        [WebMethod]
-        public List<EmployeeRelative> GetEmployeeRelative()
-        {
-            List<EmployeeRelative> relatives = new List<EmployeeRelative>();
-            navConnection.Open();
-            using (SqlCommand command = new SqlCommand("select employee.[First Name], employee.[Last Name], employee.[Job Title], relative.[First Name], relative.[Relative Code] from[CRONUS Sverige AB$Employee] employee right join[CRONUS Sverige AB$Employee Relative] relative on employee.No_ = relative.[Employee No_]", navConnection))
-            {
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        EmployeeRelative tmp = new EmployeeRelative
-                        {
-                            EmpFirstName = reader.GetValue(0) as string,
-                            EmpLastName = reader.GetValue(1) as string,
-                            EmpJobTitle = reader.GetValue(2) as string,
-                            RelativeFirstName = reader.GetValue(3) as string,
-                            RelativeCode = reader.GetValue(4) as string
-                        };
-                        relatives.Add(tmp);
-                    }
-                }
-            }
-            navConnection.Close();
-            return relatives;
-        }
-        #endregion
-
-        }
-        #endregion
-
-        #endregion
-        [WebMethod]
-        public List<CRONUS_Sverige_AB_Employee_Absence> GetEmployeeAbsence()    
+        public List<CRONUS_Sverige_AB_Employee_Absence> GetEmployeeAbsence()
         {
             using (CronusContext cc = new CronusContext())
             {
-                List<CRONUS_Sverige_AB_Employee_Absence> list = cc.CRONUS_Sverige_AB_Employee_Absence.Where(e => e.From_Date.Year == 2004 && e.Cause_of_Absence_Code=="SJUK").ToList();
+                List<CRONUS_Sverige_AB_Employee_Absence> list = cc.CRONUS_Sverige_AB_Employee_Absence.Where(e => e.From_Date.Year == 2004 && e.Cause_of_Absence_Code == "SJUK").ToList();
                 return list;
             }
         }
-
+        #endregion
     }
 }
+
