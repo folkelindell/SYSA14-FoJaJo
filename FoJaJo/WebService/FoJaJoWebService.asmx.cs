@@ -32,9 +32,9 @@ namespace WebService
             {
                 return File.ReadAllText(filePath);
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
         }
 
@@ -49,9 +49,9 @@ namespace WebService
                     return player;
                 }
             }
-            catch(Exception)
+            catch(Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             
         }
@@ -67,9 +67,9 @@ namespace WebService
                     return list;
                 }
             }
-            catch
+            catch(Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             
         }
@@ -84,9 +84,9 @@ namespace WebService
                     List<Game> list = ec.Games.ToList();
                     return list;
                 }
-            }catch(Exception)
+            }catch(Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             
         }
@@ -107,9 +107,9 @@ namespace WebService
                     return company;
                 }
             }
-            catch(Exception)
+            catch(Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             
         }
@@ -125,9 +125,9 @@ namespace WebService
                     return list;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             
         }
@@ -154,9 +154,9 @@ namespace WebService
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);;
             }
         }
 
@@ -173,9 +173,9 @@ namespace WebService
                     cc.SaveChanges();
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             
         }
@@ -192,9 +192,9 @@ namespace WebService
                     cc.SaveChanges();
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             
         }
@@ -214,9 +214,9 @@ namespace WebService
                     return list;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             
         }
@@ -232,9 +232,9 @@ namespace WebService
                     return list;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             
         }
@@ -250,9 +250,9 @@ namespace WebService
                     return list;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             
         }
@@ -268,9 +268,9 @@ namespace WebService
                     return list;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             
         }
@@ -286,9 +286,9 @@ namespace WebService
                     return list;
                 }
             }
-            catch
+            catch(Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             
         }
@@ -304,9 +304,9 @@ namespace WebService
                     return list;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             
         }
@@ -322,9 +322,9 @@ namespace WebService
                     return list;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
         }
 
@@ -339,9 +339,9 @@ namespace WebService
                     return list;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             
         }
@@ -374,9 +374,9 @@ namespace WebService
                 navConnection.Close();
                 return relatives;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             finally
             {
@@ -409,9 +409,9 @@ namespace WebService
                 navConnection.Close();
                 return list;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             finally
             {
@@ -448,9 +448,9 @@ namespace WebService
                 navConnection.Close();
                 return columns;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             finally
             {
@@ -484,9 +484,9 @@ namespace WebService
                 navConnection.Close();
                 return columns;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             finally
             {
@@ -521,9 +521,9 @@ namespace WebService
                 navConnection.Close();
                 return indexes;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             finally
             {
@@ -558,9 +558,9 @@ namespace WebService
                 navConnection.Close();
                 return constraints;
             }
-            catch (Exception)
+            catch (Exception e)
             { 
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             finally
             {
@@ -594,9 +594,9 @@ namespace WebService
                 navConnection.Close();
                 return keys;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             finally
             {
@@ -630,9 +630,9 @@ namespace WebService
                 navConnection.Close();
                 return tables;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             finally
             {
@@ -666,9 +666,9 @@ namespace WebService
                 navConnection.Close();
                 return tables;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw ExceptionHandler.HandleEFException(e);
             }
             finally
             {
