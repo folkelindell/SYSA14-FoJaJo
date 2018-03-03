@@ -15,7 +15,16 @@ namespace FoJaJo.GUI
 {
     public partial class LuffarRootControl : UserControl
     {
-        public StatusLabel Status { get; set; }
+        private StatusLabel status;
+        public StatusLabel Status
+        {
+            get { return status; }
+            set { status = value;
+                playerOnePanel.Status = Status;
+                playerTwoPanel.Status = Status;
+                gameControl.Status = Status;
+            }
+        }
         private GameController controller;
         public GameController Controller { get
             {
@@ -43,6 +52,7 @@ namespace FoJaJo.GUI
 
         private void GameWonEvent()
         {
+            Status.ShowStatus(Controller.BoardState.CurrentPlayer.Username + " won!");
             MessageBox.Show(Controller.BoardState.CurrentPlayer.Username + " WON!", "Winner", MessageBoxButtons.OK, MessageBoxIcon.None);
             gameControl.Enabled = false;
         }

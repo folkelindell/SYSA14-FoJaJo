@@ -18,7 +18,7 @@ namespace FoJaJo.GUI
         {
             InitializeComponent();
             Controller = new RootController(this);
-            luffarRootControl1.Controller = new GameController();
+            luffarRootControl1.Controller = new GameController(luffarRootControl1);
             luffarRootControl1.Status = this.statusLabel1;
         }
     }

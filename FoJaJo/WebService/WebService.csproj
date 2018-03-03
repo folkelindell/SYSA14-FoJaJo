@@ -141,6 +141,7 @@
     <Compile Include="CRONUS_Sverige_AB_Employee_Statistics_Group.cs">
       <DependentUpon>CronusContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="ExceptionHandler.cs" />
     <Compile Include="Model\EmployeeRelative.cs" />
     <Compile Include="Model\MetaDataColumn.cs" />
     <Compile Include="Model\MetaDataColumn2.cs" />

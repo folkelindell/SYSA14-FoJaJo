@@ -45,7 +45,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21F));
             this.tableLayoutPanel1.Controls.Add(this.usernameLabel, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.usernameValue, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.ratingLabel, 1, 3);
@@ -76,9 +76,10 @@
             this.usernameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.usernameLabel.Location = new System.Drawing.Point(23, 20);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(281, 27);
+            this.usernameLabel.Size = new System.Drawing.Size(280, 27);
             this.usernameLabel.TabIndex = 0;
             this.usernameLabel.Text = "Username";
+            this.usernameLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // usernameValue
             // 
@@ -87,7 +88,7 @@
             this.usernameValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.usernameValue.Location = new System.Drawing.Point(23, 47);
             this.usernameValue.Name = "usernameValue";
-            this.usernameValue.Size = new System.Drawing.Size(281, 27);
+            this.usernameValue.Size = new System.Drawing.Size(280, 27);
             this.usernameValue.TabIndex = 1;
             this.usernameValue.Text = "usernameValue";
             // 
@@ -98,16 +99,17 @@
             this.ratingLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ratingLabel.Location = new System.Drawing.Point(23, 74);
             this.ratingLabel.Name = "ratingLabel";
-            this.ratingLabel.Size = new System.Drawing.Size(281, 27);
+            this.ratingLabel.Size = new System.Drawing.Size(280, 27);
             this.ratingLabel.TabIndex = 2;
             this.ratingLabel.Text = "Rating";
+            this.ratingLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // logoutButton
             // 
             this.logoutButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.logoutButton.Location = new System.Drawing.Point(109, 185);
             this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(195, 36);
+            this.logoutButton.Size = new System.Drawing.Size(194, 36);
             this.logoutButton.TabIndex = 3;
             this.logoutButton.Text = "Log out";
             this.logoutButton.UseVisualStyleBackColor = true;
@@ -120,7 +122,7 @@
             this.ratingValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ratingValue.Location = new System.Drawing.Point(23, 101);
             this.ratingValue.Name = "ratingValue";
-            this.ratingValue.Size = new System.Drawing.Size(281, 27);
+            this.ratingValue.Size = new System.Drawing.Size(280, 27);
             this.ratingValue.TabIndex = 4;
             this.ratingValue.Text = "ratingValue";
             // 
@@ -131,9 +133,10 @@
             this.totalWinsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.totalWinsLabel.Location = new System.Drawing.Point(23, 128);
             this.totalWinsLabel.Name = "totalWinsLabel";
-            this.totalWinsLabel.Size = new System.Drawing.Size(281, 27);
+            this.totalWinsLabel.Size = new System.Drawing.Size(280, 27);
             this.totalWinsLabel.TabIndex = 5;
             this.totalWinsLabel.Text = "Total wins";
+            this.totalWinsLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // totalWinsValue
             // 
@@ -142,7 +145,7 @@
             this.totalWinsValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.totalWinsValue.Location = new System.Drawing.Point(23, 155);
             this.totalWinsValue.Name = "totalWinsValue";
-            this.totalWinsValue.Size = new System.Drawing.Size(281, 27);
+            this.totalWinsValue.Size = new System.Drawing.Size(280, 27);
             this.totalWinsValue.TabIndex = 6;
             this.totalWinsValue.Text = "totalWinsLabel";
             // 

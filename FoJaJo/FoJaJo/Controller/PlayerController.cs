@@ -18,7 +18,6 @@ namespace FoJaJo.Controller
         }
         public Player LogInPlayer(string usr, string pw)
         {
-            Console.WriteLine(usr);
             Player player = GetPlayer(usr);
             if (player != null && player.Password.Equals(pw))
             {
@@ -40,9 +39,5 @@ namespace FoJaJo.Controller
             Player player = playerDAO.GetPlayer(username);
             return player;
         }
-
-
-
-
     }
 }

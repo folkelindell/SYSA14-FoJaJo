@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FoJaJo.GUI
+namespace ConsoleWebservice
 {
-    public interface IView
+    class Program
     {
-        void UpdateView();
+        static void Main(string[] args)
+        {
+        }
     }
 }
