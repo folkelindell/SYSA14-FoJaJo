@@ -169,10 +169,22 @@ namespace WebService
                 using (CronusContext cc = new CronusContext())
                 {
                     Company company = SelectCompany(companyName);
-                    cc.Company.Attach(company);
-                    cc.Company.Remove(company);
-                    cc.SaveChanges();
+                    if(company != null)
+                    {
+                        cc.Company.Attach(company);
+                        cc.Company.Remove(company);
+                        cc.SaveChanges();
+                    }
+                    else
+                    {
+                        throw new SoapException("Company not found", SoapException.ServerFaultCode);
+                    }
+                    
                 }
+            }
+            catch (SoapException)
+            {
+                throw;
             }
             catch (Exception e)
             {
@@ -189,9 +201,21 @@ namespace WebService
                 using (CronusContext cc = new CronusContext())
                 {
                     Company company = cc.Company.Find(oldCompanyName);
-                    company.Description = description;
-                    cc.SaveChanges();
+                    if(company != null)
+                    {
+                        company.Description = description;
+                        cc.SaveChanges();
+                    }
+                    else
+                    {
+                        throw new SoapException("Company not found", SoapException.ServerFaultCode);
+                    }
+                    
                 }
+            }
+            catch (SoapException)
+            {
+                throw;
             }
             catch (Exception e)
             {

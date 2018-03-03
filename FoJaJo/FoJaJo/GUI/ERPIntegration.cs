@@ -15,13 +15,13 @@ namespace FoJaJo.GUI
 {
     public partial class ERPIntegration : UserControl
     {
-        WebServiceController1 wc;
         public ERPIntegration()
         {
             InitializeComponent();
         }
 
         public StatusLabel StatusLbl { get; set; }
+        public WebServiceController1 WebController { get; set; }
 
         private void ERPIntegration_Load(object sender, EventArgs e)
         {
@@ -40,7 +40,6 @@ namespace FoJaJo.GUI
 
         private void BtnSelectERP_Click(object sender, EventArgs e)
         {
-            wc = new WebServiceController1();
             dGVERP.DataSource = null;
             if(cBoxERP.SelectedIndex > -1)
             {
@@ -49,50 +48,50 @@ namespace FoJaJo.GUI
                     switch (cBoxERP.SelectedIndex)
                     {
                         case 0:
-                            dGVERP.DataSource = wc.getMetaKeys();
+                            dGVERP.DataSource = WebController.getMetaKeys();
                             break;
                         case 1:
-                            dGVERP.DataSource = wc.getMetaIndexes();
+                            dGVERP.DataSource = WebController.getMetaIndexes();
                             break;
                         case 2:
-                            dGVERP.DataSource = wc.getMetaTablesConstraints();
+                            dGVERP.DataSource = WebController.getMetaTablesConstraints();
                             break;
                         case 3:
-                            dGVERP.DataSource = wc.getMetaTables();
+                            dGVERP.DataSource = WebController.getMetaTables();
                             break;
                         case 4:
-                            dGVERP.DataSource = wc.getMetaTables2();
+                            dGVERP.DataSource = WebController.getMetaTables2();
                             break;
                         case 5:
-                            dGVERP.DataSource = wc.GetMetaColumns();
+                            dGVERP.DataSource = WebController.GetMetaColumns();
                             break;
                         case 6:
-                            dGVERP.DataSource = wc.GetMetaColumns2();
+                            dGVERP.DataSource = WebController.GetMetaColumns2();
                             break;
                         case 7:
-                            dGVERP.DataSource = wc.GetAllEmployees().Select(o => new
+                            dGVERP.DataSource = WebController.GetAllEmployees().Select(o => new
                             { o.First_Name, o.Job_Title, o.City }).ToList();
                             break;
                         case 8:
-                            dGVERP.DataSource = wc.GetMetaColumns();
+                            dGVERP.DataSource = WebController.GetMetaColumns();
                             break;
                         case 9:
-                            dGVERP.DataSource = wc.GetEmployeeRelatives();
+                            dGVERP.DataSource = WebController.GetEmployeeRelatives();
                             break;
                         case 10:
-                            dGVERP.DataSource = wc.GetEmployeeAbsence().Select(o => new { o.Employee_No_, o.Cause_of_Absence_Code, o.Description, From_Date = o.From_Date.ToString() }).ToList();
+                            dGVERP.DataSource = WebController.GetEmployeeAbsence().Select(o => new { o.Employee_No_, o.Cause_of_Absence_Code, o.Description, From_Date = o.From_Date.ToString() }).ToList();
                             break;
                         case 11:
-                            dGVERP.DataSource = wc.GetMostSick();
+                            dGVERP.DataSource = WebController.GetMostSick();
                             break;
                         case 12:
-                            dGVERP.DataSource = wc.GetAllEmployeeAbsence().Select(o => new { o.Entry_No_, o.Employee_No_, o.Cause_of_Absence_Code }).ToList();
+                            dGVERP.DataSource = WebController.GetAllEmployeeAbsence().Select(o => new { o.Entry_No_, o.Employee_No_, o.Cause_of_Absence_Code }).ToList();
                             break;
                         case 13:
-                            dGVERP.DataSource = wc.GetAllPortalSetup().Select(o => new { o.Config_TP_Group_Capt_ID, o.Config_Tool_Pane_Caption, o.Search_Tool_Pane_Caption }).ToList();
+                            dGVERP.DataSource = WebController.GetAllPortalSetup().Select(o => new { o.Config_TP_Group_Capt_ID, o.Config_Tool_Pane_Caption, o.Search_Tool_Pane_Caption }).ToList();
                             break;
                         case 14:
-                            dGVERP.DataSource = wc.GetAllQualification().Select(o => new { o.Description, o.Qualification_Code, o.Institution_Company }).ToList();
+                            dGVERP.DataSource = WebController.GetAllQualification().Select(o => new { o.Description, o.Qualification_Code, o.Institution_Company }).ToList();
                             break;
                     }
                 }catch (Exception x)
@@ -107,16 +106,16 @@ namespace FoJaJo.GUI
             string companyName = txtBoxCompany.Text;
             if (companyName != null)
             {
-                DialogResult dr = MessageBox.Show("Du kommer att ta bort företaget ur databasen", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult dr = MessageBox.Show("You will permanently remove the company from the database", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dr == DialogResult.Yes)
                 {
                     try
                     {
-                        wc.RemoveCompany(companyName);
+                        WebController.RemoveCompany(companyName);
                         dGVERP.DataSource = null;
                         txtBoxCompany.Text = "";
                         txtBoxCompanyDescription.Text = "";
-                        StatusLbl.ShowStatus("Företaget borttaget!");
+                        StatusLbl.ShowStatus("Company deleted!");
                     }
                     catch (Exception x)
                     {
@@ -126,14 +125,13 @@ namespace FoJaJo.GUI
                 }
                 else
                 {
-                    StatusLbl.ShowMessage("Delete avbruten");
+                    StatusLbl.ShowMessage("Delete cancelled");
                 }
             }
         }
 
         private void BtnAddCompany_Click(object sender, EventArgs e)
         {
-            wc = new WebServiceController1();
             string text = txtBoxCompany.Text;
             string desc = txtBoxCompanyDescription.Text;
             try
@@ -144,7 +142,7 @@ namespace FoJaJo.GUI
                 }
                 else
                 {
-                    wc.AddCompany(text, desc);
+                    WebController.AddCompany(text, desc);
                     txtBoxCompany.Text = "";
                     txtBoxCompanyDescription.Text = "";
                 }
@@ -157,12 +155,11 @@ namespace FoJaJo.GUI
         private void BtnShowCompany_Click(object sender, EventArgs e)
         {
             string company = txtBoxCompany.Text;
-            wc = new WebServiceController1();
             if (string.IsNullOrWhiteSpace(txtBoxCompany.Text))
             {
                 try
                 {
-                    dGVERP.DataSource = wc.SelectAllCompany().Select(o => new { o.Name, o.Description }).ToList();
+                    dGVERP.DataSource = WebController.SelectAllCompany().Select(o => new { o.Name, o.Description }).ToList();
                 }
                 catch(Exception x)
                 {
@@ -173,7 +170,7 @@ namespace FoJaJo.GUI
             {
                 try
                 {
-                    dGVERP.DataSource = wc.GetCompany(company).Select(o => new { o.Name, o.Description }).ToList();
+                    dGVERP.DataSource = WebController.GetCompany(company).Select(o => new { o.Name, o.Description }).ToList();
                 }
                 catch(Exception x)
                 {
@@ -186,7 +183,6 @@ namespace FoJaJo.GUI
         {
             string name = txtBoxCompany.Text;
             string desc = txtBoxCompanyDescription.Text;
-            wc = new WebServiceController1();
             if (string.IsNullOrWhiteSpace(txtBoxCompanyDescription.Text) || string.IsNullOrWhiteSpace(txtBoxCompany.Text))
             {
                 StatusLbl.ShowMessage("You need to fill both name and description");
@@ -195,10 +191,11 @@ namespace FoJaJo.GUI
             {
                 try
                 {
-                    wc.UpdateCompany(name, desc);
-                    dGVERP.DataSource = wc.GetCompany(name).Select(o => new { o.Name, o.Description }).ToList();
+                    WebController.UpdateCompany(name, desc);
+                    dGVERP.DataSource = WebController.GetCompany(name).Select(o => new { o.Name, o.Description }).ToList();
                     txtBoxCompany.Text = "";
                     txtBoxCompanyDescription.Text = "";
+                    StatusLbl.ShowStatus("Update success!");
                 }
                 catch (Exception x)
                 {

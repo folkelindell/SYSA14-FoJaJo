@@ -22,6 +22,8 @@ namespace FoJaJo.GUI
             luffarRootControl1.Status = this.statusLabel1;
             erpIntegration1.StatusLbl = this.statusLabel1;
             openFileShowPlayers1.StatusLbl = this.statusLabel1;
+            erpIntegration1.WebController = new WebServiceController1();
+            openFileShowPlayers1.WebController = new WebServiceController1();
             
         }
     }

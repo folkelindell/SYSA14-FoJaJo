@@ -15,22 +15,25 @@ namespace FoJaJo.GUI
 {
     public partial class OpenFileShowPlayers : UserControl
     {
-        WebServiceController1 wc;
         public StatusLabel StatusLbl { get; set; }
+        public WebServiceController1 WebController{ get; set; }
 
         public OpenFileShowPlayers()
         {
             InitializeComponent();
         }
-
         private void OpenFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void TxtBoxOpenFile_TextChanged(object sender, EventArgs e)
         {
 
         }
 
         private void OpenFile_Click(object sender, EventArgs e)
         {
-            wc = new WebServiceController1();   
 
             OpenFileDialog openFile = new OpenFileDialog
             {
@@ -44,30 +47,22 @@ namespace FoJaJo.GUI
                 string strFilePath = openFile.InitialDirectory + openFile.FileName;
                 try
                 {
-                    string fileText = wc.OpenFile(strFilePath);
+                    string fileText = WebController.OpenFile(strFilePath);
                     txtBox.Text = fileText;
                 }
                 catch (Exception x)
                 {
                     StatusLbl.ShowMessage(x.Message);
                 }
-                
-
             }
-        }
-
-        private void TxtBoxOpenFile_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void BtnShowPlayers_Click(object sender, EventArgs e)
         {
-            wc = new WebServiceController1();
             dataGridGetAllPlayers.DataSource = null;
             try
             {
-                dataGridGetAllPlayers.DataSource = wc.GetAllPlayers();
+                dataGridGetAllPlayers.DataSource = WebController.GetAllPlayers();
             }
             catch (Exception x)
             {

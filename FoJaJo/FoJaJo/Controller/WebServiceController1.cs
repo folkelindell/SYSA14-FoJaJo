@@ -11,7 +11,7 @@ using FoJaJo.FoJaJoWebService;
 
 namespace FoJaJo.Controller
 {
-    class WebServiceController1
+    public class WebServiceController1
     {
 
         FoJaJoWebServiceSoapClient client = new FoJaJoWebServiceSoapClient();
