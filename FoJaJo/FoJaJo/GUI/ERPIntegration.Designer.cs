@@ -48,43 +48,40 @@ namespace FoJaJo.GUI
             // 
             // tblLayOutERP
             // 
-            this.tblLayOutERP.ColumnCount = 2;
-            this.tblLayOutERP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.76923F));
-            this.tblLayOutERP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.23077F));
-            this.tblLayOutERP.Controls.Add(this.btnDeleteCompany, 1, 8);
-            this.tblLayOutERP.Controls.Add(this.btnUpdateCompany, 0, 8);
-            this.tblLayOutERP.Controls.Add(this.btnShowCompany, 0, 7);
-            this.tblLayOutERP.Controls.Add(this.btnAddCompany, 1, 7);
-            this.tblLayOutERP.Controls.Add(this.lblNewCompanyName, 0, 6);
-            this.tblLayOutERP.Controls.Add(this.txtBoxCompanyDescription, 1, 6);
-            this.tblLayOutERP.Controls.Add(this.lblCompanyName, 0, 5);
-            this.tblLayOutERP.Controls.Add(this.txtBoxCompany, 1, 5);
+            this.tblLayOutERP.ColumnCount = 3;
+            this.tblLayOutERP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblLayOutERP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblLayOutERP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblLayOutERP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblLayOutERP.Controls.Add(this.cBoxERP, 0, 0);
             this.tblLayOutERP.Controls.Add(this.btnSelectERP, 0, 1);
-            this.tblLayOutERP.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tblLayOutERP.Controls.Add(this.lblCompanyName, 0, 2);
+            this.tblLayOutERP.Controls.Add(this.txtBoxCompany, 1, 2);
+            this.tblLayOutERP.Controls.Add(this.lblNewCompanyName, 0, 3);
+            this.tblLayOutERP.Controls.Add(this.txtBoxCompanyDescription, 1, 3);
+            this.tblLayOutERP.Controls.Add(this.btnShowCompany, 0, 4);
+            this.tblLayOutERP.Controls.Add(this.dGVERP, 2, 0);
+            this.tblLayOutERP.Controls.Add(this.btnAddCompany, 1, 1);
+            this.tblLayOutERP.Controls.Add(this.btnUpdateCompany, 0, 6);
+            this.tblLayOutERP.Controls.Add(this.btnDeleteCompany, 1, 6);
+            this.tblLayOutERP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblLayOutERP.Location = new System.Drawing.Point(0, 0);
             this.tblLayOutERP.Name = "tblLayOutERP";
-            this.tblLayOutERP.RowCount = 10;
-            this.tblLayOutERP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.333333F));
-            this.tblLayOutERP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.66667F));
-            this.tblLayOutERP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tblLayOutERP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tblLayOutERP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.5F));
-            this.tblLayOutERP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.666667F));
-            this.tblLayOutERP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.666667F));
-            this.tblLayOutERP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tblLayOutERP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tblLayOutERP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tblLayOutERP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblLayOutERP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblLayOutERP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblLayOutERP.Size = new System.Drawing.Size(242, 600);
+            this.tblLayOutERP.RowCount = 7;
+            this.tblLayOutERP.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tblLayOutERP.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tblLayOutERP.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tblLayOutERP.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tblLayOutERP.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tblLayOutERP.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tblLayOutERP.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tblLayOutERP.Size = new System.Drawing.Size(757, 600);
             this.tblLayOutERP.TabIndex = 11;
             this.tblLayOutERP.Paint += new System.Windows.Forms.PaintEventHandler(this.TblLayOutERP_Paint);
             // 
             // btnDeleteCompany
             // 
-            this.btnDeleteCompany.Location = new System.Drawing.Point(101, 512);
+            this.btnDeleteCompany.Location = new System.Drawing.Point(101, 140);
             this.btnDeleteCompany.Name = "btnDeleteCompany";
             this.btnDeleteCompany.Size = new System.Drawing.Size(96, 23);
             this.btnDeleteCompany.TabIndex = 18;
@@ -94,7 +91,7 @@ namespace FoJaJo.GUI
             // 
             // btnUpdateCompany
             // 
-            this.btnUpdateCompany.Location = new System.Drawing.Point(3, 512);
+            this.btnUpdateCompany.Location = new System.Drawing.Point(3, 140);
             this.btnUpdateCompany.Name = "btnUpdateCompany";
             this.btnUpdateCompany.Size = new System.Drawing.Size(92, 23);
             this.btnUpdateCompany.TabIndex = 19;
@@ -104,7 +101,7 @@ namespace FoJaJo.GUI
             // 
             // btnShowCompany
             // 
-            this.btnShowCompany.Location = new System.Drawing.Point(3, 482);
+            this.btnShowCompany.Location = new System.Drawing.Point(3, 111);
             this.btnShowCompany.Name = "btnShowCompany";
             this.btnShowCompany.Size = new System.Drawing.Size(92, 23);
             this.btnShowCompany.TabIndex = 17;
@@ -114,7 +111,7 @@ namespace FoJaJo.GUI
             // 
             // btnAddCompany
             // 
-            this.btnAddCompany.Location = new System.Drawing.Point(101, 482);
+            this.btnAddCompany.Location = new System.Drawing.Point(101, 111);
             this.btnAddCompany.Name = "btnAddCompany";
             this.btnAddCompany.Size = new System.Drawing.Size(96, 23);
             this.btnAddCompany.TabIndex = 21;
@@ -125,7 +122,7 @@ namespace FoJaJo.GUI
             // lblNewCompanyName
             // 
             this.lblNewCompanyName.AutoSize = true;
-            this.lblNewCompanyName.Location = new System.Drawing.Point(3, 451);
+            this.lblNewCompanyName.Location = new System.Drawing.Point(3, 82);
             this.lblNewCompanyName.Name = "lblNewCompanyName";
             this.lblNewCompanyName.Size = new System.Drawing.Size(60, 13);
             this.lblNewCompanyName.TabIndex = 15;
@@ -133,7 +130,7 @@ namespace FoJaJo.GUI
             // 
             // txtBoxCompanyDescription
             // 
-            this.txtBoxCompanyDescription.Location = new System.Drawing.Point(101, 454);
+            this.txtBoxCompanyDescription.Location = new System.Drawing.Point(101, 85);
             this.txtBoxCompanyDescription.Name = "txtBoxCompanyDescription";
             this.txtBoxCompanyDescription.Size = new System.Drawing.Size(138, 20);
             this.txtBoxCompanyDescription.TabIndex = 20;
@@ -141,7 +138,7 @@ namespace FoJaJo.GUI
             // lblCompanyName
             // 
             this.lblCompanyName.AutoSize = true;
-            this.lblCompanyName.Location = new System.Drawing.Point(3, 423);
+            this.lblCompanyName.Location = new System.Drawing.Point(3, 56);
             this.lblCompanyName.Name = "lblCompanyName";
             this.lblCompanyName.Size = new System.Drawing.Size(90, 13);
             this.lblCompanyName.TabIndex = 14;
@@ -149,7 +146,7 @@ namespace FoJaJo.GUI
             // 
             // txtBoxCompany
             // 
-            this.txtBoxCompany.Location = new System.Drawing.Point(101, 426);
+            this.txtBoxCompany.Location = new System.Drawing.Point(101, 59);
             this.txtBoxCompany.Name = "txtBoxCompany";
             this.txtBoxCompany.Size = new System.Drawing.Size(138, 20);
             this.txtBoxCompany.TabIndex = 16;
@@ -183,7 +180,7 @@ namespace FoJaJo.GUI
             // 
             // btnSelectERP
             // 
-            this.btnSelectERP.Location = new System.Drawing.Point(3, 29);
+            this.btnSelectERP.Location = new System.Drawing.Point(3, 30);
             this.btnSelectERP.Name = "btnSelectERP";
             this.btnSelectERP.Size = new System.Drawing.Size(75, 23);
             this.btnSelectERP.TabIndex = 12;
@@ -197,18 +194,18 @@ namespace FoJaJo.GUI
             this.dGVERP.AllowUserToDeleteRows = false;
             this.dGVERP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dGVERP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVERP.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dGVERP.Location = new System.Drawing.Point(245, 0);
+            this.dGVERP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dGVERP.Location = new System.Drawing.Point(245, 3);
             this.dGVERP.Name = "dGVERP";
             this.dGVERP.ReadOnly = true;
-            this.dGVERP.Size = new System.Drawing.Size(512, 600);
+            this.tblLayOutERP.SetRowSpan(this.dGVERP, 7);
+            this.dGVERP.Size = new System.Drawing.Size(547, 643);
             this.dGVERP.TabIndex = 12;
             // 
             // ERPIntegration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dGVERP);
             this.Controls.Add(this.tblLayOutERP);
             this.Name = "ERPIntegration";
             this.Size = new System.Drawing.Size(757, 600);
